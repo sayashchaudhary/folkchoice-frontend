@@ -1,21 +1,24 @@
 import React from 'react';
-import {Route, Switch, BrowserRouter} from 'react-router-dom';
-import Landing from "./Components/Layout/Landing";
-import Register from "./Components/Auth/Register";
-import Login from "./Components/Auth/Login";
-import './App.css';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import Landing from './components/Layout/Landing/Landing';
+import Register from './components/Auth/Register/Register';
+import Login from './components/Auth/Login/Login';
 
 const App: React.FC = () => {
     return (
-        <div className="App">
-            <BrowserRouter>
-                <Route exact path='/' component={Landing}/>
-                <Switch>
-                    <Route exact path='/login' component={Login}/>
-                    <Route path='/register' component={Register}/>
-                </Switch>
-            </BrowserRouter>
-        </div>
+        <Router>
+            <Switch>
+                <Route exact path='/'>
+                    <Landing/>
+                </Route>
+                <Route path='/login'>
+                    <Login/>
+                </Route>
+                <Route path='/register'>
+                    <Register/>
+                </Route>
+            </Switch>
+        </Router>
     );
 };
 
