@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React from 'react';
 import {Route, Switch, BrowserRouter} from 'react-router-dom';
 import Landing from "./Components/Layout/Landing";
 import Register from "./Components/Auth/Register";
@@ -9,12 +9,11 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <BrowserRouter>
-            <Route exact path='/' component={Landing}/>
-            <Switch>
-                <Route exact path='/login'
-                       render={() => <Suspense fallback={<div>Loading...</div>}><Login /></Suspense>}/>
-                <Route path='/register' component={Register}/>
-            </Switch>
+                <Route exact path='/' component={Landing}/>
+                <Switch>
+                    <Route exact path='/login' component={Login}/>
+                    <Route path='/register' component={Register}/>
+                </Switch>
             </BrowserRouter>
         </div>
     );
