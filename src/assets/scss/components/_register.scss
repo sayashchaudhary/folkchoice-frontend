@@ -70,6 +70,7 @@
   color: white !important;
   width: 90%;
   padding-top: 5%;
+  margin-bottom: 5%;
   margin-left:5%;
 }
 
@@ -134,6 +135,9 @@
   .inner-card {
     height: 80%
   }
+  .outer-card {
+    height: 90%;
+  }
 }
 
 // for ipads
@@ -145,7 +149,10 @@
     width: 85%;
   }
   .submit {
-    width: 80%;
-    margin-left: 50%;
+    width: 60%;
+    margin-top: 10%;
+  }
+  .input {
+    padding-top: 10%;
   }
 }
