@@ -68,13 +68,16 @@
 
 .input {
   color: white !important;
-  width: 200%;
-  padding-top: 15%;
-
+  width: 90%;
+  padding-top: 5%;
+  margin-left:5%;
 }
 
 .input1 {
   color: white;
+  padding-top:5%;
+  // width:100%;
+  padding-left:15%;
 }
 
 ::placeholder {
@@ -94,47 +97,51 @@
   background-color: $color-primary;
   width: 60%;
   padding: 5px;
-  margin-left: 60%;
+  margin-left: 20%;
   color: black;
   border-radius: 50px;
   outline: none;
   border: none;
 }
 
+// .MuiInput-underline{
+//   border-bottom:1px solid white !important;
+// }
+
 // for mobiles
 @media(max-width: 767px) {
-  .neuromorphism-1 {
+  .outer-card {
     width: 80%;
   }
-  .neuromorphism-2 {
-    width: 80%;
-    height: 68%;
+  .inner-card {
+    width: 85%;
+    height:90%;
   }
   .submit {
     margin-left: 20%;
   }
-  .neuromorphism {
+  .background {
     display: none;
   }
   .input {
     width: 90%;
-    padding-top: 7px;
+    padding-top: 10px;
   }
 }
 
 // fir iphone5/SE
 @media only screen and (min-width: 320px) and (max-width: 568px) {
-  .neuromorphism-2 {
+  .inner-card {
     height: 80%
   }
 }
 
 // for ipads
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .neuromorphism-1 {
+  .outer-card {
     width: 60%;
   }
-  .neuromorphism-2 {
+  .inner-card {
     width: 85%;
   }
   .submit {
