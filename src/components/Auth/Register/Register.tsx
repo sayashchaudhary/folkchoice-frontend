@@ -40,6 +40,7 @@ const Register: React.FC = () => {
             <div className='background'/>
             <div className='outer-card'>
                 <img src={Logo} alt="logo" className="logo"/>
+                <div className="text-center company"><i>FOLK CHOICE</i></div>
                 <div className='inner-card'>
                     <Formik
                         validateOnChange={true}
@@ -56,6 +57,7 @@ const Register: React.FC = () => {
                             <MyInputField name="password" type="password" placeholder="Password"/>
                             <MyInputField name="cnfPassword" type="password" placeholder="Confirm Password"/>
                             <MyInputField name="phoneno" type="input" placeholder="Phone Number"/>
+                            <label className="gender">Gender:</label>
                             <MyRadio name="gender" type="radio" value="male" label="Male"/>
                             <MyRadio name="gender" type="radio" value="female" label="Female"/>
                             <button type="submit" className="submit">Submit</button>

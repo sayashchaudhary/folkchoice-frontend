@@ -63,22 +63,32 @@
 
 .logo {
   width: 20%;
-  margin: 20px 20px 20px 40%;
+  margin: 10px 10px 10px 40%;
+}
+
+.company{
+  font-size:30px;
+  font-weight:strong;
+  padding-bottom: 2vh ;
 }
 
 .input {
   color: white !important;
-  width: 90%;
-  padding-top: 4%;
+  width: 85%;
+  padding-top: 3vh;
   margin-bottom: 15px;
-  margin-left:5%;
+  margin-left:8%;
 }
 
 .input1 {
   color: white;
-  padding-top:4%;
-  // width:100%;
+  padding-top:2%;
   padding-left:15%;
+}
+
+.gender{
+  margin-left:8%;
+  color:white;
 }
 
 ::placeholder {
