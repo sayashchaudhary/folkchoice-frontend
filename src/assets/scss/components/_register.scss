@@ -1,0 +1,96 @@
+.container-fluid{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8%;
+    height:100vh;
+    
+}
+.container-fluid:after{
+    content: "";
+    background-color: $color-primary;
+    background-image: url('../../images/background.png');
+    background-position: 20px 5px;
+    background-size: 500px 600px;
+    background-repeat: no-repeat;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    position: absolute;
+    opacity:0.4;
+    z-index:-1;
+}
+.neuromorphism{
+    content: "";
+    background-color: $color-primary;
+    background-image: url('../../images/background1.png');
+    background-position: right;
+    background-size: 500px 600px;
+    background-repeat: no-repeat;
+    // transform:rotate(-79.17deg);
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    position: absolute;
+    opacity:0.6;
+    z-index:-1;
+}
+.neuromorphism-1{
+    height: 90vh;
+    position: absolute;
+    width:35vw;
+    background: $color-primary;
+    border-radius: 53px;
+    box-shadow: 9px 9px 10px rgba(0,0,0,0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0,0,0,0.03); 
+}
+.neuromorphism-2{
+    margin-left: 7%;
+    margin-bottom: 5%;  
+    height: 65vh;
+    width:30vw;
+    background: $color-secondary;
+    border-radius: 53px;
+    box-shadow: 9px 9px 10px rgba(55,58,89,0.1), -9px -9px 10px #ffffff, inset 7px 7px 16px rgba(0, 0, 0, 0.25); 
+}
+.logo{
+    width:20%;
+    margin:20px;
+    margin-left:40%;
+    padding: auto;
+}
+.input{
+    color:white !important;
+    width:170%;
+    padding: 5px;
+    padding-top:10px;
+    
+}
+.input1{
+    color:white;
+}
+::placeholder{
+    color:white !important;
+    opacity:1;
+}
+
+.register_form{
+    display: 'flex';
+    flex-wrap: 'wrap';
+    padding-top:18px;
+    padding-left:18px;
+    color:'white';
+}
+.submit{
+    background-color: $color-primary;
+    width:50%;
+    padding: 5px;
+    margin:auto;
+    color:black;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
