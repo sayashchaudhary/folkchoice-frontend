@@ -19,7 +19,7 @@
   background-color: $color-primary;
   background-image: url('../../images/background.png');
   background-position: 20px 50px;
-  background-size: 5  00px 600px;
+  background-size: 500px 600px;
   background-repeat: no-repeat;
   top: 0;
   left: 0;
@@ -48,7 +48,7 @@
 
 .outer-card {
   position: absolute;
-  width: 35%;
+  width: 32%;
   background: $color-primary;
   border-radius: 53px;
   box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
@@ -109,18 +109,25 @@
 
 .submit {
   background-color: $color-primary;
-  width: 60%;
+  width: 50%;
   padding: 5px;
-  margin-left: 20%;
+  margin-left: 25%;
+  margin-top:2% ;
   color: black;
   border-radius: 50px;
   outline: none;
   border: none;
 }
 
-// .MuiInput-underline{
-//   border-bottom:1px solid white !important;
-// }
+.MuiInput-underline:before{
+  border-bottom: 1px solid white !important;
+}
+.MuiInput-underline:hover{
+  border-bottom: 1px solid white !important;
+}
+.MuiRadio-root {
+  color: white !important;
+}
 
 // for mobiles
 @media(max-width: 767px) {
@@ -128,12 +135,17 @@
     width: 80%;
     height:92vh !important;
   }
+  .input{
+    width: 80% !important;
+    margin-left: 10%;
+  }
   .inner-card {
     width: 85%;
     height:68vh !important;
   }
   .submit {
-    margin-left: 20%;
+    margin-left: 24%;
+    margin-top:1%;
   }
   .background {
     display: none;

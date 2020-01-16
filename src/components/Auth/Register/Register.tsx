@@ -39,16 +39,16 @@ const validationSchema = Yup.object({
 
 const Register: React.FC = () => {
     return (
-        <div className='container-fluid'>
+        <div className="container-fluid">
             <Helmet>
                 <title>{ TITLE }</title>
             </Helmet>
             <div className="signup">
-                <div className='background'/>
-                <div className='outer-card'>
+                <div className="background"/>
+                <div className="outer-card">
                     <img src={Logo} alt="logo" className="logo"/>
                     <div className="text-center company"><i>FOLK CHOICE</i></div>
-                    <div className='inner-card'>
+                    <div className="inner-card">
                         <Formik
                             validateOnChange={true}
                             validationSchema={validationSchema}

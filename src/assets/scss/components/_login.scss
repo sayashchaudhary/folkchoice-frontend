@@ -1,0 +1,215 @@
+@import '../utilities/variables';
+
+ 
+.signin:after {
+    content: "";
+    background-color: $color-primary;
+    background-image: url('../../images/background.png');
+    background-position: 55px 82px;
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.outer{
+    position: absolute;
+    margin-top:-10vh;
+    height:90vh;
+    padding-top:6vh;
+    padding-bottom: 6vh;
+    width: 40%;
+    right:10%;
+    background: $color-primary;
+    border-radius: 53px;
+    padding-bottom: 5vh;
+    box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
+}
+
+.inner{
+    margin-left: 7%;
+    margin-bottom: 5%;
+    height: 32vh;
+    width: 85%;
+    background: $color-secondary;
+    border-radius: 53px;
+    box-shadow: 9px 9px 10px rgba(55, 58, 89, 0.1), -9px -9px 10px #ffffff, inset 7px 7px 16px rgba(0, 0, 0, 0.25);
+}
+
+.about{
+    padding-left:10%;
+    font-size:40px;
+    color:$color-secondary;
+}
+
+.about span{
+    font-size:30px;
+    line-height: 0.2px;
+}
+
+.about .text{
+    font-size: 15px !important;
+}
+
+.buttons{
+    padding-top:1.2vh;
+    padding-left:8%;
+}
+
+.forgot{
+    color:white;
+    padding-left:8%;
+    font-weight:600;
+    padding-top:2vh;
+}
+
+.login{
+    margin-left:15%;
+    border-radius: 25px;
+    outline:none;
+    border:none;
+    width:23%;
+    color:black;
+    font-weight:600;
+    padding-top:1vh;
+    padding-bottom: 1vh;
+    box-shadow: 9px 9px 10px rgba(55, 58, 89, 0.1), inset 7px 7px 16px rgba(0, 0, 0, 0.25);
+}
+
+.sign{
+    margin-left:2%;
+    border-radius: 25px;
+    outline:none;
+    border:none;
+    width:23%;
+    color:white;
+    font-weight:600;
+    padding-top:1vh;
+    padding-bottom: 1vh;
+    background:transparent;
+    box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
+}
+
+.name{
+    width: 15%;
+    margin-left:5%;
+}
+
+.google,
+.facebook,
+.phone{
+    width:28%;
+    border-radius: 25px;
+    outline:none;
+    border:none;
+    background-color: white;
+    padding:2%;
+    margin-left:3%;   
+    box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
+}
+
+.google span,
+.facebook span{
+    font-size:12px;
+}
+
+.google img{
+    width:30%;
+    margin-right:0%;
+    float: left;
+    margin-left:0;
+}
+.facebook img{
+    width:35%;
+    margin-right: 0;
+    float: left;
+    margin-right: 0;
+}
+
+@media(max-width:767px){
+    .signin:after{
+        height:120vh;
+    }
+    .outer{
+        width:80%;
+        height:105vh;
+        margin-top:2vh;
+    }
+    .inner{
+        height: 40vh;
+    }
+    .text{
+        display: none;
+    }
+    .forgot{
+        display: inline;
+        margin-left:8%;
+    }
+    .login,
+    .sign{
+        width:50%;
+        margin-left:8vh;
+        margin-top:2vh;
+    }
+    .google,.facebook{
+        width:50%;
+        margin-left:8vh;
+        margin-top:2vh;
+    }
+}
+
+// for iphone5/SE
+@media only screen and (width: 320px) and (height: 568px) {
+    .outer{
+        height:125vh;
+    }
+    .inner{
+        height:45vh;
+    }
+    .signin:after{
+        height:140vh;
+    }
+}
+
+// for ipads
+@media only screen and (width: 768px) and (height: 1024px) {
+    .outer{
+        height:80vh;
+        width:50%;
+        margin-top:2vh;
+    }
+    .forgot{
+        display: inline;
+        margin-left:8%;
+    }
+    .login,
+    .sign{
+        width:50%;
+        margin-left:8vh;
+        margin-top:2vh;
+    }
+}
+
+// for ipad pro
+@media screen and (width:1024px) and (height:1366px) {
+    .outer{
+        height:60vh;
+        margin-top:0;
+        width:50%;
+    }
+    .inner{
+        height:25vh;
+    }
+    .forgot{
+        display: inline;
+    }
+    .login,
+    .sign{
+        width:30%;
+    }
+}
