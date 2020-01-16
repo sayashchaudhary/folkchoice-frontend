@@ -1,10 +1,13 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
+import * as Yup from 'yup';
 import Input from '@material-ui/core/Input'
 import Radio from '@material-ui/core/Radio'
-import {Formik, Form, useField, FieldAttributes} from 'formik';
-import * as Yup from 'yup';
 import Logo from '../../../assets/images/logo.png';
 import {FormControlLabel} from '@material-ui/core';
+import {Formik, Form, useField, FieldAttributes} from 'formik';
+
+const TITLE = 'Sign Up - Folk Choice'
 
 type MyRadioProps = { label: string } & FieldAttributes<{}>
 
@@ -37,32 +40,37 @@ const validationSchema = Yup.object({
 const Register: React.FC = () => {
     return (
         <div className='container-fluid'>
-            <div className='background'/>
-            <div className='outer-card'>
-                <img src={Logo} alt="logo" className="logo"/>
-                <div className="text-center company"><i>FOLK CHOICE</i></div>
-                <div className='inner-card'>
-                    <Formik
-                        validateOnChange={true}
-                        validationSchema={validationSchema}
-                        initialValues={{Name: "", Email: "", password: "", cnfPassword: "", phoneno: "", gender: ""}}
-                        onSubmit={(data, {setSubmitting}) => {
-                            setSubmitting(true);
-                            console.log(data);
-                            setSubmitting(false);
-                        }}>
-                        <Form>
-                            <MyInputField name="Name" type="text" placeholder="Your Name"/>
-                            <MyInputField name="Email" type="email" placeholder="E-mail"/>
-                            <MyInputField name="password" type="password" placeholder="Password"/>
-                            <MyInputField name="cnfPassword" type="password" placeholder="Confirm Password"/>
-                            <MyInputField name="phoneno" type="input" placeholder="Phone Number"/>
-                            <label className="gender">Gender:</label>
-                            <MyRadio name="gender" type="radio" value="male" label="Male"/>
-                            <MyRadio name="gender" type="radio" value="female" label="Female"/>
-                            <button type="submit" className="submit">Submit</button>
-                        </Form>
-                    </Formik>
+            <Helmet>
+                <title>{ TITLE }</title>
+            </Helmet>
+            <div className="signup">
+                <div className='background'/>
+                <div className='outer-card'>
+                    <img src={Logo} alt="logo" className="logo"/>
+                    <div className="text-center company"><i>FOLK CHOICE</i></div>
+                    <div className='inner-card'>
+                        <Formik
+                            validateOnChange={true}
+                            validationSchema={validationSchema}
+                            initialValues={{Name: "", Email: "", password: "", cnfPassword: "", phoneno: "", gender: ""}}
+                            onSubmit={(data, {setSubmitting}) => {
+                                setSubmitting(true);
+                                console.log(data);
+                                setSubmitting(false);
+                            }}>
+                            <Form>
+                                <MyInputField name="Name" type="text" placeholder="Your Name"/>
+                                <MyInputField name="Email" type="email" placeholder="E-mail"/>
+                                <MyInputField name="password" type="password" placeholder="Password"/>
+                                <MyInputField name="cnfPassword" type="password" placeholder="Confirm Password"/>
+                                <MyInputField name="phoneno" type="input" placeholder="Phone Number"/>
+                                <label className="gender">Gender:</label>
+                                <MyRadio name="gender" type="radio" value="male" label="Male"/>
+                                <MyRadio name="gender" type="radio" value="female" label="Female"/>
+                                <button type="submit" className="submit">Submit</button>
+                            </Form>
+                        </Formik>
+                    </div>
                 </div>
             </div>
         </div>

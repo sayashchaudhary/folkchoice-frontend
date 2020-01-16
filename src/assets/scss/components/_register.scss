@@ -1,22 +1,25 @@
 @import '../utilities/variables';
 
-.container-fluid {
+.container-fluid{
+  padding-right:0 !important;
+  padding-left:0 !important;
+}
+
+.signup {
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8%;
-  height: 100vh
-
+  height: 100vh;
 }
 
-.container-fluid:after {
+.signup:after {
   content: "";
   background-color: $color-primary;
   background-image: url('../../images/background.png');
   background-position: 20px 50px;
-  background-size: 500px 600px;
+  background-size: 5  00px 600px;
   background-repeat: no-repeat;
   top: 0;
   left: 0;
@@ -123,10 +126,11 @@
 @media(max-width: 767px) {
   .outer-card {
     width: 80%;
+    height:92vh !important;
   }
   .inner-card {
     width: 85%;
-    height:90%;
+    height:68vh !important;
   }
   .submit {
     margin-left: 20%;
@@ -144,15 +148,18 @@
 }
 
 // fir iphone5/SE
-@media only screen and (min-width: 320px) and (max-width: 568px) {
+@media only screen and (width: 320px) and (height: 568px) {
   .inner-card {
-    height: 80%
+    height: 78vh !important
   }
   .gender{
     display: none;
   }
   .outer-card {
-    height: 90%;
+    height: 92vh !important;
+  }
+  .company{
+    display: none;
   }
 }
 
