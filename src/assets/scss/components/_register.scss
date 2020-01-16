@@ -1,8 +1,8 @@
 @import '../utilities/variables';
 
-.container-fluid{
-  padding-right:0 !important;
-  padding-left:0 !important;
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 .signup {
@@ -69,10 +69,10 @@
   margin: 10px 10px 10px 40%;
 }
 
-.company{
-  font-size:30px;
-  font-weight:strong;
-  padding-bottom: 2vh ;
+.company {
+  font-size: 30px;
+  font-weight: strong;
+  padding-bottom: 2vh;
 }
 
 .input {
@@ -80,18 +80,18 @@
   width: 85%;
   padding-top: 3vh;
   margin-bottom: 15px;
-  margin-left:8%;
+  margin-left: 8%;
 }
 
 .input1 {
   color: white;
-  padding-top:2%;
-  padding-left:15%;
+  padding-top: 2%;
+  padding-left: 15%;
 }
 
-.gender{
-  margin-left:8%;
-  color:white;
+.gender {
+  margin-left: 8%;
+  color: white;
 }
 
 ::placeholder {
@@ -112,19 +112,21 @@
   width: 50%;
   padding: 5px;
   margin-left: 25%;
-  margin-top:2% ;
+  margin-top: 2%;
   color: black;
   border-radius: 50px;
   outline: none;
   border: none;
 }
 
-.MuiInput-underline:before{
+.MuiInput-underline:before {
   border-bottom: 1px solid white !important;
 }
-.MuiInput-underline:hover{
+
+.MuiInput-underline:hover {
   border-bottom: 1px solid white !important;
 }
+
 .MuiRadio-root {
   color: white !important;
 }
@@ -133,24 +135,24 @@
 @media(max-width: 767px) {
   .outer-card {
     width: 80%;
-    height:92vh !important;
+    height: 92vh !important;
   }
-  .input{
+  .input {
     width: 80% !important;
     margin-left: 10%;
   }
   .inner-card {
     width: 85%;
-    height:68vh !important;
+    height: 68vh !important;
   }
   .submit {
     margin-left: 24%;
-    margin-top:1%;
+    margin-top: 1%;
   }
   .background {
     display: none;
   }
-  .gender{
+  .gender {
     display: none;
   }
   .input {
@@ -164,13 +166,13 @@
   .inner-card {
     height: 78vh !important
   }
-  .gender{
+  .gender {
     display: none;
   }
   .outer-card {
     height: 92vh !important;
   }
-  .company{
+  .company {
     display: none;
   }
 }

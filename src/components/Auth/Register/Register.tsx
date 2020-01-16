@@ -7,7 +7,7 @@ import Logo from '../../../assets/images/logo.png';
 import {FormControlLabel} from '@material-ui/core';
 import {Formik, Form, useField, FieldAttributes} from 'formik';
 
-const TITLE = 'Sign Up - Folk Choice'
+const TITLE = 'Sign Up - Folk Choice';
 
 type MyRadioProps = { label: string } & FieldAttributes<{}>
 
@@ -41,7 +41,7 @@ const Register: React.FC = () => {
     return (
         <div className="container-fluid">
             <Helmet>
-                <title>{ TITLE }</title>
+                <title>{TITLE}</title>
             </Helmet>
             <div className="signup">
                 <div className="background"/>
@@ -52,7 +52,14 @@ const Register: React.FC = () => {
                         <Formik
                             validateOnChange={true}
                             validationSchema={validationSchema}
-                            initialValues={{Name: "", Email: "", password: "", cnfPassword: "", phoneno: "", gender: ""}}
+                            initialValues={{
+                                Name: "",
+                                Email: "",
+                                password: "",
+                                cnfPassword: "",
+                                phoneno: "",
+                                gender: ""
+                            }}
                             onSubmit={(data, {setSubmitting}) => {
                                 setSubmitting(true);
                                 console.log(data);

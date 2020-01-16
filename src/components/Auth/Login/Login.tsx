@@ -1,14 +1,14 @@
 import React from 'react';
 import * as Yup from 'yup';
 import {Helmet} from 'react-helmet';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Input from '@material-ui/core/Input'
 import Logo from '../../../assets/images/logo.png';
 import Google from '../../../assets/images/google.png';
 import Facebook from '../../../assets/images/facebook.png';
 import {Formik, Form, useField, FieldAttributes} from 'formik';
 
-const TITLE = 'Sign In - Folk Choice'
+const TITLE = 'Sign In - Folk Choice';
 
 
 const MyInputField: React.FC<FieldAttributes<{}>> = ({placeholder, type, ...props}) => {
@@ -28,21 +28,21 @@ const Register: React.FC = () => {
     return (
         <div className="container-fluid">
             <Helmet>
-                <title>{ TITLE }</title>
+                <title>{TITLE}</title>
             </Helmet>
             <div className="signin">
-            <div className="navbar-brand">
-                <img src={Logo} alt="logo" className="name" />FOLK CHOICE
-            </div>
+                <div className="navbar-brand">
+                    <img src={Logo} alt="logo" className="name"/>FOLK CHOICE
+                </div>
                 <div className="outer">
                     <div className="about">
                         <span>
                             Welcome to
                         </span>
-                        <br />
+                        <br/>
                         <strong>
                             FOLK CHOICE
-                        </strong><br />
+                        </strong><br/>
                         <span className="text">about folk choice company</span>
                     </div>
                     <div className="inner">
@@ -60,17 +60,30 @@ const Register: React.FC = () => {
                                 <MyInputField name="password" type="password" placeholder="Password"/>
                                 <div className="forgot">
                                     Forgot Password ?
-                                    <Link to="/"><button type="submit" className="login">Sign in</button></Link>
-                                    <Link to="/register"><button type="submit" className="sign">Sign up</button></Link>
+                                    <Link to="/">
+                                        <button type="submit" className="login">Sign in</button>
+                                    </Link>
+                                    <Link to="/register">
+                                        <button type="submit" className="sign">Sign up</button>
+                                    </Link>
                                 </div>
                             </Form>
                         </Formik>
                     </div>
                     <div className="text-center"><strong>or...</strong></div>
                     <div className="buttons">
-                        <Link to ="/"><button type="submit" className="google"><img src={Google} alt="Google"></img><span><div>Sign in with</div> </span>Google</button></Link>
-                        <Link to ="/"><button type="submit" className="facebook"><img src={Facebook} alt="Facebook"></img><span><div>Sign in with</div> </span>Facebook</button></Link>
-                        <Link to ="/"><button type="submit" className="facebook"><img src={Facebook} alt="Phone"></img><span><div>Sign in with</div> </span>Phone</button></Link>
+                        <Link to="/">
+                            <button type="submit" className="google"><img src={Google} alt="Google"/><span><div>Sign in with</div> </span>Google
+                            </button>
+                        </Link>
+                        <Link to="/">
+                            <button type="submit" className="facebook"><img src={Facebook} alt="Facebook"/><span><div>Sign in with</div> </span>Facebook
+                            </button>
+                        </Link>
+                        <Link to="/">
+                            <button type="submit" className="facebook"><img src={Facebook} alt="Phone"/><span><div>Sign in with</div> </span>Phone
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
