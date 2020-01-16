@@ -5,8 +5,8 @@
   content: "";
   background-color: $color-primary;
   background-image: url('../../images/background.png');
-  background-position: 55px 82px;
-  background-size: 500px 500px;
+  background-position: 105px 82px;
+  background-size: 600px 600px;
   background-repeat: no-repeat;
   top: 0;
   left: 0;
@@ -22,8 +22,9 @@
   margin-top: -10vh;
   height: 90vh;
   padding-top: 6vh;
-  width: 40%;
-  right: 10%;
+  width: 50%;
+  right: 0px;
+  overflow: hidden;
   background: $color-primary;
   border-radius: 53px;
   padding-bottom: 5vh;
@@ -102,13 +103,13 @@
 .google,
 .facebook,
 .phone {
-  width: 28%;
+  width: 20%;
   border-radius: 25px;
   outline: none;
   border: none;
   background-color: white;
   padding: 2%;
-  margin-left: 3%;
+  margin-left: 9%;
   box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
 }
 

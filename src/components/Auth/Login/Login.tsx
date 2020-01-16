@@ -6,6 +6,7 @@ import Input from '@material-ui/core/Input'
 import Logo from '../../../assets/images/logo.png';
 import Google from '../../../assets/images/google.png';
 import Facebook from '../../../assets/images/facebook.png';
+import Phone from '../../../assets/images/phone.png';
 import {Formik, Form, useField, FieldAttributes} from 'formik';
 
 const TITLE = 'Sign In - Folk Choice';
@@ -81,7 +82,7 @@ const Register: React.FC = () => {
                             </button>
                         </Link>
                         <Link to="/">
-                            <button type="submit" className="facebook"><img src={Facebook} alt="Phone"/><span><div>Sign in with</div> </span>Phone
+                            <button type="submit" className="facebook"><img src={Phone} alt="Phone"/><span><div>Sign in with</div> </span>Phone
                             </button>
                         </Link>
                     </div>
