@@ -21,7 +21,7 @@ const MyInputField: React.FC<FieldAttributes<{}>> = ({placeholder, type, ...prop
 };
 
 const validationSchema = Yup.object({
-    Email: Yup.string().email('Email is requiired').required('Email is required'),
+    Email: Yup.string().email('Email is required').required('Email is required'),
     password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
 });
 
@@ -62,10 +62,10 @@ const Register: React.FC = () => {
                                 <div className="forgot">
                                     Forgot Password ?
                                     <Link to="/">
-                                        <button type="submit" className="login">Sign in</button>
+                                        <button type="submit" className="btn-login">Sign in</button>
                                     </Link>
                                     <Link to="/register">
-                                        <button type="submit" className="sign">Sign up</button>
+                                        <button type="submit" className="btn-signin">Sign up</button>
                                     </Link>
                                 </div>
                             </Form>
@@ -74,15 +74,15 @@ const Register: React.FC = () => {
                     <div className="text-center"><strong>or...</strong></div>
                     <div className="buttons">
                         <Link to="/">
-                            <button type="submit" className="google"><img src={Google} alt="Google"/><span><div>Sign in with</div> </span>Google
+                            <button type="submit" className="button google"><img src={Google} alt="Google"/><span><div>Sign in with</div> </span>Google
                             </button>
                         </Link>
                         <Link to="/">
-                            <button type="submit" className="facebook"><img src={Facebook} alt="Facebook"/><span><div>Sign in with</div> </span>Facebook
+                            <button type="submit" className="button facebook"><img src={Facebook} alt="Facebook"/><span><div>Sign in with</div> </span>Facebook
                             </button>
                         </Link>
                         <Link to="/">
-                            <button type="submit" className="facebook"><img src={Phone} alt="Phone"/><span><div>Sign in with</div> </span>Phone
+                            <button type="submit" className="button facebook"><img src={Phone} alt="Phone"/><span><div>Sign in with</div> </span>Phone
                             </button>
                         </Link>
                     </div>

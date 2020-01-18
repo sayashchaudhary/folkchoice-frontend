@@ -1,20 +1,23 @@
 @import '../utilities/variables';
 
 
-.signin:after {
-  content: "";
-  background-color: $color-primary;
-  background-image: url('../../images/background.png');
-  background-position: 105px 82px;
-  background-size: 600px 600px;
-  background-repeat: no-repeat;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  opacity: 0.4;
-  z-index: -1;
+.signin {
+  &:after {
+    content: "";
+    background-color: $color-primary;
+    background-image: url('../../images/background.png');
+    background-position: 105px 82px;
+    background-size: 600px 600px;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0.4;
+    z-index: -1;
+    height: 140vh;
+  }
 }
 
 .outer {
@@ -23,7 +26,7 @@
   height: 90vh;
   padding-top: 6vh;
   width: 50%;
-  right: 0px;
+  right: 0;
   overflow: hidden;
   background: $color-primary;
   border-radius: 53px;
@@ -45,15 +48,15 @@
   padding-left: 10%;
   font-size: 40px;
   color: $color-secondary;
-}
 
-.about span {
-  font-size: 30px;
-  line-height: 0.2px;
-}
+  span {
+    font-size: 30px;
+    line-height: 0.2px;
+  }
 
-.about .text {
-  font-size: 15px !important;
+  .text {
+    font-size: 15px !important;
+  }
 }
 
 .buttons {
@@ -66,9 +69,10 @@
   padding-left: 8%;
   font-weight: 600;
   padding-top: 2vh;
+  display: inline;
 }
 
-.login {
+.btn-login {
   margin-left: 15%;
   border-radius: 25px;
   outline: none;
@@ -81,7 +85,7 @@
   box-shadow: 9px 9px 10px rgba(55, 58, 89, 0.1), inset 7px 7px 16px rgba(0, 0, 0, 0.25);
 }
 
-.sign {
+.btn-signin {
   margin-left: 2%;
   border-radius: 25px;
   outline: none;
@@ -100,9 +104,7 @@
   margin-left: 5%;
 }
 
-.google,
-.facebook,
-.phone {
+.button {
   width: 20%;
   border-radius: 25px;
   outline: none;
@@ -111,25 +113,16 @@
   padding: 2%;
   margin-left: 9%;
   box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
-}
 
-.google span,
-.facebook span {
-  font-size: 12px;
-}
+  img {
+    width: 35%;
+    margin-right: 0;
+    float: left;
+  }
 
-.google img {
-  width: 30%;
-  margin-right: 0%;
-  float: left;
-  margin-left: 0;
-}
-
-.facebook img {
-  width: 35%;
-  margin-right: 0;
-  float: left;
-  margin-right: 0;
+  span {
+    font-size: 12px;
+  }
 }
 
 @media(max-width: 767px) {
@@ -214,3 +207,4 @@
     width: 30%;
   }
 }
+

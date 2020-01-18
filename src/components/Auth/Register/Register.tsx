@@ -33,7 +33,7 @@ const validationSchema = Yup.object({
     Email: Yup.string().email('Email is invalid').required('Email is required'),
     password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
     cnfPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match').required('Confirm Password is required'),
-    phoneno: Yup.number().min(10, 'Contact number should be at least 10 digits').required('Contact number is required'),
+    phoneNo: Yup.number().min(10, 'Contact number should be at least 10 digits').required('Contact number is required'),
     gender: Yup.string().required('Gender is required')
 });
 
@@ -57,7 +57,7 @@ const Register: React.FC = () => {
                                 Email: "",
                                 password: "",
                                 cnfPassword: "",
-                                phoneno: "",
+                                phoneNo: "",
                                 gender: ""
                             }}
                             onSubmit={(data, {setSubmitting}) => {
@@ -70,11 +70,11 @@ const Register: React.FC = () => {
                                 <MyInputField name="Email" type="email" placeholder="E-mail"/>
                                 <MyInputField name="password" type="password" placeholder="Password"/>
                                 <MyInputField name="cnfPassword" type="password" placeholder="Confirm Password"/>
-                                <MyInputField name="phoneno" type="input" placeholder="Phone Number"/>
+                                <MyInputField name="phoneNo" type="input" placeholder="Phone Number"/>
                                 <label className="gender">Gender:</label>
                                 <MyRadio name="gender" type="radio" value="male" label="Male"/>
                                 <MyRadio name="gender" type="radio" value="female" label="Female"/>
-                                <button type="submit" className="submit">Submit</button>
+                                <button type="submit" className="btn btn-submit">Submit</button>
                             </Form>
                         </Formik>
                     </div>
