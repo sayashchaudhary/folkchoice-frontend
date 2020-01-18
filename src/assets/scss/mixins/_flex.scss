@@ -1,0 +1,93 @@
+//Usage: .class {
+//  display:flex;
+//  flex-direction: column;
+//}
+// -> .class {
+//  @include ec-flex-layout(column);
+//}
+
+@mixin ec-flex-layout($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin ec-flex-layout-with-gap($direction, $value) {
+  @include ec-flex-layout($direction);
+  @if ($direction == row) {
+    > * {
+      margin-right: $value;
+    }
+    > *:last-child {
+      margin-right: 0;
+    }
+  } @else if ($direction == column) {
+    > * {
+      margin-bottom: $value;
+
+    }
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  } @else if ($direction == row-reverse) {
+    > * {
+      margin-left: $value;
+    }
+    > *:last-child {
+      margin-left: 0;
+    }
+  } @else if ($direction == column-reverse) {
+    > * {
+      margin-top: $value;
+    }
+    > *:last-child {
+      margin-top: 0;
+    }
+  }
+}
+
+// use this if you want the element to take the entire available space
+@mixin ec-flex-fill() {
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+//Usage: .class {
+//  flex-grow: 1;
+//  flex-shrink: 1;
+//  flex-basis: 0;
+//}
+// -> .class {
+//  @include ec-flex-gsb(1, 1, 0);
+//}
+
+@mixin ec-flex-gsb($grow, $shrink, $basis) {
+  flex-basis: $basis;
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+}
+
+// Use this to align the child element of a div having display flex
+//Usage: .class {
+//  display:flex;
+//  flex-direction: column;
+//  justify-content: center;
+//  align-items: center;
+//}
+// -> .class {
+//  @include ec-fx-layout-alignment(row, center, center);
+//}
+@mixin ec-fx-layout-alignment(
+  $direction,
+  $main-axis-alignment,
+  $cross-axis-alignment
+) {
+  @include ec-flex-layout($direction);
+  justify-content: $main-axis-alignment;
+  align-items: $cross-axis-alignment;
+}
+
+@mixin ec-flex-wrap($direction, $wrap-option) {
+  @include ec-flex-layout($direction);
+  flex-wrap: $wrap-option;
+}
