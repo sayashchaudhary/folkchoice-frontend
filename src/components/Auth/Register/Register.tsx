@@ -44,7 +44,7 @@ const Register: React.FC = () => {
                 <title>{TITLE}</title>
             </Helmet>
             <div className="signup">
-                <div className="background"/>
+                <div className="background" />
                 <div className="outer-card">
                     <img src={Logo} alt="logo" className="logo"/>
                     <div className="text-center company"><i>FOLK CHOICE</i></div>

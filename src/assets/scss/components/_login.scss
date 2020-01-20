@@ -6,17 +6,17 @@
     content: "";
     background-color: $color-primary;
     background-image: url('../../images/background.png');
-    background-position: 105px 82px;
-    background-size: 600px 600px;
+    background-position: 5px 82px;
+    background-size: 800px 600px;
     background-repeat: no-repeat;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
-    opacity: 0.4;
+    opacity: 0.8;
     z-index: -1;
-    height: 140vh;
+    height: 100vh;
   }
 }
 
