@@ -1,0 +1,200 @@
+@import '../utilities/variables';
+
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.signup {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &:after {
+    content: "";
+    background-color: $color-primary;
+    background-image: url('../../images/background.png');
+    background-position: 0 50px;
+    background-size: 600px 600px;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+  }
+}
+
+.background {
+  content: "";
+  background-color: $color-primary;
+  background-image: url('../../images/background1.png');
+  background-position: right;
+  background-size: 600px 600px;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  opacity:1;
+  z-index: -1;
+}
+
+.outer-card {
+  position: absolute;
+  width: 32%;
+  background: $color-primary;
+  border-radius: 53px;
+  box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
+
+  .inner-card {
+    margin-left: 7%;
+    margin-bottom: 5%;
+    height: 65vh;
+    width: 85%;
+    background: $color-secondary;
+    border-radius: 53px;
+    box-shadow: 9px 9px 10px rgba(55, 58, 89, 0.1), -9px -9px 10px #ffffff, inset 7px 7px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.logo {
+  width: 20%;
+  margin: 10px 10px 10px 40%;
+}
+
+.company {
+  font-size: 30px;
+  font-weight: strong;
+  padding-bottom: 2vh;
+  display: none;
+}
+
+.input {
+  color: white !important;
+  width: 85%;
+  padding-top: 3vh;
+  margin-bottom: 15px;
+  margin-left: 8%;
+}
+
+.input1 {
+  color: white;
+  padding-top: 2%;
+  padding-left: 15%;
+}
+
+.gender {
+  margin-left: 8%;
+  color: white;
+  display: none;
+}
+
+::placeholder {
+  color: white !important;
+  opacity: 1;
+}
+
+.register_form {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  padding-left: 18px;
+  color: white;
+}
+
+.btn-submit {
+  background-color: $color-primary;
+  width: 50%;
+  padding: 5px;
+  margin-left: 25%;
+  margin-top: 2%;
+  color: black;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+}
+
+.MuiInput-underline {
+  &:before {
+    border-bottom: 1px solid white !important;
+  }
+
+  &:hover {
+    border-bottom: 1px solid white;
+  }
+}
+
+.MuiRadio-root {
+  color: white !important;
+}
+
+
+// for mobiles
+@media(max-width: 767px) {
+  .outer-card {
+    width: 80%;
+    height: 92vh !important;
+  }
+  .input {
+    width: 80% !important;
+    margin-left: 10%;
+  }
+  .inner-card {
+    width: 85%;
+    height: 68vh !important;
+  }
+  .submit {
+    margin-left: 24%;
+    margin-top: 1%;
+  }
+  .background {
+    display: none;
+  }
+  .gender {
+    display: none;
+  }
+  .input {
+    width: 90%;
+    padding-top: 10px;
+  }
+}
+
+// fir iphone5/SE
+@media only screen and (width: 320px) and (height: 568px) {
+  .inner-card {
+    height: 78vh !important
+  }
+  .gender {
+    display: none;
+  }
+  .outer-card {
+    height: 92vh !important;
+  }
+  .company {
+    display: none;
+  }
+}
+
+// for ipads
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .outer-card {
+    width: 60%;
+  }
+  .inner-card {
+    width: 85%;
+  }
+  .submit {
+    width: 60%;
+    margin-top: 10%;
+  }
+  .input {
+    padding-top: 10%;
+  }
+}
