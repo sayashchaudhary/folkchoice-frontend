@@ -1,22 +1,22 @@
 import React from 'react';
 import * as Yup from 'yup';
-import {Helmet} from 'react-helmet';
-import {Link} from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import Input from '@material-ui/core/Input'
 import Logo from '../../../assets/images/logo.png';
 import Google from '../../../assets/images/google.png';
 import Facebook from '../../../assets/images/facebook.png';
 import Phone from '../../../assets/images/phone.png';
-import {Formik, Form, useField, FieldAttributes} from 'formik';
+import { Formik, Form, useField, FieldAttributes } from 'formik';
 
 const TITLE = 'Sign In - Folk Choice';
 
 
-const MyInputField: React.FC<FieldAttributes<{}>> = ({placeholder, type, ...props}) => {
+const MyInputField: React.FC<FieldAttributes<{}>> = ({ placeholder, type, ...props }) => {
     const [field, meta] = useField<{}>(props);
     const errorText = meta.error && meta.touched ? meta.error : '';
     return (
-        <Input placeholder={placeholder} {...field} type={type} error={!!errorText} className={"input"}/>
+        <Input placeholder={placeholder} {...field} type={type} error={!!errorText} className={'input'}/>
     )
 };
 
@@ -50,8 +50,8 @@ const Register: React.FC = () => {
                         <Formik
                             validateOnChange={true}
                             validationSchema={validationSchema}
-                            initialValues={{Email: "", password: ""}}
-                            onSubmit={(data, {setSubmitting}) => {
+                            initialValues={{ Email: '', password: '' }}
+                            onSubmit={(data, { setSubmitting }) => {
                                 setSubmitting(true);
                                 console.log(data);
                                 setSubmitting(false);
