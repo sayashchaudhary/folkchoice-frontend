@@ -12,7 +12,7 @@ export class AppStore {
 
     @action
     setRedirectUrl(url: string) {
-        if (!this.redirectUrl) {
+        if (!url || this.redirectUrl === url) {
             return;
         }
         this.redirectUrl = url;
