@@ -101,7 +101,8 @@ export default function PrimarySearchAppBar() {
                     >
                     <MenuIcon />
                     </IconButton>
-                    <img src={Hamburger} alt="Hamburger" className="hamburger"/>
+                    {/* <img src={Hamburger} alt="Hamburger" className="hamburger"/> */}
+
 
                       <img src={Logo} alt="logo" className="name"/><span className="text">FOLK CHOICE</span>
                     <div className={classes.search}>
