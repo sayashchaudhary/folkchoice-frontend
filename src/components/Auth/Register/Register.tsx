@@ -29,8 +29,8 @@ const MyInputField: React.FC<FieldAttributes<{}>> = ({placeholder, type, ...prop
 };
 
 const validationSchema = Yup.object({
-    Name: Yup.string().required('First Name is required'),
-    Email: Yup.string().email('Email is invalid').required('Email is required'),
+    name: Yup.string().required('First Name is required'),
+    email: Yup.string().email('Email is invalid').required('Email is required'),
     password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
     cnfPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match').required('Confirm Password is required'),
     phoneNo: Yup.number().min(10, 'Contact number should be at least 10 digits').required('Contact number is required'),
@@ -53,8 +53,8 @@ const Register: React.FC = () => {
                             validateOnChange={true}
                             validationSchema={validationSchema}
                             initialValues={{
-                                Name: "",
-                                Email: "",
+                                name: "",
+                                email: "",
                                 password: "",
                                 cnfPassword: "",
                                 phoneNo: "",
@@ -66,8 +66,8 @@ const Register: React.FC = () => {
                                 setSubmitting(false);
                             }}>
                             <Form>
-                                <MyInputField name="Name" type="text" placeholder="Your Name"/>
-                                <MyInputField name="Email" type="email" placeholder="E-mail"/>
+                                <MyInputField name="name" type="text" placeholder="Your Name"/>
+                                <MyInputField name="email" type="email" placeholder="E-mail"/>
                                 <MyInputField name="password" type="password" placeholder="Password"/>
                                 <MyInputField name="cnfPassword" type="password" placeholder="Confirm Password"/>
                                 <MyInputField name="phoneNo" type="input" placeholder="Phone Number"/>
