@@ -1,24 +1,89 @@
 @import '../utilities/variables';
 
 .nav{
+    &__name{
+        width:4%;
+        margin-left:0.5%;
+        margin-right: 1%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
     .MuiAppBar-colorPrimary {
         background-color: $color-primary;
     }
-    .name{
-        width:5%;
-        margin-left:1%;
-    }
-    .text{
+
+    &__text{
         color: $color-secondary;
         font-size:24px;
     }
+
     .MuiInputBase-input {
         background-color: $color-primary;
         border-radius: 15px;
         box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
     } 
+
     .MuiIconButton-colorInherit  {
         color:$color-secondary;
     }
-    
+
+    &__right{
+        &-login{
+            margin-left:72%;
+            margin-right:1%;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            width:10%;
+            color: black;
+            font-weight: 600;
+            padding: 1%;
+            box-shadow: 5px 5px 6px rgba(55, 58, 89, 0.1), inset 2px 2px 12px rgba(0, 0, 0, 0.25);
+        }
+        &-signin{
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            width: 10%;
+            color: white;
+            font-weight: 600;
+            margin-right:4%;
+            padding: 1%;
+            background: $color-secondary;
+            box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25), inset 2px 2px 12px rgba(0, 0, 0, 0.03);
+        }
+        &-hamburger{
+            width:3%;
+            cursor: pointer;
+        }
+    }
+    &__cart{
+        width:2%;
+        margin-right:0.5%;
+    }
+    &__heart{
+        width:3.5%
+    }
 }
+
+.MuiList-padding {
+    background-color:$color-primary;
+}
+
+.menu_items{
+    align-content: center;
+    padding-left:0;
+    padding:5%;
+}
+
+.MuiMenuItem-root{
+    border-bottom:1px solid black !important;
+}
+
+@media(max-width:767px){
+    .nav{
+        display: none;
+    }
+}
+
