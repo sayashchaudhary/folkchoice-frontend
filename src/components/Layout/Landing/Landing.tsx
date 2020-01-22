@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 import { GlobalProps } from '../../../App';
-import Navbar from '../Navbar/Navbar'
+import Navbar from '../Navbar/Navbar';
+import Dashboard from '../Dashboard/Dashboard';
+import Footer from '../Footer/Footer'
 
 
 const Landing: React.FC<GlobalProps> = (props) => {
@@ -13,8 +14,8 @@ const Landing: React.FC<GlobalProps> = (props) => {
     return (
         <div className='landing-container'>
             <Navbar />
-            <Link to="/register" className="btn btn-lg btn-info mr-2">Sign Up</Link>
-            <Link to="/login" className="btn btn-lg btn-light">Login </Link>
+            <Dashboard />
+            <Footer />
         </div>
     )
 };
