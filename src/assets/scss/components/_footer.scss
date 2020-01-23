@@ -2,4 +2,28 @@
 
 .footer{
     background-color: $color-secondary;
+    color:$color-primary;;
+    &__alignleft{
+        margin-left: 5%;
+        &-image{
+            width:25%;
+            padding: 2%;
+        }
+        &-text{
+            font-size:30px;
+        }
+        &-detail{
+            padding-top: 2%;
+            margin-left: 5%;
+        }
+    }
+    &__alignright{
+       padding-right:8%;
+       padding-top:5%;
+    }
+    &__social{
+        width:4%;
+        padding-right:5px;
+        padding-left: 25px;
+    }
 }

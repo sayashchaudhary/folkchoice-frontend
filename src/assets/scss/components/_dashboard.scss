@@ -4,7 +4,7 @@
     background-color: $color-primary;
     &__text{
         color:$color-secondary;
-        margin-left:10%;
+        margin-left:8%;
         padding-top:4%;
     }
     &__address{
@@ -27,7 +27,7 @@
         padding-top:4%;
         padding-bottom:4%;
         &-card{
-            width: 25%;
+            width: 85%;
             display: inline-block;
             background: $color-primary;
             margin-left:5%;
@@ -50,7 +50,7 @@
                 margin-top:2%;
                 width: 70%;
                 height:100%;
-                padding:5%;
+                padding:3%;
                 display: inline-block;
                 background: $color-primary;
                 border-radius: 13px;
@@ -67,6 +67,6 @@
 
 @media(max-width:767px){
     .align{
-        padding: 5%;
+        padding-bottom: 5%;
     }
 }

@@ -34,14 +34,22 @@ const Dashboard: React.FC = () => {
                     </div>
                 </div>
                 <div className="dashboard__carousel">
-                    <div className="dashboard__carousel-card">
-                        <img src={Download} alt="img" className="dashboard__carousel-card__image" />
-                    </div>
-                    <div className="dashboard__carousel-card">
-                        <img src={Download} alt="img" className="dashboard__carousel-card__image" />
-                    </div>
-                    <div className="dashboard__carousel-card">
-                        <img src={Download} alt="img" className="dashboard__carousel-card__image" />
+                    <div className="row">
+                        <div className="col-md-4 align text-center">
+                            <div className="dashboard__carousel-card">
+                                <img src={Download} alt="img" className="dashboard__carousel-card__image" />
+                            </div>
+                        </div>
+                        <div className="col-md-4 align text-center">
+                            <div className="dashboard__carousel-card">
+                                <img src={Download} alt="img" className="dashboard__carousel-card__image" />
+                            </div>
+                        </div>
+                        <div className="col-md-4 align text-center">
+                            <div className="dashboard__carousel-card">
+                                <img src={Download} alt="img" className="dashboard__carousel-card__image" />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="dashboard__items">
@@ -51,7 +59,7 @@ const Dashboard: React.FC = () => {
                     </div>
                     <div className="dashboard__items-item">
                         <div className="row">
-                            <div className="col-md-3 align">
+                            <div className="col-md-3 align text-center">
                                 <div className="dashboard__items-item__card">
                                     <img src={Download} alt="img" className="dashboard__items-item__card-image" />
                                     <h4>Lakme 9 to 5 CC - Honey</h4>
@@ -59,7 +67,7 @@ const Dashboard: React.FC = () => {
                                     <h5><del>521</del></h5><h2>349</h2>
                                 </div>
                             </div>
-                            <div className="col-md-3 align">
+                            <div className="col-md-3 align text-center">
                                 <div className="dashboard__items-item__card">
                                     <img src={Download} alt="img" className="dashboard__items-item__card-image" />
                                     <h4>Lakme 9 to 5 CC - Honey</h4>
@@ -67,7 +75,7 @@ const Dashboard: React.FC = () => {
                                     <h5><del>521</del></h5><h2>349</h2>
                                 </div>
                             </div>
-                            <div className="col-md-3 align">
+                            <div className="col-md-3 align text-center">
                                 <div className="dashboard__items-item__card">
                                     <img src={Download} alt="img" className="dashboard__items-item__card-image" />
                                     <h4>Lakme 9 to 5 CC - Honey</h4>
@@ -75,7 +83,7 @@ const Dashboard: React.FC = () => {
                                     <h5><del>521</del></h5><h2>349</h2>
                                 </div>
                             </div>
-                            <div className="col-md-3 align">
+                            <div className="col-md-3 align text-center">
                                 <div className="dashboard__items-item__card">
                                     <img src={Download} alt="img" className="dashboard__items-item__card-image" />
                                     <h4>Lakme 9 to 5 CC - Honey</h4>
@@ -91,7 +99,7 @@ const Dashboard: React.FC = () => {
                     </div>
                     <div className="dashboard__items-item">
                         <div className="row">
-                            <div className="col-md-3 align">
+                            <div className="col-md-3 align text-center">
                                 <div className="dashboard__items-item__card">
                                     <img src={Download} alt="img" className="dashboard__items-item__card-image" />
                                     <h4>Lakme 9 to 5 CC - Honey</h4>
@@ -99,7 +107,7 @@ const Dashboard: React.FC = () => {
                                     <h5><del>521</del></h5><h2>349</h2>
                                 </div>
                             </div>
-                            <div className="col-md-3 align">
+                            <div className="col-md-3 align text-center">
                                 <div className="dashboard__items-item__card">
                                     <img src={Download} alt="img" className="dashboard__items-item__card-image" />
                                     <h4>Lakme 9 to 5 CC - Honey</h4>
@@ -107,7 +115,7 @@ const Dashboard: React.FC = () => {
                                     <h5><del>521</del></h5><h2>349</h2>
                                 </div>
                             </div>
-                            <div className="col-md-3 align">
+                            <div className="col-md-3 align text-center">
                                 <div className="dashboard__items-item__card">
                                     <img src={Download} alt="img" className="dashboard__items-item__card-image" />
                                     <h4>Lakme 9 to 5 CC - Honey</h4>
@@ -115,7 +123,7 @@ const Dashboard: React.FC = () => {
                                     <h5><del>521</del></h5><h2>349</h2>
                                 </div>
                             </div>
-                            <div className="col-md-3 align">
+                            <div className="col-md-3 align text-center">
                                 <div className="dashboard__items-item__card">
                                     <img src={Download} alt="img" className="dashboard__items-item__card-image" />
                                     <h4>Lakme 9 to 5 CC - Honey</h4>

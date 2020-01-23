@@ -12,10 +12,12 @@ const Landing: React.FC<GlobalProps> = (props) => {
     const userStore = rootStore.userStore;
     console.log('User store', userStore);
     return (
-        <div className='landing-container'>
+        <div>
             <Navbar />
-            <Dashboard />
-            <Footer />
+            <div className="landing-container">
+                <Dashboard />
+                <Footer />
+            </div>
         </div>
     )
 };
