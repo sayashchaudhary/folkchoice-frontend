@@ -95,6 +95,7 @@ export default function PrimarySearchAppBar() {
                 <Toolbar>
                     <img src={Logo} alt="logo" className="nav__name"/>
                     <span className="nav__text">FOLK CHOICE</span>
+                    <div className="none">
                     <div className={classes.search}>
                       <div className={classes.searchIcon}>
                         <SearchIcon />
@@ -109,6 +110,7 @@ export default function PrimarySearchAppBar() {
                     </div> 
                     <img src={Heart} alt="Wishlist" className="nav__heart" /> 
                     <img src={Cart} alt="cart" className="nav__cart" />
+                    </div>
                     <div className="nav__right">
                       <Link to="/login">
                         <button type="submit" className="nav__right-login">Sign in</button>
