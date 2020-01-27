@@ -68,8 +68,7 @@
   color: white;
   padding-left: 8%;
   font-weight: 600;
-  padding-top: 5%;
-  display: inline;
+  margin-top:4%;
 }
 
 .btn-login {
@@ -104,6 +103,13 @@
   margin-left: 5%;
 }
 
+.field{
+  color: white !important;
+  width: 85%;
+  padding-top: 5%;
+  margin-left: 8%;
+}
+
 .button {
   width: 25%;
   border-radius: 25px;
@@ -115,7 +121,8 @@
   box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
 
   img {
-    width: 35%;
+    width: 30%;
+    max-width:40px;
     margin-right: 0;
     float: left;
   }
@@ -131,10 +138,13 @@
     background-color: $color-primary;
     background-image: none;
   }
+  .field{
+    padding-top:10%
+  }
   .outer {
     left:5%;
     width: 90%;
-    height: 115%;
+    height: 118%;
     margin-top: 2%;
   }
   .inner {
@@ -145,13 +155,12 @@
     display: none;
   }
   .forgot {
-    display: inline;
-    margin-left: 8%;
+    margin-top:15%;
   }
   .btn-login,
   .btn-signin {
     width: 50%;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-top: 4%;
   }
   .google, .facebook {
@@ -167,10 +176,10 @@
 // for iphone5/SE
 @media only screen and (width: 320px) and (height: 568px) {
   .outer {
-    height: 135%;
+    height: 138%;
   }
   .inner {
-    height: 40%;
+    height: 43%;
   }
   .signin:after {
     height: 150%;
@@ -183,13 +192,13 @@
     background-image: none;
   }
   .outer {
-    height: 80%;
+    height: 63%;
     width: 80%;
     left:10%;
     margin-top: 2%;
   }
   .inner{
-    height:40%;
+    height:35%;
   }
   .forgot {
     display: inline;
@@ -208,17 +217,17 @@
 }
 
 // for ipad pro
-@media screen and (width: 1024px) and (height: 1366px) {
+@media only screen and (width: 1024px) and (height: 1366px) {
   .outer {
-    height: 65%;
+    height: 48%;
     margin-top: 0;
     width: 70%;
   }
   .inner {
-    height: 45%;
+    height: 40%;
   }
-  .forgot {
-    display: inline;
+  .forgot{
+    margin-top:5%;
   }
   .btn-login,
   .btn-signin {
@@ -226,3 +235,65 @@
   }
 }
 
+// for pixel2
+@media only screen and (width:411px) and (height:731px) {
+  .inner{
+    height:45%;
+  }
+  .outer{
+    height:100%;
+  }
+  .signin:after{
+    height:120%;
+  }
+}
+
+// for pixel2XL
+
+@media only screen and (width:411px) and (height:823px){
+  .inner{
+    height:45%;
+  }
+  .outer{
+    height:90%;
+  }
+  .signin:after{
+    height: 105%;
+  }
+}
+
+// for iphone 6/7/8
+@media only screen and (width:375px) and (height:667px){
+  .inner{
+    height: 45%;
+  }
+  .outer{
+    height:110%;
+  }
+} 
+
+// for iphone 6/7/8 plus
+@media only screen and (width:414px) and (height:736px) {
+  .inner{
+    height:45%;
+  }
+  .outer{
+    height:100%;
+  }
+  .signin:after{
+    height:115%;
+  }
+}
+
+// for iphone x
+@media only screen and (width:375px) and (height:812px){
+  .inner{
+    height:45%;
+  }
+  .outer{
+    height:90%;
+  }
+  .signin:after{
+    height:100%;
+  }
+} 

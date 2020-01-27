@@ -16,7 +16,7 @@ const MyInputField: React.FC<FieldAttributes<{}>> = ({ placeholder, type, ...pro
     const [field, meta] = useField<{}>(props);
     const errorText = meta.error && meta.touched ? meta.error : '';
     return (
-        <Input placeholder={placeholder} {...field} type={type} error={!!errorText} className={'input'}/>
+        <Input placeholder={placeholder} {...field} type={type} error={!!errorText} className={'field'}/>
     )
 };
 
@@ -68,7 +68,7 @@ const Register: React.FC = () => {
                                         <button type="submit" className="btn-signin">Sign up</button>
                                     </Link>
                                 </div>
-                            </Form>
+                            </Form> 
                         </Formik>
                     </div>
                     <div className="text-center"><strong>or...</strong></div>

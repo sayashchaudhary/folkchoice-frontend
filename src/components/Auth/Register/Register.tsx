@@ -47,7 +47,7 @@ const Register: React.FC = () => {
                 <div className="background" />
                 <div className="outer-card">
                     <img src={Logo} alt="logo" className="logo"/>
-                    <div className="company text-center"><i>FOLK CHOICE</i></div>
+                    <div className="company text-center">FOLK CHOICE</div>
                     <div className="inner-card">
                         <Formik
                             validateOnChange={true}
