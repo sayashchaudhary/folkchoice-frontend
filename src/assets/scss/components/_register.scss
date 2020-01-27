@@ -70,17 +70,10 @@
   margin: 10px 10px 10px 40%;
 }
 
-.company {
-  font-size: 30px;
-  font-weight: strong;
-  padding-bottom: 2vh;
-  display: none;
-}
-
 .input {
   color: white !important;
   width: 85%;
-  padding-top: 3vh;
+  padding-top: 7%;
   margin-bottom: 15px;
   margin-left: 8%;
 }
@@ -141,7 +134,7 @@
 @media(max-width: 767px) {
   .outer-card {
     width: 80%;
-    height: 92vh !important;
+    height: 95% !important;
   }
   .input {
     width: 80% !important;
@@ -149,14 +142,14 @@
   }
   .inner-card {
     width: 85%;
-    height: 68vh !important;
+    height: 82% !important;
   }
   .submit {
     margin-left: 24%;
     margin-top: 1%;
   }
-  .background {
-    display: none;
+  .background,.signup:after {
+    background-image: none;
   }
   .gender {
     display: none;
@@ -170,13 +163,13 @@
 // fir iphone5/SE
 @media only screen and (width: 320px) and (height: 568px) {
   .inner-card {
-    height: 78vh !important
+    height: 85% !important
   }
   .gender {
     display: none;
   }
   .outer-card {
-    height: 92vh !important;
+    height: 100% !important;
   }
   .company {
     display: none;
@@ -186,7 +179,7 @@
 // for ipads
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .outer-card {
-    width: 60%;
+    width: 75%;
   }
   .inner-card {
     width: 85%;
@@ -197,5 +190,8 @@
   }
   .input {
     padding-top: 10%;
+  }
+  .background,.signup:after{
+    background-image: none;
   }
 }
