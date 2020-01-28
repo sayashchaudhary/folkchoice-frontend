@@ -79,12 +79,11 @@
 
 .input1 {
   color: white;
-  padding-top: 2%;
-  padding-left: 15%;
 }
 
 .gender {
-  margin-left: 8%;
+  padding-top: 4%;
+  font-size: 20px;
   color: white;
 }
 
@@ -93,13 +92,13 @@
   opacity: 1;
 }
 
-.register_form {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 18px;
-  padding-left: 18px;
-  color: white;
-}
+//.register_form {
+//  display: flex;
+//  flex-wrap: wrap;
+//  padding-top: 18px;
+//  padding-left: 18px;
+//  color: white;
+//}
 
 .btn-submit {
   background-color: $color-primary;
@@ -216,7 +215,7 @@
 // for pixel2xl
 @media only screen and (width:411px) and (height:823px) {
   .inner-card{
-  height:80% !important;
+  height:83% !important;
   }
   .outer-card{
     height:70% !important;

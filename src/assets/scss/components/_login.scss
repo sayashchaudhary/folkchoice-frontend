@@ -72,11 +72,10 @@
 }
 
 .btn-login {
-  margin-left: 25%;
   border-radius: 25px;
   outline: none;
   border: none;
-  width: 23%;
+  width: 90%;
   color: black;
   font-weight: 600;
   padding-top: 1%;
@@ -85,15 +84,14 @@
 }
 
 .btn-signin {
-  margin-left: 2%;
   border-radius: 25px;
   outline: none;
   border: none;
-  width: 23%;
+  width: 90%;
   color: white;
   font-weight: 600;
   padding-top: 1%;
-  padding-bottom: 1vh;
+  padding-bottom: 1%;
   background: transparent;
   box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
 }
@@ -111,7 +109,7 @@
 }
 
 .button {
-  width: 22%;
+  width: 80%;
   border-radius: 25px;
   outline: none;
   border: none;
@@ -123,7 +121,7 @@
   img {
     width: 30%;
     max-width:40px;
-    margin-right: 0;
+    margin-left: 5%;
     float: left;
   }
 
