@@ -1,18 +1,18 @@
 import React from 'react';
 import * as Yup from 'yup';
-import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import {Helmet} from 'react-helmet';
+import {Link} from 'react-router-dom';
 import Input from '@material-ui/core/Input'
 import Logo from '../../../assets/images/logo.png';
 import Google from '../../../assets/images/google.png';
 import Facebook from '../../../assets/images/facebook.png';
 import Phone from '../../../assets/images/phone.png';
-import { Formik, Form, useField, FieldAttributes } from 'formik';
+import {Formik, Form, useField, FieldAttributes} from 'formik';
 
 const TITLE = 'Sign In - Folk Choice';
 
 
-const MyInputField: React.FC<FieldAttributes<{}>> = ({ placeholder, type, ...props }) => {
+const MyInputField: React.FC<FieldAttributes<{}>> = ({placeholder, type, ...props}) => {
     const [field, meta] = useField<{}>(props);
     const errorText = meta.error && meta.touched ? meta.error : '';
     return (
@@ -35,7 +35,7 @@ const Register: React.FC = () => {
                 <div className="navbar-brand">
                     <img src={Logo} alt="logo" className="name"/>FOLK CHOICE
                 </div>
-                <div className="outer">
+                <div className="container outer">
                     <div className="about">
                         <span>
                             Welcome to
@@ -50,8 +50,8 @@ const Register: React.FC = () => {
                         <Formik
                             validateOnChange={true}
                             validationSchema={validationSchema}
-                            initialValues={{ Email: '', password: '' }}
-                            onSubmit={(data, { setSubmitting }) => {
+                            initialValues={{Email: '', password: ''}}
+                            onSubmit={(data, {setSubmitting}) => {
                                 setSubmitting(true);
                                 console.log(data);
                                 setSubmitting(false);
@@ -59,32 +59,45 @@ const Register: React.FC = () => {
                             <Form>
                                 <MyInputField name="Email" type="email" placeholder="E-mail"/>
                                 <MyInputField name="password" type="password" placeholder="Password"/>
-                                <div className="forgot">
-                                    Forgot Password ?
-                                    <Link to="/">
-                                        <button type="submit" className="btn-login">Sign in</button>
-                                    </Link>
-                                    <Link to="/register">
-                                        <button type="submit" className="btn-signin">Sign up</button>
-                                    </Link>
+                                <div className="row forgot">
+                                    <div className="col-md-6">
+                                        Forgot Password ?
+                                    </div>
+                                    <div className="col-md-3">
+                                        <Link to="/">
+                                            <button type="submit" className="btn-login">Sign in</button>
+                                        </Link>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <Link to="/register">
+                                            <button type="submit" className="btn-signin">Sign up</button>
+                                        </Link>
+                                    </div>
                                 </div>
-                            </Form> 
+                            </Form>
                         </Formik>
                     </div>
                     <div className="text-center"><strong>or...</strong></div>
-                    <div className="buttons">
-                        <Link to="/">
-                            <button type="submit" className="button google"><img src={Google} alt="Google"/><span><div>Sign in with</div> </span>Google
-                            </button>
-                        </Link>
-                        <Link to="/">
-                            <button type="submit" className="button facebook"><img src={Facebook} alt="Facebook"/><span><div>Sign in with</div> </span>Facebook
-                            </button>
-                        </Link>
-                        <Link to="/">
-                            <button type="submit" className="button facebook"><img src={Phone} alt="Phone"/><span><div>Sign in with</div> </span>Phone
-                            </button>
-                        </Link>
+                    <div className="row buttons">
+                        <div className="col-md-4">
+                            <Link to="/">
+                                <button type="submit" className="button google"><img src={Google} alt="Google"/><span><div>Sign in with</div> </span>Google
+                                </button>
+                            </Link>
+                        </div>
+                        <div className="col-md-4">
+                            <Link to="/">
+                                <button type="submit" className="button facebook"><img src={Facebook}
+                                                                                       alt="Facebook"/><span><div>Sign in with</div> </span>Facebook
+                                </button>
+                            </Link>
+                        </div>
+                        <div className="col-md-4">
+                            <Link to="/">
+                                <button type="submit" className="button facebook"><img src={Phone} alt="Phone"/><span><div>Sign in with</div> </span>Phone
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

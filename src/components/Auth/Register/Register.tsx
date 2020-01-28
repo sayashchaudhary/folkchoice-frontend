@@ -44,8 +44,8 @@ const Register: React.FC = () => {
                 <title>{TITLE}</title>
             </Helmet>
             <div className="signup">
-                <div className="background" />
-                <div className="outer-card">
+                <div className="background"/>
+                <div className="container outer-card">
                     <img src={Logo} alt="logo" className="logo"/>
                     <div className="company text-center">FOLK CHOICE</div>
                     <div className="inner-card">
@@ -71,10 +71,18 @@ const Register: React.FC = () => {
                                 <MyInputField name="password" type="password" placeholder="Password"/>
                                 <MyInputField name="cnfPassword" type="password" placeholder="Confirm Password"/>
                                 <MyInputField name="phoneNo" type="input" placeholder="Phone Number"/>
-                                <label className="gender">Gender:</label>
-                                <MyRadio name="gender" type="radio" value="male" label="Male"/>
-                                <MyRadio name="gender" type="radio" value="female" label="Female"/>
-                                <button type="submit" className="btn btn-submit">Submit</button>
+                                <div className="row text-center">
+                                    <div className="col-md-4">
+                                        <label className="gender">Gender:</label>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <MyRadio name="gender" type="radio" value="male" label="Male"/>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <MyRadio name="gender" type="radio" value="female" label="Female"/>
+                                    </div>
+                                    <button type="submit" className="btn btn-submit">Submit</button>
+                                </div>
                             </Form>
                         </Formik>
                     </div>
