@@ -1,16 +1,18 @@
 import React from 'react';
-import { fade, makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import { createStyles, fade, makeStyles, Theme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import InputBase from '@material-ui/core/InputBase';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Logo from '../../../assets/images/logo.png';
 import Heart from '../../../assets/images/heart.png';
 import Cart from '../../../assets/images/cart.png';
 import Hamburger from '../../../assets/images/hamburger.png';
+import { RoutePath } from '../../../routing/routes';
+import { RouteUtils } from '../../../routing/route-utils';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -63,9 +65,15 @@ export default function PrimarySearchAppBar() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
+    const handleMenuClose = () => {
+        setAnchorEl(null);
+    };
+    const history = useHistory();
+    const navigateToRoute = (route: RoutePath) => {
+        if (route) {
+            history.push(RouteUtils.getUrl(route, null));
+        }
+    };
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -106,18 +114,14 @@ export default function PrimarySearchAppBar() {
                         }}
                         inputProps={{ 'aria-label': 'search' }}
                       />
-                    </div> 
-                    <img src={Heart} alt="Wishlist" className="nav__heart" /> 
+                    </div>
+                    <img src={Heart} alt="Wishlist" className="nav__heart" />
                     <img src={Cart} alt="cart" className="nav__cart" />
                     <div className="nav__right">
-                      <Link to="/login">
-                        <button type="submit" className="nav__right-login">Sign in</button>
-                      </Link>
-                      <Link to="/register">
-                        <button type="submit" className="nav__right-signin">Sign up</button>
-                      </Link>
-                      <img src={Hamburger} alt="Hamburger" className="nav__right-hamburger" onClick={handleProfileMenuOpen}/>              
-                    </div> 
+                        <button onClick={() => navigateToRoute(RoutePath.login)} type="submit" className="nav__right-login">Sign in</button>
+                        <button onClick={() => navigateToRoute(RoutePath.register)} type="submit" className="nav__right-signin">Sign up</button>
+                        <img src={Hamburger} alt="Hamburger" className="nav__right-hamburger" onClick={handleProfileMenuOpen}/>
+                    </div>
                     </Toolbar>
             </AppBar>
             {renderMenu}
