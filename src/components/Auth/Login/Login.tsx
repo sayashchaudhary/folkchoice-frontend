@@ -87,8 +87,7 @@ const Register: React.FC = () => {
                         </div>
                         <div className="col-md-4">
                             <Link to="/">
-                                <button type="submit" className="button facebook"><img src={Facebook}
-                                                                                       alt="Facebook"/><span><div>Sign in with</div> </span>Facebook
+                                <button type="submit" className="button facebook"><img src={Facebook} alt="Facebook"/><span><div>Sign in with</div> </span>Facebook
                                 </button>
                             </Link>
                         </div>
