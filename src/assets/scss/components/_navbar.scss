@@ -147,7 +147,7 @@
 }
 
 // for ipad 
-@media (min-width:768px){
+@media only screen and (width:768px) and (height:1024px){
     .nav__search{
         margin-left: 5%;
         width:25%;

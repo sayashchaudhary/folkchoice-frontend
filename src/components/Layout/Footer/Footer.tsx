@@ -1,8 +1,9 @@
 import React from 'react';
-import Logo from '../../../assets/images/logo1.png';
+import Logo from '../../../assets/images/logo.jpg';
 import Instagram from '../../../assets/images/instagram.png';
 import Facebook from '../../../assets/images/facebook1.png';
 import Twitter from '../../../assets/images/twitter.png';
+import Heart from '../../../assets/images/heart.png';
 
 
 const Footer: React.FC = () => {
@@ -17,8 +18,12 @@ const Footer: React.FC = () => {
                             <div className="footer__alignleft-detail">
                                 <h4><strong>E-mail us at</strong></h4>
                                 <p>abc@gmail.com</p>
-                                <h4><strong>Contact us: </strong></h4>
-                                <p>1234567890, 9876543210</p>
+                                <h4><strong>Contact us: </strong>
+                                <span>1234567890, 9876543210</span></h4>
+                                <h4>
+                                    We Care
+                                    <img src={Heart} alt= "heart" className="footer__alignleft-detail__heart" />
+                                </h4>
                             </div>
                         </div>
                     </div>
@@ -26,22 +31,16 @@ const Footer: React.FC = () => {
                         <div className="footer__alignright">
                         <div className="footer__alignright-detail">
                                 <h4><strong>About us</strong></h4>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
-                                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen 
-                                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
-                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </p>
                                 <h4><strong>FAQ'S </strong></h4>
                                 <h4><strong>Help Desk </strong></h4>
+                                <h4><strong>Privacy Policies </strong></h4>
                                 <h4><strong>Terms and Conditions </strong></h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-12 text-center">
+                    <div className="col-md-12 text-center pb-3">
                         <img src={Instagram} alt="instagram" className="footer__social" /><span>folk__choice</span>
                         <img src={Facebook} alt="facebook" className="footer__social" /><span>folk__choice</span>
                         <img src={Twitter} alt="twitter" className="footer__social" /><span>folk__choice</span>

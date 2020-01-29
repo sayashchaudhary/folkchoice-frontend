@@ -1,8 +1,10 @@
 @import '../utilities/variables';
 
 .footer{
-    background-color: $color-secondary;
-    color:$color-primary;;
+    background-color: $color-primary;
+    color:black;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
     &__alignleft{
         margin-left: 5%;
         &-image{
@@ -15,14 +17,19 @@
         &-detail{
             padding-top: 2%;
             margin-left: 5%;
+            display: inline;
+
+            &__heart {
+                width: 50px;
+            }
         }
     }
     &__alignright{
        padding-right:8%;
-       padding-top:5%;
+       padding-top:15%;
     }
     &__social{
-        width:4%;
+        width: 60px;
         padding-right:5px;
         padding-left: 25px;
     }

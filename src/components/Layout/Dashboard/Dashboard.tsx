@@ -1,56 +1,39 @@
 import React from 'react';
-import Location from '../../../assets/images/location.png';
-import Download from '../../../assets/images/download.jpeg';
 
 const Dashboard: React.FC = () => {
     return (
         <div className="container-fluid">
             <div className="dashboard">
-                <div className="row">
-                    <div className="col-8">
-                        <div className="dashboard__text">
-                            <h3>Hi there,</h3><br />
-                            <h1>Welcome to <strong>FOLK CHOICE</strong></h1>
-                            <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard <br/>
-                            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen <br/>
-                            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<br/>
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with <br/>
-                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col-4">
-                        <div className="dashboard__address">
-                            <div className="dashboard__address-card">
-                                <img src={Location} alt="Location" className="dashboard__address-card__image"/>
-                                <div className="dashboard__address-card__address">
-                                    John Doe<br/>
-                                    Street addrresses: 445 Mount Eden<br />
-                                    Road, Mount Eden, Auckland.
+                <div className="dashboard__slider">
+	                <div className="dashboard__slider-slide-track">
+		                <div className="dashboard__slider-slide-track__slide">
+                            <div className="dashboard__slider-slide-track__slide-card">
+                                <img src="https://the-booklet.com/wp-content/uploads//2019/04/photo-1483985988355-763728e1935b.jpg" alt="img" className="dashboard__slider-slide-track__slide-card__image" />
+                                <div className="dashboard__slider-slide-track__slide-card__text">
+                                    <h4 className="dashboard__slider-slide-track__slide-card__text-heading">Great Deals On</h4>
+                                    <h2 className="dashboard__slider-slide-track__slide-card__text-heading1">CLOTHINGS</h2>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="dashboard__carousel">
-                    <div className="row">
-                        <div className="col-md-4 align text-center">
-                            <div className="dashboard__carousel-card">
-                                <img src={Download} alt="img" className="dashboard__carousel-card__image" />
+		                </div>
+                        <div className="dashboard__slider-slide-track__slide">
+                            <div className="dashboard__slider-slide-track__slide-card">
+                                <img src="https://the-booklet.com/wp-content/uploads//2019/04/photo-1483985988355-763728e1935b.jpg" alt="img" className="dashboard__slider-slide-track__slide-card__image" />
+                                <div className="dashboard__slider-slide-track__slide-card__text">
+                                    <h4 className="dashboard__slider-slide-track__slide-card__text-heading">Great Deals On</h4>
+                                    <h2 className="dashboard__slider-slide-track__slide-card__text-heading1">CLOTHINGS</h2>
+                               </div>
                             </div>
-                        </div>
-                        <div className="col-md-4 align text-center">
-                            <div className="dashboard__carousel-card">
-                                <img src={Download} alt="img" className="dashboard__carousel-card__image" />
+		                </div>
+                        <div className="dashboard__slider-slide-track__slide">
+                            <div className="dashboard__slider-slide-track__slide-card">
+                                <img src="https://the-booklet.com/wp-content/uploads//2019/04/photo-1483985988355-763728e1935b.jpg" alt="img" className="dashboard__slider-slide-track__slide-card__image" />
+                                <div className="dashboard__slider-slide-track__slide-card__text">
+                                    <h4 className="dashboard__slider-slide-track__slide-card__text-heading">Great Deals On</h4>
+                                    <h2 className="dashboard__slider-slide-track__slide-card__text-heading1">CLOTHINGS</h2>
+                               </div>
                             </div>
-                        </div>
-                        <div className="col-md-4 align text-center">
-                            <div className="dashboard__carousel-card">
-                                <img src={Download} alt="img" className="dashboard__carousel-card__image" />
-                            </div>
-                        </div>
-                    </div>
+		                </div>	
+	                </div>
                 </div>
                 <div className="dashboard__items">
                     <div className="dashboard__items-text">
@@ -59,80 +42,113 @@ const Dashboard: React.FC = () => {
                     </div>
                     <div className="dashboard__items-item">
                         <div className="row">
-                            <div className="col-md-3 align text-center">
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <div className="dashboard__items-item__card">
-                                    <img src={Download} alt="img" className="dashboard__items-item__card-image" />
-                                    <h4>Lakme 9 to 5 CC - Honey</h4>
-                                    <p>Seller - Lalita Sales</p>
-                                    <h5><del>521</del></h5><h2>349</h2>
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹521</del><span className="dashboard__items-item__card-seller__price"> ₹349</span> </p>
                                 </div>
                             </div>
-                            <div className="col-md-3 align text-center">
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <div className="dashboard__items-item__card">
-                                    <img src={Download} alt="img" className="dashboard__items-item__card-image" />
-                                    <h4>Lakme 9 to 5 CC - Honey</h4>
-                                    <p>Seller - Lalita Sales</p>
-                                    <h5><del>521</del></h5><h2>349</h2>
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹521</del><span className="dashboard__items-item__card-seller__price"> ₹349</span> </p>
                                 </div>
                             </div>
-                            <div className="col-md-3 align text-center">
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <div className="dashboard__items-item__card">
-                                    <img src={Download} alt="img" className="dashboard__items-item__card-image" />
-                                    <h4>Lakme 9 to 5 CC - Honey</h4>
-                                    <p>Seller - Lalita Sales</p>
-                                    <h5><del>521</del></h5><h2>349</h2>
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹521</del><span className="dashboard__items-item__card-seller__price"> ₹349</span> </p>
                                 </div>
                             </div>
-                            <div className="col-md-3 align text-center">
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <div className="dashboard__items-item__card">
-                                    <img src={Download} alt="img" className="dashboard__items-item__card-image" />
-                                    <h4>Lakme 9 to 5 CC - Honey</h4>
-                                    <p>Seller - Lalita Sales</p>
-                                    <h5><del>521</del></h5><h2>349</h2>
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹521</del><span className="dashboard__items-item__card-seller__price"> ₹349</span> </p>
+                                </div>
+                            </div>
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
+                                <div className="dashboard__items-item__card">
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹521</del><span className="dashboard__items-item__card-seller__price"> ₹349</span> </p>
+                                </div>
+                            </div>
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
+                                <div className="dashboard__items-item__card">
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹521</del><span className="dashboard__items-item__card-seller__price"> ₹349</span> </p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <div className="dashboard__items">
                     <div className="dashboard__items-text">
-                        <h4>Today, we present you:</h4><br />
-                        <h2><strong>Crazy Deals on Clothings</strong></h2>
+                        <h2><strong>Crazy Deals on Clothing</strong></h2>
                     </div>
                     <div className="dashboard__items-item">
                         <div className="row">
-                            <div className="col-md-3 align text-center">
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <div className="dashboard__items-item__card">
-                                    <img src={Download} alt="img" className="dashboard__items-item__card-image" />
-                                    <h4>Lakme 9 to 5 CC - Honey</h4>
-                                    <p>Seller - Lalita Sales</p>
-                                    <h5><del>521</del></h5><h2>349</h2>
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹ 521</del><span className="dashboard__items-item__card-seller__price"> ₹ 349</span> </p>
                                 </div>
                             </div>
-                            <div className="col-md-3 align text-center">
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <div className="dashboard__items-item__card">
-                                    <img src={Download} alt="img" className="dashboard__items-item__card-image" />
-                                    <h4>Lakme 9 to 5 CC - Honey</h4>
-                                    <p>Seller - Lalita Sales</p>
-                                    <h5><del>521</del></h5><h2>349</h2>
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹ 521</del><span className="dashboard__items-item__card-seller__price"> ₹ 349</span> </p>
                                 </div>
                             </div>
-                            <div className="col-md-3 align text-center">
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <div className="dashboard__items-item__card">
-                                    <img src={Download} alt="img" className="dashboard__items-item__card-image" />
-                                    <h4>Lakme 9 to 5 CC - Honey</h4>
-                                    <p>Seller - Lalita Sales</p>
-                                    <h5><del>521</del></h5><h2>349</h2>
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹ 521</del><span className="dashboard__items-item__card-seller__price"> ₹ 349</span> </p>
                                 </div>
                             </div>
-                            <div className="col-md-3 align text-center">
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <div className="dashboard__items-item__card">
-                                    <img src={Download} alt="img" className="dashboard__items-item__card-image" />
-                                    <h4>Lakme 9 to 5 CC - Honey</h4>
-                                    <p>Seller - Lalita Sales</p>
-                                    <h5><del>521</del></h5><h2>349</h2>
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹ 521</del><span className="dashboard__items-item__card-seller__price"> ₹ 349</span> </p>
+                                </div>
+                            </div>
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
+                                <div className="dashboard__items-item__card">
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹ 521</del><span className="dashboard__items-item__card-seller__price"> ₹ 349</span> </p>
+                                </div>
+                            </div>
+                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
+                                <div className="dashboard__items-item__card">
+                                    <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg" alt="img" className="dashboard__items-item__card-image" />
+                                    <h4 className="dashboard__items-item__card-name">Lakme 9 to 5 CC - Honey</h4>
+                                    <p className="dashboard__items-item__card-seller">Seller - Lalita Sales</p>
+                                    <p className="dashboard__items-item__card-seller"><del> ₹ 521</del><span className="dashboard__items-item__card-seller__price"> ₹ 349</span> </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>    
                 </div>
             </div>
         </div>
