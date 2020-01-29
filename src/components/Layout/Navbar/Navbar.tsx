@@ -127,8 +127,8 @@ export default function PrimarySearchAppBar() {
             {renderMenu}
         </div>
         <div className="demo">
-          <Link to="/login"><button type="submit" className="nav__right-login">Sign in</button></Link>
-          <Link to="/register"><button type="submit" className="nav__right-signin">Sign up</button></Link>
+          <button onClick={() => navigateToRoute(RoutePath.login)} type="submit" className="nav__right-login">Sign in</button>
+          <button onClick={() => navigateToRoute(RoutePath.register)} type="submit" className="nav__right-signin">Sign up</button>              
         </div>
       </div>
   );
