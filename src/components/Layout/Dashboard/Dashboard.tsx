@@ -1,5 +1,14 @@
 import React from 'react';
-import ProductCard from '../ProductCard/ProductCard';
+import ProductCard, { ProductCardProps } from '../ProductCard/ProductCard';
+
+const dummyProducts: ProductCardProps[] = [
+    { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
+    { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
+    { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
+    { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
+    { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
+    { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
+];
 
 const Dashboard: React.FC = () => {
     return (
@@ -12,122 +21,48 @@ const Dashboard: React.FC = () => {
                     </div>
                     <div className="dashboard__items-item">
                         <div className="row">
-                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                                <ProductCard
-                                    Name="Lakme 9 to 5 CC - Honey"
-                                    Seller="Seller - Lalita Sales"
-                                    Oldprice="₹521"
-                                    Newprice="₹349"
-                                />
-                            </div>
+                            {
+                                dummyProducts.map(p => {
+                                    return (
+                                        <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
+                                            <ProductCard
+                                                name={p.name}
+                                                seller={p.seller}
+                                                oldPrice={p.oldPrice}
+                                                newPrice={p.newPrice}
+                                            />
+                                        </div>
+                                    );
+                                })
+                            }
 
-                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                                <ProductCard
-                                    Name="Lakme 9 to 5 CC - Honey"
-                                    Seller="Seller - Lalita Sales"
-                                    Oldprice="₹521"
-                                    Newprice="₹349"
-                                />
-                            </div>
+                        </div>
 
-                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                                <ProductCard
-                                    Name="Lakme 9 to 5 CC - Honey"
-                                    Seller="Seller - Lalita Sales"
-                                    Oldprice="₹521"
-                                    Newprice="₹349"
-                                />
-                            </div>
-
-                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                                <ProductCard
-                                    Name="Lakme 9 to 5 CC - Honey"
-                                    Seller="Seller - Lalita Sales"
-                                    Oldprice="₹521"
-                                    Newprice="₹349"
-                                />
-                            </div>
-
-                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                                <ProductCard
-                                    Name="Lakme 9 to 5 CC - Honey"
-                                    Seller="Seller - Lalita Sales"
-                                    Oldprice="₹521"
-                                    Newprice="₹349"
-                                />
-                            </div>
-
-                            <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                                <ProductCard
-                                    Name="Lakme 9 to 5 CC - Honey"
-                                    Seller="Seller - Lalita Sales"
-                                    Oldprice="₹521"
-                                    Newprice="₹349"
-                                />
-                            </div></div>
-
-                </div>
-                <div className="dashboard__items">
-                    <div className="dashboard__items-text">
-                        <h2><strong>Crazy Deals on Clothing</strong></h2>
                     </div>
-                    <div className="row">
-                        <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                            <ProductCard
-                                Name="Lakme 9 to 5 CC - Honey"
-                                Seller="Seller - Lalita Sales"
-                                Oldprice="₹521"
-                                Newprice="₹349"
-                            />
+                    <div className="dashboard__items">
+                        <div className="dashboard__items-text">
+                            <h2><strong>Crazy Deals on Clothing</strong></h2>
                         </div>
-
-                        <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                            <ProductCard
-                                Name="Lakme 9 to 5 CC - Honey"
-                                Seller="Seller - Lalita Sales"
-                                Oldprice="₹521"
-                                Newprice="₹349"
-                            />
+                        <div className="row">
+                            {
+                                dummyProducts.map(p => {
+                                    return (
+                                        <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
+                                            <ProductCard
+                                                name={p.name}
+                                                seller={p.seller}
+                                                oldPrice={p.oldPrice}
+                                                newPrice={p.newPrice}
+                                            />
+                                        </div>
+                                    );
+                                })
+                            }
                         </div>
-
-                        <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                            <ProductCard
-                                Name="Lakme 9 to 5 CC - Honey"
-                                Seller="Seller - Lalita Sales"
-                                Oldprice="₹521"
-                                Newprice="₹349"
-                            />
-                        </div>
-
-                        <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                            <ProductCard
-                                Name="Lakme 9 to 5 CC - Honey"
-                                Seller="Seller - Lalita Sales"
-                                Oldprice="₹521"
-                                Newprice="₹349"
-                            />
-                        </div>
-
-                        <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                            <ProductCard
-                                Name="Lakme 9 to 5 CC - Honey"
-                                Seller="Seller - Lalita Sales"
-                                Oldprice="₹521"
-                                Newprice="₹349"
-                            />
-                        </div>
-
-                        <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
-                            <ProductCard
-                                Name="Lakme 9 to 5 CC - Honey"
-                                Seller="Seller - Lalita Sales"
-                                Oldprice="₹521"
-                                Newprice="₹349"
-                            />
-                        </div></div>
+                    </div>
                 </div>
             </div>
-            </div></div>
+        </div>
     );
 };
 
