@@ -1,9 +1,10 @@
 import React from 'react';
-import { inject, observer } from 'mobx-react';
-import { GlobalProps } from '../../../App';
+import {inject, observer} from 'mobx-react';
+import {GlobalProps} from '../../../App';
 import Navbar from '../Navbar/Navbar';
 import Dashboard from '../Dashboard/Dashboard';
 import Footer from '../Footer/Footer'
+import Slider from '../Carousel/Carousel';
 
 
 const Landing: React.FC<GlobalProps> = (props) => {
@@ -13,10 +14,11 @@ const Landing: React.FC<GlobalProps> = (props) => {
     console.log('User store', userStore);
     return (
         <div>
-            <Navbar />
+            <Navbar/>
             <div className="landing-container">
-                <Dashboard />
-                <Footer />
+                <Slider/>
+                <Dashboard/>
+                <Footer/>
             </div>
         </div>
     )

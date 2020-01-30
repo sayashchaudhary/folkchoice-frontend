@@ -4,37 +4,37 @@ const Dashboard: React.FC = () => {
     return (
         <div className="container-fluid">
             <div className="dashboard">
-                <div className="dashboard__slider">
-	                <div className="dashboard__slider-slide-track">
-		                <div className="dashboard__slider-slide-track__slide">
-                            <div className="dashboard__slider-slide-track__slide-card">
-                                <img src="https://the-booklet.com/wp-content/uploads//2019/04/photo-1483985988355-763728e1935b.jpg" alt="img" className="dashboard__slider-slide-track__slide-card__image" />
-                                <div className="dashboard__slider-slide-track__slide-card__text">
-                                    <h4 className="dashboard__slider-slide-track__slide-card__text-heading">Great Deals On</h4>
-                                    <h2 className="dashboard__slider-slide-track__slide-card__text-heading1">CLOTHINGS</h2>
-                                </div>
-                            </div>
-		                </div>
-                        <div className="dashboard__slider-slide-track__slide">
-                            <div className="dashboard__slider-slide-track__slide-card">
-                                <img src="https://the-booklet.com/wp-content/uploads//2019/04/photo-1483985988355-763728e1935b.jpg" alt="img" className="dashboard__slider-slide-track__slide-card__image" />
-                                <div className="dashboard__slider-slide-track__slide-card__text">
-                                    <h4 className="dashboard__slider-slide-track__slide-card__text-heading">Great Deals On</h4>
-                                    <h2 className="dashboard__slider-slide-track__slide-card__text-heading1">CLOTHINGS</h2>
-                               </div>
-                            </div>
-		                </div>
-                        <div className="dashboard__slider-slide-track__slide">
-                            <div className="dashboard__slider-slide-track__slide-card">
-                                <img src="https://the-booklet.com/wp-content/uploads//2019/04/photo-1483985988355-763728e1935b.jpg" alt="img" className="dashboard__slider-slide-track__slide-card__image" />
-                                <div className="dashboard__slider-slide-track__slide-card__text">
-                                    <h4 className="dashboard__slider-slide-track__slide-card__text-heading">Great Deals On</h4>
-                                    <h2 className="dashboard__slider-slide-track__slide-card__text-heading1">CLOTHINGS</h2>
-                               </div>
-                            </div>
-		                </div>	
-	                </div>
-                </div>
+                {/*<div className="dashboard__slider">*/}
+	            {/*    <div className="dashboard__slider-slide-track">*/}
+		        {/*        <div className="dashboard__slider-slide-track__slide">*/}
+                {/*            <div className="dashboard__slider-slide-track__slide-card">*/}
+                {/*                <img src="https://the-booklet.com/wp-content/uploads//2019/04/photo-1483985988355-763728e1935b.jpg" alt="img" className="dashboard__slider-slide-track__slide-card__image" />*/}
+                {/*                <div className="dashboard__slider-slide-track__slide-card__text">*/}
+                {/*                    <h4 className="dashboard__slider-slide-track__slide-card__text-heading">Great Deals On</h4>*/}
+                {/*                    <h2 className="dashboard__slider-slide-track__slide-card__text-heading1">CLOTHINGS</h2>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+		        {/*        </div>*/}
+                {/*        <div className="dashboard__slider-slide-track__slide">*/}
+                {/*            <div className="dashboard__slider-slide-track__slide-card">*/}
+                {/*                <img src="https://the-booklet.com/wp-content/uploads//2019/04/photo-1483985988355-763728e1935b.jpg" alt="img" className="dashboard__slider-slide-track__slide-card__image" />*/}
+                {/*                <div className="dashboard__slider-slide-track__slide-card__text">*/}
+                {/*                    <h4 className="dashboard__slider-slide-track__slide-card__text-heading">Great Deals On</h4>*/}
+                {/*                    <h2 className="dashboard__slider-slide-track__slide-card__text-heading1">CLOTHINGS</h2>*/}
+                {/*               </div>*/}
+                {/*            </div>*/}
+		        {/*        </div>*/}
+                {/*        <div className="dashboard__slider-slide-track__slide">*/}
+                {/*            <div className="dashboard__slider-slide-track__slide-card">*/}
+                {/*                <img src="https://the-booklet.com/wp-content/uploads//2019/04/photo-1483985988355-763728e1935b.jpg" alt="img" className="dashboard__slider-slide-track__slide-card__image" />*/}
+                {/*                <div className="dashboard__slider-slide-track__slide-card__text">*/}
+                {/*                    <h4 className="dashboard__slider-slide-track__slide-card__text-heading">Great Deals On</h4>*/}
+                {/*                    <h2 className="dashboard__slider-slide-track__slide-card__text-heading1">CLOTHINGS</h2>*/}
+                {/*               </div>*/}
+                {/*            </div>*/}
+		        {/*        </div>	*/}
+	            {/*    </div>*/}
+                {/*</div>*/}
                 <div className="dashboard__items">
                     <div className="dashboard__items-text">
                         <h4>Today, we present you:</h4><br />
