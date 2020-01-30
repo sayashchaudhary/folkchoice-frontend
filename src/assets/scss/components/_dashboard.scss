@@ -10,14 +10,10 @@
             color:$color-secondary;
             margin-left:2%;
         }
-
     }
 }
 
 @media(max-width:767px){
-    .dashboard__items-item__card{
-        width:100%;
-    }
     .dashboard__items{
         margin-left:2%;
         margin-right:2%;

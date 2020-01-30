@@ -18,7 +18,7 @@ const Dashboard: React.FC = () => {
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                ></ProductCard>
+                                />
                             </div>
 
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
@@ -27,7 +27,7 @@ const Dashboard: React.FC = () => {
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                ></ProductCard>
+                                />
                             </div>
 
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
@@ -36,7 +36,7 @@ const Dashboard: React.FC = () => {
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                ></ProductCard>
+                                />
                             </div>
 
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
@@ -45,7 +45,7 @@ const Dashboard: React.FC = () => {
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                ></ProductCard>
+                                />
                             </div>
 
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
@@ -54,7 +54,7 @@ const Dashboard: React.FC = () => {
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                ></ProductCard>
+                                />
                             </div>
 
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
@@ -63,7 +63,7 @@ const Dashboard: React.FC = () => {
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                ></ProductCard>
+                                />
                             </div></div>
 
                 </div>
@@ -78,7 +78,7 @@ const Dashboard: React.FC = () => {
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            ></ProductCard>
+                            />
                         </div>
 
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
@@ -87,7 +87,7 @@ const Dashboard: React.FC = () => {
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            ></ProductCard>
+                            />
                         </div>
 
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
@@ -96,7 +96,7 @@ const Dashboard: React.FC = () => {
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            ></ProductCard>
+                            />
                         </div>
 
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
@@ -105,7 +105,7 @@ const Dashboard: React.FC = () => {
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            ></ProductCard>
+                            />
                         </div>
 
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
@@ -114,7 +114,7 @@ const Dashboard: React.FC = () => {
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            ></ProductCard>
+                            />
                         </div>
 
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
@@ -123,7 +123,7 @@ const Dashboard: React.FC = () => {
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            ></ProductCard>
+                            />
                         </div></div>
                 </div>
             </div>

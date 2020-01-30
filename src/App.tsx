@@ -12,7 +12,7 @@ const App: React.FC = () => {
     return (
         <Provider store={rootStore}>
             <Router>
-                <RootRouting/>
+                <RootRouting></RootRouting>
             </Router>
         </Provider>
 

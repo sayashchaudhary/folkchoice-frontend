@@ -7,7 +7,7 @@ import Landing from '../../components/Layout/Landing/Landing';
 import { RouteUtils } from '../route-utils';
 import { RoutePath } from '../routes';
 
-export const RootRouting: React.FC<GlobalProps> = () => {
+export const RootRouting: React.FC<any> = (props) => {
     return (
         <Switch>
             <Route exact path='/'>
