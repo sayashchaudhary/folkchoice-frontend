@@ -14,56 +14,56 @@ const Dashboard: React.FC = () => {
                         <div className="row">
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <ProductCard
-                                    name="Lakme 9 to 5 CC - Honey"
+                                    Name="Lakme 9 to 5 CC - Honey"
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                />
+                                ></ProductCard>
                             </div>
 
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <ProductCard
-                                    name="Lakme 9 to 5 CC - Honey"
+                                    Name="Lakme 9 to 5 CC - Honey"
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                />
+                                ></ProductCard>
                             </div>
 
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <ProductCard
-                                    name="Lakme 9 to 5 CC - Honey"
+                                    Name="Lakme 9 to 5 CC - Honey"
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                />
+                                ></ProductCard>
                             </div>
 
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <ProductCard
-                                    name="Lakme 9 to 5 CC - Honey"
+                                    Name="Lakme 9 to 5 CC - Honey"
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                />
+                                ></ProductCard>
                             </div>
 
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <ProductCard
-                                    name="Lakme 9 to 5 CC - Honey"
+                                    Name="Lakme 9 to 5 CC - Honey"
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                />
+                                ></ProductCard>
                             </div>
 
                             <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                                 <ProductCard
-                                    name="Lakme 9 to 5 CC - Honey"
+                                    Name="Lakme 9 to 5 CC - Honey"
                                     Seller="Seller - Lalita Sales"
                                     Oldprice="₹521"
                                     Newprice="₹349"
-                                />
+                                ></ProductCard>
                             </div></div>
 
                 </div>
@@ -74,57 +74,56 @@ const Dashboard: React.FC = () => {
                     <div className="row">
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                             <ProductCard
-                                name="Lakme 9 to 5 CC - Honey"
+                                Name="Lakme 9 to 5 CC - Honey"
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            />
+                            ></ProductCard>
                         </div>
 
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                             <ProductCard
-                                product-image="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg"
-                                product-name="Lakme 9 to 5 CC - Honey"
-                                product-seller="Seller - Lalita Sales"
-                                product-old-price="₹521"
-                                product-new-price="₹349"
-                            />
+                                Name="Lakme 9 to 5 CC - Honey"
+                                Seller="Seller - Lalita Sales"
+                                Oldprice="₹521"
+                                Newprice="₹349"
+                            ></ProductCard>
                         </div>
 
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                             <ProductCard
-                                name="Lakme 9 to 5 CC - Honey"
+                                Name="Lakme 9 to 5 CC - Honey"
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            />
+                            ></ProductCard>
                         </div>
 
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                             <ProductCard
-                                name="Lakme 9 to 5 CC - Honey"
+                                Name="Lakme 9 to 5 CC - Honey"
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            />
+                            ></ProductCard>
                         </div>
 
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                             <ProductCard
-                                name="Lakme 9 to 5 CC - Honey"
+                                Name="Lakme 9 to 5 CC - Honey"
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            />
+                            ></ProductCard>
                         </div>
 
                         <div className="col-6 col-sm-6 col-md-4 col-lg-2 text-center">
                             <ProductCard
-                                name="Lakme 9 to 5 CC - Honey"
+                                Name="Lakme 9 to 5 CC - Honey"
                                 Seller="Seller - Lalita Sales"
                                 Oldprice="₹521"
                                 Newprice="₹349"
-                            />
+                            ></ProductCard>
                         </div></div>
                 </div>
             </div>

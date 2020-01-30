@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductCard: React.FC = (props:any) => {
+const ProductCard: React.FC<any> = (props:any) => {
     return (
         <div className="container-fluid">
             <div className="dashboard__items">
