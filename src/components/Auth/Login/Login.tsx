@@ -26,6 +26,12 @@ const validationSchema = Yup.object({
 });
 
 const Register: React.FC = () => {
+    // const history = useHistory();
+    // const navigateToRoute = (route: RoutePath) => {
+    //     if (route) {
+    //         history.push(RouteUtils.getUrl(route, null));
+    //     }
+    // };
     return (
         <div className="container-fluid">
             <Helmet>

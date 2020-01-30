@@ -2,56 +2,7 @@
 
 .dashboard{
     background-color: $color-primary;
-    &__slider{
-        background: white;
-        padding-top: 3%;
-        box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.125);
-        height: 484px;
-        margin: auto;
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        -webkit-animation: scroll 10s linear infinite;
-        animation: scroll 10s linear infinite;
-        display: -webkit-box;
-        display: flex;
-        height: 484px;
-        width: 20%;
-        width: calc(13% * 14);
-        &-slide-track{
-            -webkit-animation: scroll 10s linear infinite;
-            animation: scroll 10s linear infinite;
-            display: -webkit-box;
-            display: flex;
-            width: calc(13% * 14);
-            &__slide{
-                height: 484px;
-                width: 20%;
-                &-card{
-                    position: relative;
-                    width: 85%;
-                    display: inline-block;
-                    background:linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 70.42%), #E9EEFA;
-                    margin-left:5%;
-                    overflow:hidden;
-                    border-radius: 19px;
-                    box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
-                    &__image{
-                        width:100%;
-                        border-radius: 19px;
-                    }
-                    &__text{
-                        position: absolute;
-                        bottom:18px;
-                        color:white;
-                        left:15px;
-                    }
-                }
-            }
-        }
-    }
-    
-    
+
     &__items{
         padding-top:3%;
         margin-left:2%;
@@ -77,6 +28,7 @@
                     font-size:17px;
                 }
                 &-seller{
+                    padding-bottom: 5%; 
                     font-size:14px;
                     &__price{
                         font-weight: 600;
@@ -89,59 +41,6 @@
 
             }
         }
-    }
-}
-
-@keyframes scroll {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(calc(-250px * 7));
-              transform: translateX(calc(-250px * 7));
-    }
-}
-
-@media(max-width:767px){
-    .dashboard__slider{
-        height:200px;
-    }
-    .dashboard__slider-slide-track{
-        width:90%;
-    }
-    .dashboard__slider-slide-track__slide{
-        width:90%;
-    }
-    .dashboard__slider-slide-track__slide-card{
-        width:90%;
-    }
-    .dashboard__slider-slide-track__slide-card__text-heading{
-        font-size:15px;
-    }
-    .dashboard__slider-slide-track__slide-card__text-heading1{
-        font-size:25px;
-    }
-}
-@media(min-width:768px)and (max-width:1024px){
-    .dashboard__slider{
-        height:300px;
-        padding-bottom:5%;
-    }
-    .dashboard__slider-slide-track{
-        width:80%;
-    }
-    .dashboard__slider-slide-track__slide{
-        width:80%;
-    }
-    .dashboard__slider-slide-track__slide-card{
-        width:80%;
-    }
-    .dashboard__slider-slide-track__slide-card__text-heading{
-        font-size:25px;
-    }
-    .dashboard__slider-slide-track__slide-card__text-heading1{
-        font-size:35px;
     }
 }
 
