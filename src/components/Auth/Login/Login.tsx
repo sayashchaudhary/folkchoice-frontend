@@ -1,13 +1,16 @@
 import React from 'react';
 import * as Yup from 'yup';
-import {Helmet} from 'react-helmet';
-import {Link} from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import { Link, useHistory } from 'react-router-dom';
 import Input from '@material-ui/core/Input'
 import Logo from '../../../assets/images/logo.png';
 import Google from '../../../assets/images/google.png';
 import Facebook from '../../../assets/images/facebook.png';
 import Phone from '../../../assets/images/phone.png';
-import {Formik, Form, useField, FieldAttributes} from 'formik';
+import { Formik, Form, useField, FieldAttributes } from 'formik';
+import { RoutePath } from '../../../routing/routes';
+import { RouteUtils } from '../../../routing/route-utils';
+
 
 const TITLE = 'Sign In - Folk Choice';
 
@@ -26,12 +29,12 @@ const validationSchema = Yup.object({
 });
 
 const Register: React.FC = () => {
-    // const history = useHistory();
-    // const navigateToRoute = (route: RoutePath) => {
-    //     if (route) {
-    //         history.push(RouteUtils.getUrl(route, null));
-    //     }
-    // };
+    const history = useHistory();
+    const navigateToRoute = (route: RoutePath) => {
+        if (route) {
+            history.push(RouteUtils.getUrl(route, null));
+        }
+    };
     return (
         <div className="container-fluid">
             <Helmet>
@@ -75,9 +78,9 @@ const Register: React.FC = () => {
                                         </Link>
                                     </div>
                                     <div className="col-md-3">
-                                        <Link to="/register">
-                                            <button type="submit" className="btn-signin">Sign up</button>
-                                        </Link>
+                                        <button onClick={() => navigateToRoute(RoutePath.register)} type="submit"
+                                                className="btn-signin">Sign up
+                                        </button>
                                     </div>
                                 </div>
                             </Form>
@@ -93,7 +96,8 @@ const Register: React.FC = () => {
                         </div>
                         <div className="col-md-4">
                             <Link to="/">
-                                <button type="submit" className="button facebook"><img src={Facebook} alt="Facebook"/><span><div>Sign in with</div> </span>Facebook
+                                <button type="submit" className="button facebook"><img src={Facebook}
+                                                                                       alt="Facebook"/><span><div>Sign in with</div> </span>Facebook
                                 </button>
                             </Link>
                         </div>
