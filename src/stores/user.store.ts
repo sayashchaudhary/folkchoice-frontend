@@ -7,6 +7,7 @@ export class UserStore extends BaseStore<UserModel> {
 
     @observable isLoading = false;
     @observable isLoaded = false;
+    @observable isLoggedIn = false;
 
     static getInstance(): UserStore {
         if (!this._instance) {
