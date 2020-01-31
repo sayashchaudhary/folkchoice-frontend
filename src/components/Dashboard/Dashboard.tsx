@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCard, { ProductCardProps } from '../ProductCard/ProductCard';
+import ProductCard, { ProductCardProps } from '../Shared/ProductCard/ProductCard';
 
 const dummyProducts: ProductCardProps[] = [
     {name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349'},

@@ -4,8 +4,9 @@
   background-color: $color-primary;
   padding-top: 5%;
 }
-@media(max-width:767px){
-  .landing-container{
-    padding-top:20%;
+
+@media(max-width: 767px) {
+  .landing-container {
+    padding-top: 20%;
   }
 }

@@ -3,7 +3,7 @@ import { GlobalProps } from '../../App';
 import { Redirect, Route, Switch } from 'react-router';
 import Login from '../../components/Auth/Login/Login';
 import Register from '../../components/Auth/Register/Register';
-import Landing from '../../components/Layout/Landing/Landing';
+import Landing from '../../components/Landing/Landing';
 import { RouteUtils } from '../route-utils';
 import { RoutePath } from '../routes';
 

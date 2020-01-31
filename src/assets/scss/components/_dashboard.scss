@@ -1,38 +1,40 @@
 @import '../utilities/variables';
 
-.dashboard{
-    background-color: $color-primary;
+.dashboard {
+  background-color: $color-primary;
 
-    &__items{
-        padding-top:3%;
-        padding-bottom: 5%;
+  &__items {
+    padding-top: 3%;
+    padding-bottom: 5%;
 
-        &-text{
-            color:$color-secondary;
-            margin-left:4%;
-        }
-        &-item{
-            box-shadow: inset 0 4px 9px rgba(0, 0, 0, 0.25);
-            padding-bottom: 2%;
-            width:100%;
-            padding-left:7%;
-            padding-right:5%;
-            &__spacing{
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
+    &-text {
+      color: $color-secondary;
+      margin-left: 4%;
     }
+
+    &-item {
+      box-shadow: inset 0 4px 9px rgba(0, 0, 0, 0.25);
+      padding-bottom: 2%;
+      width: 100%;
+      padding-left: 7%;
+      padding-right: 5%;
+
+      &__spacing {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
 }
 
-@media(max-width:767px){
-    .dashboard__items{
-        margin-left:2%;
-        margin-right:2%;
-    }
-    .dashboard__items-item__spacing{
-        padding-left: 2%;
-        padding-right: 6%;
-    }
+@media(max-width: 767px) {
+  .dashboard__items {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .dashboard__items-item__spacing {
+    padding-left: 2%;
+    padding-right: 6%;
+  }
 
 }

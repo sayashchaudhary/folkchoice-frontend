@@ -1,9 +1,9 @@
 import React from 'react';
 import {inject, observer} from 'mobx-react';
-import {GlobalProps} from '../../../App';
-import Navbar from '../Navbar/Navbar';
+import {GlobalProps} from '../../App';
+import Navbar from '../Shared/Navbar/Navbar';
 import Dashboard from '../Dashboard/Dashboard';
-import Footer from '../Footer/Footer'
+import Footer from '../Shared/Footer/Footer'
 import Slider from '../Carousel/Carousel';
 
 
