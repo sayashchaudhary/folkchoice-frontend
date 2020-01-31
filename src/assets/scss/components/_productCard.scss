@@ -1,27 +1,35 @@
 @import '../utilities/variables';
 
 .product-card {
-  margin-top: 2%;
-  width: 77%;
+  width: 78%;
+  max-width:230px;
   height: 90%;
-  padding: 2%;
   display: inline-block;
   background: $color-primary;
-  border-radius: 13px;
-  box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25), -9px -9px 10px rgba(255, 255, 255, 0.5), inset 7px 7px 16px rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+  margin-top: 8%;
+  box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   &-image {
     padding-bottom: 1%;
-    width: 80%;
+    max-height:154px;
+    width:100%;
   }
 
   &-name {
     font-size: 17px;
+    padding-left:2%;
+  }
+
+  &-prices{
+    margin-right: 5%;
+    padding-bottom: 2%;
   }
 
   &-seller {
     padding-bottom: 5%;
     font-size: 14px;
+    padding-left:2%;
 
     &__price {
       font-weight: 600;
@@ -32,6 +40,10 @@
     }
   }
 
+}
+.padding{
+  padding-right: 0;
+  padding-left: 0;
 }
 
 @media(max-width: 767px) {

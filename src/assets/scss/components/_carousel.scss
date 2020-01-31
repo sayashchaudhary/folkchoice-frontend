@@ -3,15 +3,18 @@
   margin-left:10% !important;
   margin-right:10% !important;
   margin-top:2% !important;
+  background-color: white !important;
 }
-.slider_image{
+.slider__image{
   border-radius: 19px;
+  width:80% !important;
+  max-height:500px !important;
   box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.125);
 }
 .legend{
   background-color: transparent !important;
   opacity:1 !important;
-  left:10% !important;
+  left:15% !important;
   font-size: 35px !important;
   margin-left: -40% !important;
   font-weight: bold !important;
@@ -30,5 +33,8 @@
     font-size: 15px !important;
     font-weight: bold !important;
     bottom:0 !important;
+  }
+  .slider__image{
+    width:100% !important;
   }
 }
