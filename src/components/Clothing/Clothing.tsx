@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
-import Carousel from '../Carousel/Carousel'
+import Carousel from '../Carousel/Carousel';
+import Footer from '../Shared/Footer/Footer';
 
 const Clothing: React.FC = () => {
     return (
@@ -158,6 +159,7 @@ const Clothing: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 };
