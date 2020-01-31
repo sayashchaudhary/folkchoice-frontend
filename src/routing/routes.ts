@@ -2,7 +2,8 @@ export enum RoutePath {
     auth = 'auth',
     login = 'login',
     register = 'register',
-    home = 'home'
+    home = 'home',
+    clothing = 'clothing'
 }
 
 export const AuthRouteMap = {

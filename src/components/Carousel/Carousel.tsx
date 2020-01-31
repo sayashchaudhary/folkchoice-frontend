@@ -5,7 +5,7 @@ import Download from '../../assets/images/download.jpg';
 
 const Slider: React.FC = () => {
     return (
-        <Carousel autoPlay={true} infiniteLoop={true}>
+        <Carousel autoPlay={true} infiniteLoop={true} className="carousel__background">
             <div>
                 <img src={Download} alt="Download" className="slider__image"/>
                 <p className="legend">Best Deals On <br />Clothing</p>

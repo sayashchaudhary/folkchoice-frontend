@@ -1,5 +1,8 @@
 import React from 'react';
 import ProductCard, { ProductCardProps } from '../Shared/ProductCard/ProductCard';
+import { useHistory } from "react-router";
+import { RoutePath } from "../../routing/routes";
+import { RouteUtils } from "../../routing/route-utils";
 
 const dummyProducts: ProductCardProps[] = [
     {name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349'},
@@ -11,9 +14,16 @@ const dummyProducts: ProductCardProps[] = [
 ];
 
 const Dashboard: React.FC = () => {
+    const history = useHistory();
+    const navigateToRoute = (route: RoutePath) => {
+        if (route) {
+            history.push(RouteUtils.getUrl(route, null));
+        }
+    };
     return (
         <div className="container-fluid">
             <div className="dashboard">
+                <button onClick={() => navigateToRoute(RoutePath.clothing)} >Clothing</button>
                 <div className="dashboard__items">
                     <div className="dashboard__items-text">
                         <h4>Today, we present you:</h4><br/>
