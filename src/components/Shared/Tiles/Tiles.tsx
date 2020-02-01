@@ -3,7 +3,7 @@ import Gradient from "../../../assets/images/gradient.png";
 
 export interface TilesProps {
     imageUrl?: string;
-    caption: string
+    text: string
 }
 
 const Tiles: React.FC<TilesProps> = (props: TilesProps) => {
@@ -17,7 +17,7 @@ const Tiles: React.FC<TilesProps> = (props: TilesProps) => {
                     alt="men" className="tiles__card-image"/>
                 <img src={Gradient} alt="gradient" className="tiles__card-gradient"/>
                 <div className="tiles__card-text">
-                    <p>{props.caption}</p>
+                    <p>{props.text}</p>
                 </div>
             </div>
         </div>

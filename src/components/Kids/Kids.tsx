@@ -2,8 +2,8 @@ import React from 'react';
 import Tiles, {TilesProps} from "../Shared/Tiles/Tiles";
 
 const dummyTile: TilesProps[] = [
-    {caption: 'Him'},
-    {caption: 'Her'},
+    {text: 'Him'},
+    {text: 'Her'},
 ];
 
 const Kids: React.FC = () => {
@@ -14,7 +14,7 @@ const Kids: React.FC = () => {
                     dummyTile.map(c => {
                         return (
                             <div className="col-6 col-sm-6 col-md-6">
-                                <Tiles caption={c.caption}/>
+                                <Tiles text={c.text}/>
                             </div>
                         )
                     })
