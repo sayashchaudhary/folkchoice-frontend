@@ -3,7 +3,8 @@ export enum RoutePath {
     login = 'login',
     register = 'register',
     home = 'home',
-    clothing = 'clothing'
+    clothing = 'clothing',
+    kids = 'kids'
 }
 
 export const AuthRouteMap = {

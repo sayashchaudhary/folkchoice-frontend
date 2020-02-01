@@ -1,12 +1,14 @@
 import React from 'react';
-import { GlobalProps } from '../../App';
+// import { GlobalProps } from '../../App';
 import { Redirect, Route, Switch } from 'react-router';
 import Login from '../../components/Auth/Login/Login';
 import Register from '../../components/Auth/Register/Register';
 import Clothing from "../../components/Clothing/Clothing";
+import Kids from "../../components/Kids/Kids";
 import Landing from '../../components/Landing/Landing';
 import { RouteUtils } from '../route-utils';
 import { RoutePath } from '../routes';
+
 
 
 export const RootRouting: React.FC<any> = (props) => {
@@ -26,6 +28,9 @@ export const RootRouting: React.FC<any> = (props) => {
             </Route>
             <Route path={RouteUtils.getPath(RoutePath.clothing)}>
                 <Clothing/>
+            </Route>
+            <Route path={RouteUtils.getPath(RoutePath.kids)}>
+                <Kids/>
             </Route>
         </Switch>
     );

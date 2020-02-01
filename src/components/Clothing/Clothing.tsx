@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
 import Slider, {CarouselData} from '../Shared/Carousel/Carousel';
 import Footer from '../Shared/Footer/Footer';
+import Gradient from '../../assets/images/gradient.png';
 
 const dummyCarousel: CarouselData[] = [
     {caption: ''},
@@ -20,6 +21,7 @@ const Clothing: React.FC = () => {
                             <img
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEzDjENz1AjhT5nYUsJp4PJwVFLEzpclKLHPvHGNpKWmydb303"
                                 alt="men" className="clothing__card-image"/>
+                                <img src={Gradient} alt="gradient" className="clothing__card-gradient" />
                             <div className="clothing__card-text">
                                 <p>MEN'S <br/>CLOTHING</p>
                             </div>
@@ -30,6 +32,7 @@ const Clothing: React.FC = () => {
                             <img
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDgZMRkeqJWQ0E_UF8euHcOJcdZFU6v0e5-QDK72jGMI7UPi_N"
                                 alt="men" className="clothing__card-image"/>
+                            <img src={Gradient} alt="gradient" className="clothing__card-gradient" />
                             <div className="clothing__card-text">
                                 <p>WOMEN'S <br/>CLOTHING</p>
                             </div>
@@ -40,6 +43,7 @@ const Clothing: React.FC = () => {
                             <img
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBc-elmXE8KdWSPTv8JlXxiOmaI9Yww6ywW006iuycEb6iSZLB    "
                                 alt="men" className="clothing__card-image"/>
+                            <img src={Gradient} alt="gradient" className="clothing__card-gradient" />
                             <div className="clothing__card-text">
                                 <p>KIDS <br/>CLOTHING</p>
                             </div>
@@ -50,6 +54,7 @@ const Clothing: React.FC = () => {
                             <img
                                 src="https://www.buckandbuck.com/media/catalog/product/cache/ed87568b890e2f3fc93cb0ae3e77131d/3/1/31rx_2009_srgb_1_1.jpg"
                                 alt="men" className="clothing__card-image"/>
+                            <img src={Gradient} alt="gradient" className="clothing__card-gradient" />
                             <div className="clothing__card-text">
                                 <p>SECOND <br/>INNINGS</p>
                             </div>

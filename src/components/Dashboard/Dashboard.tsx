@@ -24,6 +24,7 @@ const Dashboard: React.FC = () => {
         <div className="container-fluid">
             <div className="dashboard">
                 <button onClick={() => navigateToRoute(RoutePath.clothing)} >Clothing</button>
+                <button onClick={() => navigateToRoute(RoutePath.kids)} >Kids</button>
                 <div className="dashboard__items">
                     <div className="dashboard__items-text">
                         <h4>Today, we present you:</h4><br/>
