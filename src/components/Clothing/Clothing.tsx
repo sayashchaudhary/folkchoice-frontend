@@ -1,20 +1,31 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
-import Slider, {CarouselData} from '../Shared/Carousel/Carousel';
+import Slider, { SliderData } from '../Shared/Carousel/Carousel';
 import Footer from '../Shared/Footer/Footer';
-import Tiles, {TilesProps} from "../Shared/Tiles/Tiles";
+import Tiles, { TilesProps } from "../Shared/Tiles/Tiles";
+import Market, {MarketProps} from "../Shared/Market/Market";
 
 const dummyTiles: TilesProps[] = [
-    {text: 'Men clothing'},
-    {text: 'Men clothing'},
-    {text: 'Men clothing'},
-    {text: 'Men clothing'},
+    {text: 'Men clothing',imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEzDjENz1AjhT5nYUsJp4PJwVFLEzpclKLHPvHGNpKWmydb303'},
+    {text: 'Men clothing',imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDgZMRkeqJWQ0E_UF8euHcOJcdZFU6v0e5-QDK72jGMI7UPi_N'},
+    {text: 'Men clothing',imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBc-elmXE8KdWSPTv8JlXxiOmaI9Yww6ywW006iuycEb6iSZLB'},
+    {text: 'Men clothing',imageUrl:'https://www.buckandbuck.com/media/catalog/product/cache/ed87568b890e2f3fc93cb0ae3e77131d/3/1/31rx_2009_srgb_1_1.jpg'},
 ];
 
-const dummyCarousel: CarouselData[] = [
+const dummySlider: SliderData[] = [
     {caption: ''},
     {caption: ''},
     {caption: ''}
+];
+
+const dummyMarket: MarketProps[] = [
+    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
+    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
+    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
+    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
+    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
+    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
+
 ];
 
 const Clothing: React.FC = () => {
@@ -27,7 +38,7 @@ const Clothing: React.FC = () => {
                         dummyTiles.map(t => {
                             return (
                                 <div className="col-6 col-sm-6 col-md-4 col-lg-3 clothing__spacing">
-                                    <Tiles text={t.text}/>
+                                    <Tiles imageUrl={t.imageUrl} text={t.text}/>
                                 </div>
                             )
                         })
@@ -35,7 +46,7 @@ const Clothing: React.FC = () => {
                 </div>
                 <div className="row">
                     <div className="clothing__carousel">
-                        <Slider data={dummyCarousel}/>
+                        <Slider data={dummySlider}/>
                     </div>
                 </div>
                 <div className="row">
@@ -44,101 +55,19 @@ const Clothing: React.FC = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-6 pt-3 clothing__spacing">
-                        <div className="clothing__seller">
-                            <div className="clothing__seller-card">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
-                                    alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
-                                    Ethnic, Casuals, Formals</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 pt-3 clothing__spacing">
-                        <div className="clothing__seller">
-                            <div className="clothing__seller-card">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
-                                    alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
-                                    Ethnic, Casuals, Formals</p>
-                            </div>
-                        </div>
-                    </div>
+                    {
+                        dummyMarket.map(m => {
+                            return (
+                                <div className="col-md-6 pt-3 clothing__spacing">
+                                    <Market shop={m.shop} category={m.category} />
+                                </div>
+                            )
+                        })
+                    }
                 </div>
                 <div className="row">
                     <div className="clothing__carousel">
-                        <Slider data={dummyCarousel}/>
-                    </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-md-6 pt-3 clothing__spacing">
-                        <div className="clothing__seller">
-                            <div className="clothing__seller-card">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
-                                    alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
-                                    Ethnic, Casuals, Formals</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 pt-3 clothing__spacing">
-                        <div className="clothing__seller">
-                            <div className="clothing__seller-card">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
-                                    alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
-                                    Ethnic, Casuals, Formals</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 pt-3 clothing__spacing">
-                        <div className="clothing__seller">
-                            <div className="clothing__seller-card">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
-                                    alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
-                                    Ethnic, Casuals, Formals</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 pt-3 clothing__spacing">
-                        <div className="clothing__seller">
-                            <div className="clothing__seller-card">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
-                                    alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
-                                    Ethnic, Casuals, Formals</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 pt-3 clothing__spacing">
-                        <div className="clothing__seller">
-                            <div className="clothing__seller-card">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
-                                    alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
-                                    Ethnic, Casuals, Formals</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 pt-3 clothing__spacing">
-                        <div className="clothing__seller">
-                            <div className="clothing__seller-card">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
-                                    alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
-                                    Ethnic, Casuals, Formals</p>
-                            </div>
-                        </div>
+                        <Slider data={dummySlider}/>
                     </div>
                 </div>
             </div>

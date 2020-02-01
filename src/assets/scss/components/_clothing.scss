@@ -1,38 +1,6 @@
 .clothing {
   padding-top: 6%;
 
-  &__card {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 22px;
-    width: 80%;
-    height: 90%;
-    margin-left: 10%;
-    margin-right: 20%;
-    overflow: hidden;
-    position: relative;
-
-    &-image {
-      width: 100%;
-      z-index:1;
-      //position: absolute;
-    }
-
-    &-gradient{
-      z-index:2;
-      width: 100%;
-      margin-top:-100%;
-    }
-
-    &-text {
-      position: absolute;
-      bottom: 8px;
-      left: 17px;
-      font-weight: 600;
-      color: white;
-      font-size: 34px;
-    }
-  }
-
   &__carousel {
     box-shadow: inset 0px 4px 9px rgba(0, 0, 0, 0.25);
   }
@@ -45,42 +13,10 @@
   &__text {
     margin-left: 5%;
   }
-
-  &__seller {
-    margin-left: 15%;
-    width: 75%;
-    margin-bottom: 5%;
-
-    &-card {
-      width: 100%;
-      margin-right: 20%;
-      height: 147px;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 31px;
-
-      &__image {
-        width: 13%;
-        height: 60%;
-        margin-left: 10%;
-        margin-top: 3%;
-        border-radius: 50%;
-      }
-
-      &__text {
-        float: right;
-        margin-right: 10%;
-        margin-top: 3%;
-        font-size: 32px;
-        text-align: right;
-      }
-    }
-  }
 }
-
 
 @media(max-width: 767px) {
   .clothing {
-    padding-top: 20%;
 
     &__text {
       margin-left: 10%;
@@ -90,30 +26,6 @@
       padding-left: 1%;
       padding-right: 1%;
     }
-
-    &__card-text {
-      font-size: 20px;
-      bottom: 2px;
-    }
-
-    &__seller {
-      margin-left: 5%;
-      &-card {
-        margin-left: 10%;
-        height: 100px;
-
-        &__image {
-          width: 20%;
-          margin-left: 5%;
-          margin-top: 10%;
-        }
-
-        &__text {
-          font-size: 15px;
-          display: inline;
-          margin-top: 10%;
-        }
-      }
-    }
   }
 }
+

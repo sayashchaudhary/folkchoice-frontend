@@ -4,7 +4,7 @@
   min-width: 80% !important;
   margin-left: 10% !important;
   margin-right: 10% !important;
-  margin-top: 1% !important;
+  margin-top: 3% !important;
   overflow: hidden !important;
   background-color: $color-secondary !important;
 }
@@ -13,9 +13,9 @@
   background-color: $color-secondary;
 }
 
-.slider__gradient{
-  margin-top:-31%;
-  width:80% !important;
+.slider__gradient {
+  margin-top: -31%;
+  width: 80% !important;
   border-radius: 19px;
 }
 
@@ -60,8 +60,8 @@
   .slider__image {
     width: 100% !important;
   }
-  .slider__gradient{
-    width:100% !important;
-    margin-top:-36%;
+  .slider__gradient {
+    width: 100% !important;
+    margin-top: -36%;
   }
 }

@@ -1,5 +1,6 @@
 .tiles {
   padding-top: 6%;
+  padding-bottom: 6%;
 
   &__card {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -14,8 +15,8 @@
     &-image {
       width: 100%;
       z-index: 1;
+      min-height: 378px;
       object-fit: cover;
-      //position: absolute;
     }
 
     &-gradient {
@@ -33,6 +34,27 @@
       color: white;
       font-size: 34px;
       display: block;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .tiles {
+    padding-top: 20%;
+
+    &__card {
+      margin-left: 10%;
+      margin-right: 10%;
+      max-height: 250px;
+
+      &-image {
+        min-height: 250px;
+      }
+
+      &-text {
+        font-size: 20px;
+        bottom: 2px;
+      }
     }
   }
 }
