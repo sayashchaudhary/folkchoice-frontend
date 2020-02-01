@@ -9,7 +9,7 @@
   background-color: $color-secondary !important;
 }
 
-.carousel__background{
+.carousel__background {
   background-color: $color-secondary;
 }
 
@@ -21,7 +21,7 @@
 
 .slider__image {
   border-radius: 19px;
-  z-index:1;
+  z-index: 1;
   width: 80% !important;
   overflow: hidden;
   max-height: 500px !important;
@@ -48,7 +48,7 @@
     margin-right: 0 !important;
     background-color: white !important;
   }
-  .carousel__background{
+  .carousel__background {
     background-color: white;
     overflow: hidden;
   }
