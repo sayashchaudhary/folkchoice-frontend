@@ -4,7 +4,13 @@ import {GlobalProps} from '../../App';
 import Navbar from '../Shared/Navbar/Navbar';
 import Dashboard from '../Dashboard/Dashboard';
 import Footer from '../Shared/Footer/Footer'
-import Slider from '../Carousel/Carousel';
+import Slider, {CarouselData} from '../Shared/Carousel/Carousel';
+
+const dummyCarousel: CarouselData[] = [
+    {caption: 'cosmetics'},
+    {caption: 'exclusive'},
+    {caption: 'clothing'}
+];
 
 
 const Landing: React.FC<GlobalProps> = (props) => {
@@ -16,7 +22,9 @@ const Landing: React.FC<GlobalProps> = (props) => {
         <div>
             <Navbar/>
             <div className="landing-container">
-                <Slider/>
+                <Slider
+                    data={dummyCarousel}
+                />
                 <Dashboard/>
                 <Footer/>
             </div>

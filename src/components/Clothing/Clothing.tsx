@@ -1,7 +1,13 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
-import Carousel from '../Carousel/Carousel';
+import Slider, {CarouselData} from '../Shared/Carousel/Carousel';
 import Footer from '../Shared/Footer/Footer';
+
+const dummyCarousel: CarouselData[] = [
+    {caption: ''},
+    {caption: ''},
+    {caption: ''}
+];
 
 const Clothing: React.FC = () => {
     return (
@@ -52,7 +58,7 @@ const Clothing: React.FC = () => {
                 </div>
                 <div className="row">
                     <div className="clothing__carousel">
-                        <Carousel/>
+                        <Slider data={dummyCarousel}/>
                     </div>
                 </div>
                 <div className="row">
@@ -67,7 +73,7 @@ const Clothing: React.FC = () => {
                                 <img
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
                                     alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br />
+                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
                                     Ethnic, Casuals, Formals</p>
                             </div>
                         </div>
@@ -78,15 +84,15 @@ const Clothing: React.FC = () => {
                                 <img
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
                                     alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br />
-                                Ethnic, Casuals, Formals</p>
+                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
+                                    Ethnic, Casuals, Formals</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="clothing__carousel">
-                        <Carousel/>
+                        <Slider data={dummyCarousel}/>
                     </div>
                 </div>
 
@@ -97,7 +103,7 @@ const Clothing: React.FC = () => {
                                 <img
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
                                     alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br />
+                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
                                     Ethnic, Casuals, Formals</p>
                             </div>
                         </div>
@@ -108,7 +114,7 @@ const Clothing: React.FC = () => {
                                 <img
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
                                     alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br />
+                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
                                     Ethnic, Casuals, Formals</p>
                             </div>
                         </div>
@@ -119,7 +125,7 @@ const Clothing: React.FC = () => {
                                 <img
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
                                     alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br />
+                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
                                     Ethnic, Casuals, Formals</p>
                             </div>
                         </div>
@@ -130,7 +136,7 @@ const Clothing: React.FC = () => {
                                 <img
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
                                     alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br />
+                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
                                     Ethnic, Casuals, Formals</p>
                             </div>
                         </div>
@@ -141,7 +147,7 @@ const Clothing: React.FC = () => {
                                 <img
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
                                     alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br />
+                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
                                     Ethnic, Casuals, Formals</p>
                             </div>
                         </div>
@@ -152,14 +158,14 @@ const Clothing: React.FC = () => {
                                 <img
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVS3bRllJLwKk14gFqMN6T8fKt8DMm_trMKd6WUC16YhMRtgMx"
                                     alt="Profile Pic" className="clothing__seller-card__image"/>
-                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br />
+                                <p className="clothing__seller-card__text"><strong>Rama Traders</strong><br/>
                                     Ethnic, Casuals, Formals</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     )
 };
