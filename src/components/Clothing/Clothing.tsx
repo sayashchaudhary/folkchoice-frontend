@@ -1,15 +1,27 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
-import Slider, { SliderData } from '../Shared/Carousel/Carousel';
+import Slider, {SliderData} from '../Shared/Carousel/Carousel';
 import Footer from '../Shared/Footer/Footer';
-import Tiles, { TilesProps } from "../Shared/Tiles/Tiles";
+import Tiles, {TilesProps} from "../Shared/Tiles/Tiles";
 import Market, {MarketProps} from "../Shared/Market/Market";
 
 const dummyTiles: TilesProps[] = [
-    {text: 'Men clothing',imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEzDjENz1AjhT5nYUsJp4PJwVFLEzpclKLHPvHGNpKWmydb303'},
-    {text: 'Men clothing',imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDgZMRkeqJWQ0E_UF8euHcOJcdZFU6v0e5-QDK72jGMI7UPi_N'},
-    {text: 'Men clothing',imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBc-elmXE8KdWSPTv8JlXxiOmaI9Yww6ywW006iuycEb6iSZLB'},
-    {text: 'Men clothing',imageUrl:'https://www.buckandbuck.com/media/catalog/product/cache/ed87568b890e2f3fc93cb0ae3e77131d/3/1/31rx_2009_srgb_1_1.jpg'},
+    {
+        text: 'Men clothing',
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEzDjENz1AjhT5nYUsJp4PJwVFLEzpclKLHPvHGNpKWmydb303'
+    },
+    {
+        text: 'Men clothing',
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDgZMRkeqJWQ0E_UF8euHcOJcdZFU6v0e5-QDK72jGMI7UPi_N'
+    },
+    {
+        text: 'Men clothing',
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBc-elmXE8KdWSPTv8JlXxiOmaI9Yww6ywW006iuycEb6iSZLB'
+    },
+    {
+        text: 'Men clothing',
+        imageUrl: 'https://www.buckandbuck.com/media/catalog/product/cache/ed87568b890e2f3fc93cb0ae3e77131d/3/1/31rx_2009_srgb_1_1.jpg'
+    },
 ];
 
 const dummySlider: SliderData[] = [
@@ -19,12 +31,12 @@ const dummySlider: SliderData[] = [
 ];
 
 const dummyMarket: MarketProps[] = [
-    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
-    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
-    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
-    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
-    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
-    {shop: 'Rama Traders',category:'Ethnic, Casuals, Formals'} ,
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 1},
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 2},
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 3},
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 4},
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 5},
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 6},
 
 ];
 
@@ -58,10 +70,14 @@ const Clothing: React.FC = () => {
                     {
                         dummyMarket.map(m => {
                             return (
-                                <div className="col-md-6 pt-3 clothing__spacing">
-                                    <Market shop={m.shop} category={m.category} />
-                                </div>
+                                m.id <= 2 ?
+                                    <div className="col-md-6 pt-3 clothing__spacing">
+                                        <Market shop={m.shop} category={m.category} id={m.id}/>
+                                    </div>
+                                    :
+                                    null
                             )
+
                         })
                     }
                 </div>
@@ -70,6 +86,19 @@ const Clothing: React.FC = () => {
                         <Slider data={dummySlider}/>
                     </div>
                 </div>
+
+            </div>
+            <div className="row">
+                {
+                    dummyMarket.map(m => {
+                        return (
+                            <div className="col-md-6 pt-3 clothing__spacing">
+                                <Market shop={m.shop} category={m.category} id={m.id}/>
+                            </div>
+
+                        )
+                    })
+                }
             </div>
             <Footer/>
         </div>
