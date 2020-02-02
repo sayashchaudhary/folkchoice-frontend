@@ -8,18 +8,15 @@ export interface TilesProps {
 
 const Tiles: React.FC<TilesProps> = (props: TilesProps) => {
     return (
-
         <div className="tiles">
-
             <div className="tiles__card">
                 <img src={props.imageUrl} alt="men" className="tiles__card-image"/>
                 <img src={Gradient} alt="gradient" className="tiles__card-gradient"/>
                 <div className="tiles__card-text">
-                    <p>{props.text}</p>
+                    <span className="tiles__card-text">{props.text}</span>
                 </div>
             </div>
         </div>
-
     )
 };
 

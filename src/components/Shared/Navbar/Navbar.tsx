@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) =>
             transition: theme.transitions.create('width'),
             width: '100%',
             [theme.breakpoints.up('md')]: {
-                width: 250,
+                width: 325,
             },
             color: '#373A59',
         },

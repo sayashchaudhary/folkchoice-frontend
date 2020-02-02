@@ -42,7 +42,7 @@ const Landing: React.FC<GlobalProps> = (props) => {
                         categoryTiles.map(t => {
                             return (
                                 <div className="col-6 col-sm-6 col-md-6">
-                                    <Tiles imageUrl={t.imageUrl} text={t.text}/>
+                                    <Tiles imageUrl={t.imageUrl} text={t.text} />
                                 </div>
                             )
                         })
