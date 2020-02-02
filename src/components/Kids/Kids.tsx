@@ -1,7 +1,7 @@
 import React from 'react';
-import Tiles, { TilesProps } from "../Shared/Tiles/Tiles";
-import Slider, { SliderData } from "../Shared/Carousel/Carousel"
-import Market, { MarketProps } from "../Shared/Market/Market";
+import Tiles, {TilesProps} from "../Shared/Tiles/Tiles";
+import Slider, {SliderData} from "../Shared/Carousel/Carousel"
+import Market, {MarketProps} from "../Shared/Market/Market";
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from "../Shared/Footer/Footer";
 
@@ -54,10 +54,10 @@ const categoryTiles: TilesProps[] = [
 ];
 
 const dummyMarket: MarketProps[] = [
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals'},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals'},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals'},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals'},
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 1},
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 2},
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 3},
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 4},
 ];
 
 const Kids: React.FC = () => {
@@ -108,7 +108,7 @@ const Kids: React.FC = () => {
                     dummyMarket.map(m => {
                         return (
                             <div className="col-md-6 kids__spacing">
-                                <Market shop={m.shop} category={m.category}/>
+                                <Market shop={m.shop} category={m.category} id={m.id}/>
                             </div>
                         )
                     })
