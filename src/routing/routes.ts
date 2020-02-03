@@ -4,6 +4,7 @@ export enum RoutePath {
     register = 'register',
     home = 'home',
     clothing = 'clothing',
+    cosmetics = 'cosmetics',
     kids = 'kids',
     path = ':value'
 }

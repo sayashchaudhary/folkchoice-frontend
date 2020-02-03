@@ -5,24 +5,25 @@ import Navbar from '../Shared/Navbar/Navbar';
 import Dashboard from '../Dashboard/Dashboard';
 import Footer from '../Shared/Footer/Footer'
 import Slider, { SliderData } from '../Shared/Carousel/Carousel';
-import Tiles, { TilesProps } from "../Shared/Tiles/Tiles";
+import Tiles, { TilesProps } from '../Shared/Tiles/Tiles';
+import { RoutePath } from '../../routing/routes';
 
 const dummyslider: SliderData[] = [
-    {caption: 'cosmetics'},
-    {caption: 'exclusive'},
-    {caption: 'clothing'}
+    { caption: 'cosmetics' },
+    { caption: 'exclusive' },
+    { caption: 'clothing' }
 ];
 
 const categoryTiles: TilesProps[] = [
     {
         text: 'CLOTHING',
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRSOgQfJVjwL6nX9us8M8sszxCqjjoglYN9bVRhg3lCC2cVaha3',
-        link: 'clothing'
+        link: RoutePath.clothing
     },
     {
         text: 'COSMETICS',
         imageUrl: 'https://jw-webmagazine.com/wp-content/uploads/2019/07/jw-5d1b48ed789c29.07523610.jpeg',
-        link:'cosmetics'
+        link: RoutePath.cosmetics
     },
 ];
 
@@ -44,7 +45,7 @@ const Landing: React.FC<GlobalProps> = (props) => {
                         categoryTiles.map(t => {
                             return (
                                 <div className="col-6 col-sm-6 col-md-6">
-                                    <Tiles link={t.link} imageUrl={t.imageUrl} text={t.text} />
+                                    <Tiles link={t.link} imageUrl={t.imageUrl} text={t.text}/>
                                 </div>
                             )
                         })

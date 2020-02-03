@@ -7,7 +7,7 @@ import { RouteUtils } from "../../../routing/route-utils";
 export interface TilesProps {
     imageUrl: string;
     text: string;
-    link:string
+    link?:RoutePath
 }
 
 const Tiles: React.FC<TilesProps> = (props: TilesProps) => {
@@ -19,7 +19,7 @@ const Tiles: React.FC<TilesProps> = (props: TilesProps) => {
     };
     return (
         <div className="tiles">
-            <div className="tiles__card" onClick={() => navigateToRoute(RoutePath.{props.link})}>
+            <div className="tiles__card" onClick={() => navigateToRoute(props.link!)}>
                 <img src={props.imageUrl} alt="men" className="tiles__card-image"/>
                 <img src={Gradient} alt="gradient" className="tiles__card-gradient"/>
                 <div className="tiles__card-text">
