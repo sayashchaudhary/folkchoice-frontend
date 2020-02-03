@@ -16,11 +16,13 @@ const dummyslider: SliderData[] = [
 const categoryTiles: TilesProps[] = [
     {
         text: 'CLOTHING',
-        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRSOgQfJVjwL6nX9us8M8sszxCqjjoglYN9bVRhg3lCC2cVaha3'
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRSOgQfJVjwL6nX9us8M8sszxCqjjoglYN9bVRhg3lCC2cVaha3',
+        link: 'clothing'
     },
     {
         text: 'COSMETICS',
-        imageUrl: 'https://jw-webmagazine.com/wp-content/uploads/2019/07/jw-5d1b48ed789c29.07523610.jpeg'
+        imageUrl: 'https://jw-webmagazine.com/wp-content/uploads/2019/07/jw-5d1b48ed789c29.07523610.jpeg',
+        link:'cosmetics'
     },
 ];
 
@@ -42,7 +44,7 @@ const Landing: React.FC<GlobalProps> = (props) => {
                         categoryTiles.map(t => {
                             return (
                                 <div className="col-6 col-sm-6 col-md-6">
-                                    <Tiles imageUrl={t.imageUrl} text={t.text} />
+                                    <Tiles link={t.link} imageUrl={t.imageUrl} text={t.text} />
                                 </div>
                             )
                         })

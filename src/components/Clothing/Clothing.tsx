@@ -8,19 +8,23 @@ import Market, {MarketProps} from "../Shared/Market/Market";
 const dummyTiles: TilesProps[] = [
     {
         text: 'Men clothing',
-        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEzDjENz1AjhT5nYUsJp4PJwVFLEzpclKLHPvHGNpKWmydb303'
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEzDjENz1AjhT5nYUsJp4PJwVFLEzpclKLHPvHGNpKWmydb303',
+        link: ''
     },
     {
         text: 'Men clothing',
-        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDgZMRkeqJWQ0E_UF8euHcOJcdZFU6v0e5-QDK72jGMI7UPi_N'
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDgZMRkeqJWQ0E_UF8euHcOJcdZFU6v0e5-QDK72jGMI7UPi_N',
+        link: ''
     },
     {
         text: 'Men clothing',
-        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBc-elmXE8KdWSPTv8JlXxiOmaI9Yww6ywW006iuycEb6iSZLB'
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBc-elmXE8KdWSPTv8JlXxiOmaI9Yww6ywW006iuycEb6iSZLB',
+        link: ''
     },
     {
         text: 'Men clothing',
-        imageUrl: 'https://www.buckandbuck.com/media/catalog/product/cache/ed87568b890e2f3fc93cb0ae3e77131d/3/1/31rx_2009_srgb_1_1.jpg'
+        imageUrl: 'https://www.buckandbuck.com/media/catalog/product/cache/ed87568b890e2f3fc93cb0ae3e77131d/3/1/31rx_2009_srgb_1_1.jpg',
+        link: ''
     }
 ];
 
@@ -50,7 +54,7 @@ const Clothing: React.FC = () => {
                         dummyTiles.map(t => {
                             return (
                                 <div className="col-6 col-sm-6 col-md-4 col-lg-3 clothing__spacing">
-                                    <Tiles imageUrl={t.imageUrl} text={t.text}/>
+                                    <Tiles link={t.link} imageUrl={t.imageUrl} text={t.text}/>
                                 </div>
                             )
                         })
