@@ -1,16 +1,16 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
-import Slider, { SliderData } from '../Shared/Carousel/Carousel';
+import Slider, {SliderData} from '../Shared/Carousel/Carousel';
 import Footer from '../Shared/Footer/Footer';
-import Tiles, { TilesProps } from "../Shared/Tiles/Tiles";
-import Market, { MarketProps } from "../Shared/Market/Market";
-import { RoutePath } from "../../routing/routes";
+import Tiles, {TilesProps} from "../Shared/Tiles/Tiles";
+import Market, {MarketProps} from "../Shared/Market/Market";
+import {RoutePath} from "../../routing/routes";
 
 const dummyTiles: TilesProps[] = [
     {
         text: 'MEN CLOTHING',
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEzDjENz1AjhT5nYUsJp4PJwVFLEzpclKLHPvHGNpKWmydb303',
-        // link:
+        link: RoutePath.mens
     },
     {
         text: 'WOMEN CLOTHING',
