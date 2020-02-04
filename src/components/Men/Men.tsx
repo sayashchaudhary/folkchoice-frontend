@@ -34,7 +34,7 @@ const dummyTiles: TilesProps[] = [
     }
 ];
 
-const dummyMarktes: MarketProps[] = [
+const dummyMarkets: MarketProps[] = [
     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 1},
     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 2},
     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 3},
@@ -54,7 +54,7 @@ const dummySlider: SliderData[] = [
     {caption: ''},
     {caption: ''}
 ];
-const Mens: React.FC = () => {
+const Men: React.FC = () => {
     return (
         <div className="container-fluid">
             <Navbar/>
@@ -78,7 +78,7 @@ const Mens: React.FC = () => {
             <div className="row">
 
                 {
-                    dummyMarktes.map(m => {
+                    dummyMarkets.map(m => {
                         return (
                             m.id <= 4 ? <div>
                                 <div className="col-6 col-sm-6 col-md-4 col-lg-3">
@@ -98,7 +98,7 @@ const Mens: React.FC = () => {
             <div className="row">
 
                 {
-                    dummyMarktes.map(m => {
+                    dummyMarkets.map(m => {
                         return (
                             <div>
                                 <div className="col-6 col-sm-6 col-md-4 col-lg-3">
@@ -114,4 +114,4 @@ const Mens: React.FC = () => {
     );
 }
 
-export default Mens;
+export default Men;

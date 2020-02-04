@@ -10,12 +10,12 @@ const dummyTiles: TilesProps[] = [
     {
         text: 'MEN CLOTHING',
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEzDjENz1AjhT5nYUsJp4PJwVFLEzpclKLHPvHGNpKWmydb303',
-        link: RoutePath.mens
+        link: RoutePath.men
     },
     {
         text: 'WOMEN CLOTHING',
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDgZMRkeqJWQ0E_UF8euHcOJcdZFU6v0e5-QDK72jGMI7UPi_N',
-        // link: ''
+        link: RoutePath.women
     },
     {
         text: 'KIDS CLOTHING',

@@ -5,10 +5,11 @@ import Login from '../../components/Auth/Login/Login';
 import Register from '../../components/Auth/Register/Register';
 import Clothing from "../../components/Clothing/Clothing";
 import Kids from "../../components/Kids/Kids";
-import Mens from "../../components/Mens/Mens";
+import Men from "../../components/Men/Men";
 import Landing from '../../components/Landing/Landing';
 import {RouteUtils} from '../route-utils';
 import {RoutePath} from '../routes';
+import Women from "../../components/Women/Women";
 
 
 export const RootRouting: React.FC<any> = (props) => {
@@ -32,8 +33,11 @@ export const RootRouting: React.FC<any> = (props) => {
             <Route path={RouteUtils.getPath(RoutePath.kids)}>
                 <Kids/>
             </Route>
-            <Route path={RouteUtils.getPath(RoutePath.mens)}>
-                <Mens/>
+            <Route path={RouteUtils.getPath(RoutePath.men)}>
+                <Men/>
+            </Route>
+            <Route path={RouteUtils.getPath(RoutePath.women)}>
+                <Women/>
             </Route>
         </Switch>
     );

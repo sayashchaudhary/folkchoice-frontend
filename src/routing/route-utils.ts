@@ -1,4 +1,4 @@
-import { AuthRouteMap, RoutePath } from './routes';
+import {AuthRouteMap, RoutePath} from './routes';
 
 export class RouteUtils {
     static getUrl(route: RoutePath, data: any) {
