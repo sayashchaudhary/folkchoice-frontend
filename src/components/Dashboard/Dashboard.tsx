@@ -24,7 +24,8 @@ const Dashboard: React.FC = () => {
                             {
                                 dummyProducts.map(p => {
                                     return (
-                                        <div className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
+                                        <div
+                                            className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
                                             <ProductCard
                                                 name={p.name}
                                                 seller={p.seller}
@@ -45,7 +46,8 @@ const Dashboard: React.FC = () => {
                             {
                                 dummyProducts.map(p => {
                                     return (
-                                        <div className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
+                                        <div
+                                            className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
                                             <ProductCard
                                                 name={p.name}
                                                 seller={p.seller}
@@ -56,10 +58,10 @@ const Dashboard: React.FC = () => {
                                     );
                                 })
                             }
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     );
 };
