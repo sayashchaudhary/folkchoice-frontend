@@ -1,10 +1,11 @@
 import React from 'react';
-import {TilesProps} from "../Shared/Tiles/Tiles";
-import {MarketProps} from "../Shared/Market/Market";
+import { TilesProps } from "../Shared/Tiles/Tiles";
+import { MarketProps } from "../Shared/Market/Market";
 import Navbar from "../Shared/Navbar/Navbar";
 import Tiles from "../Shared/Tiles/Tiles";
 import Market from "../Shared/Market/Market";
-import Slider, {SliderData} from '../Shared/Carousel/Carousel';
+import Slider, { SliderData } from '../Shared/Carousel/Carousel';
+import Footer from "../Shared/Footer/Footer";
 
 const dummyTiles: TilesProps[] = [
     {
@@ -28,7 +29,7 @@ const dummyTiles: TilesProps[] = [
 
     },
     {
-        text: 'CHICK',
+        text: 'GULABBO',
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEzDjENz1AjhT5nYUsJp4PJwVFLEzpclKLHPvHGNpKWmydb303',
 
     }
@@ -42,11 +43,7 @@ const dummyMarkets: MarketProps[] = [
     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 5},
     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 6},
     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 7},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 8},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 9},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 10},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 11},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 12}
+    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 8}
 ];
 
 const dummySlider: SliderData[] = [
@@ -58,11 +55,11 @@ const Women: React.FC = () => {
     return (
         <div className="container-fluid">
             <Navbar/>
-            <div className="row">
+            <div className="row women">
                 {
                     dummyTiles.map(t => {
                         return (
-                            <div className="col-6 col-sm-6 col-md-4 col-lg-3 ">
+                            <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-lg-offset-1 women__spacing">
                                 <Tiles imageUrl={t.imageUrl} text={t.text}/>
                             </div>
                         );
@@ -74,21 +71,20 @@ const Women: React.FC = () => {
                     <Slider data={dummySlider}/>
                 </div>
             </div>
-
             <div className="row">
-
                 {
                     dummyMarkets.map(m => {
                         return (
-                            m.id <= 4 ? <div>
-                                <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+                            m.id <= 4 ?
+                                <div className="col-md-6 pt-3 clothing__spacing">
                                     <Market shop={m.shop} category={m.category} id={m.id}/>
                                 </div>
-                            </div> : null
-                        );
+                                :
+                                null
+                        )
+
                     })
                 }
-
             </div>
             <div className="row">
                 <div>
@@ -96,22 +92,22 @@ const Women: React.FC = () => {
                 </div>
             </div>
             <div className="row">
-
                 {
                     dummyMarkets.map(m => {
                         return (
-                            <div>
-                                <div className="col-6 col-sm-6 col-md-4 col-lg-3">
-                                    <Market shop={m.shop} category={m.category} id={m.id}/>
-                                </div>
+                            <div className="col-md-6 pt-3 clothing__spacing">
+                                <Market shop={m.shop} category={m.category} id={m.id}/>
                             </div>
-                        );
+                        )
+
                     })
                 }
-
+            </div>
+            <div className="row">
+                <Footer/>
             </div>
         </div>
     );
-}
+};
 
 export default Women;

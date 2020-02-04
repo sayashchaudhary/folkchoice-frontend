@@ -1,0 +1,15 @@
+.men{
+  padding-left: 10%;
+  padding-top: 5%;
+  &__spacing{
+    padding-left:0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .men{
+    padding-left: 5%;
+    padding-top: 15%;
+  }
+}

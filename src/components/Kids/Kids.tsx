@@ -80,7 +80,7 @@ const Kids: React.FC = () => {
                 {
                     genderTiles.map(t => {
                         return (
-                            <div className="col-6 col-sm-6 col-md-6 kids__spacing">
+                            <div className="col-md-6 kids__spacing">
                                 <Tiles link={t.link} imageUrl={t.imageUrl} text={t.text}/>
                             </div>
                         )
