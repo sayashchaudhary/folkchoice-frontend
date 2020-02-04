@@ -7,7 +7,7 @@ import { RouteUtils } from "../../../routing/route-utils";
 export interface TilesProps {
     imageUrl: string;
     text: string;
-    link?:RoutePath
+    link?: RoutePath
 }
 
 const Tiles: React.FC<TilesProps> = (props: TilesProps) => {
