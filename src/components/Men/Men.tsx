@@ -56,15 +56,17 @@ const Men: React.FC = () => {
         <div className="container-fluid">
             <Navbar/>
             <div className="row men">
+                <div className="col-sm-1 col-md-1"/>
                 {
                     dummyTiles.map(t => {
                         return (
-                            <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-lg-offset-1 men__spacing">
+                            <div className="col-sm-4 col-md-4 col-lg-2 men__spacing">
                                 <Tiles imageUrl={t.imageUrl} text={t.text}/>
                             </div>
                         );
                     })
                 }
+                <div className="col-sm-1 col-md-1"/>
             </div>
             <div className="row">
                 <div>

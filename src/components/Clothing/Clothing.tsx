@@ -25,7 +25,7 @@ const dummyTiles: TilesProps[] = [
     {
         text: 'SECOND INNINGS',
         imageUrl: 'https://www.buckandbuck.com/media/catalog/product/cache/ed87568b890e2f3fc93cb0ae3e77131d/3/1/31rx_2009_srgb_1_1.jpg',
-        // link: ''
+        link: RoutePath.secondInnings
     }
 ];
 
