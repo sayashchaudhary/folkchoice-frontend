@@ -11,6 +11,7 @@ import {RouteUtils} from '../route-utils';
 import {RoutePath} from '../routes';
 import Women from '../../components/Women/Women';
 import SecondInnings from '../../components/Second_Innings/Second_Innings';
+import Cosmetics from '../../components/Cosmetics/Cosmetics';
 
 
 export const RootRouting: React.FC<any> = (props) => {
@@ -42,6 +43,9 @@ export const RootRouting: React.FC<any> = (props) => {
             </Route>
             <Route path={RouteUtils.getPath(RoutePath.secondInnings)}>
                 <SecondInnings/>
+            </Route>
+            <Route path={RouteUtils.getPath(RoutePath.cosmetics)}>
+                <Cosmetics/>
             </Route>
         </Switch>
     );
