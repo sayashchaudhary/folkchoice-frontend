@@ -6,6 +6,7 @@ import Radio from '@material-ui/core/Radio'
 import Logo from '../../../assets/images/logo.png';
 import {FormControlLabel} from '@material-ui/core';
 import {Formik, Form, useField, FieldAttributes} from 'formik';
+import {authController} from '../../../controllers/auth.controller';
 
 const TITLE = 'Sign Up - Folk Choice';
 
@@ -33,7 +34,7 @@ const validationSchema = Yup.object({
     email: Yup.string().email('Email is invalid').required('Email is required'),
     password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
     cnfPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match').required('Confirm Password is required'),
-    phoneNo: Yup.number().min(10, 'Contact number should be at least 10 digits').required('Contact number is required'),
+    phoneNo: Yup.string().min(10, 'Contact number should be at least 10 digits').required('Contact number is required'),
     gender: Yup.string().required('Gender is required')
 });
 
@@ -58,11 +59,13 @@ const Register: React.FC = () => {
                                 password: "",
                                 cnfPassword: "",
                                 phoneNo: "",
-                                gender: ""
+                                gender: "",
+                                role:"user"
                             }}
                             onSubmit={(data, {setSubmitting}) => {
                                 setSubmitting(true);
-                                console.log(data);
+                                // console.log(data);
+                                authController.register(data);
                                 setSubmitting(false);
                             }}>
                             <Form>

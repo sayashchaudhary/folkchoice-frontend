@@ -9,7 +9,7 @@ export class ApiService {
 
     private constructor() {
         //TODO: Replace this with correct base url
-        axios.defaults.baseURL = 'https://api.baseurl.com/api/'
+        axios.defaults.baseURL = 'http://3.12.234.166:3000'
     }
 
     static getInstance() {

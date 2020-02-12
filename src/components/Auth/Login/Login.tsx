@@ -10,6 +10,7 @@ import Phone from '../../../assets/images/phone.png';
 import { Formik, Form, useField, FieldAttributes } from 'formik';
 import { RoutePath } from '../../../routing/routes';
 import { RouteUtils } from '../../../routing/route-utils';
+import {authController} from "../../../controllers/auth.controller";
 
 
 const TITLE = 'Sign In - Folk Choice';
@@ -59,10 +60,11 @@ const Register: React.FC = () => {
                         <Formik
                             validateOnChange={true}
                             validationSchema={validationSchema}
-                            initialValues={{Email: '', password: ''}}
+                            initialValues={{email: '', password: ''}}
                             onSubmit={(data, {setSubmitting}) => {
                                 setSubmitting(true);
                                 console.log(data);
+                                authController.login(data);
                                 setSubmitting(false);
                             }}>
                             <Form>

@@ -1,16 +1,15 @@
 import {ApiService} from '../services/api.service';
 import {UserStore} from '../stores/user.store';
 
-export class AuthController {
+class AuthController {
 
     private apiService = ApiService.getInstance();
     private userStore = UserStore.getInstance();
 
-    login(email: string, password: string) {
-        const user = {
-            email,
-            password
-        }
+    login(user: {
+        email: string,
+        password: string
+    }) {
         this.apiService.post('/login', user).subscribe();
 
     }
@@ -20,15 +19,19 @@ export class AuthController {
         email: string,
         password: string,
         cnfPassword: string,
-        phoneNo: number,
-        gender: string
+        phoneNo: string,
+        gender: string,
+        role: string
     }) {
         if (!this.userStore.isLoading && !this.userStore.isLoggedIn) {
-            this.apiService.post('/user', user).subscribe();
+            this.apiService.post('/signup', user).subscribe(s => {
+                    console.log(s);
+                }
+            );
         }
     }
 
-
 }
 
+export const authController = new AuthController();
 
