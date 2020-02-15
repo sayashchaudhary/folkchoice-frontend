@@ -1,15 +1,15 @@
 import React from 'react';
 import * as Yup from 'yup';
-import { Helmet } from 'react-helmet';
-import { Link, useHistory } from 'react-router-dom';
+import {Helmet} from 'react-helmet';
+import {Link, useHistory} from 'react-router-dom';
 import Input from '@material-ui/core/Input'
 import Logo from '../../../assets/images/logo.png';
 // import Google from '../../../assets/images/google.png';
 // import Facebook from '../../../assets/images/facebook.png';
 import Phone from '../../../assets/images/phone.png';
-import { Formik, Form, useField, FieldAttributes } from 'formik';
-import { RoutePath } from '../../../routing/routes';
-import { RouteUtils } from '../../../routing/route-utils';
+import {Formik, Form, useField, FieldAttributes} from 'formik';
+import {RoutePath} from '../../../routing/routes';
+import {RouteUtils} from '../../../routing/route-utils';
 import {authController} from "../../../controllers/auth.controller";
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
@@ -27,7 +27,7 @@ const MyInputField: React.FC<FieldAttributes<{}>> = ({placeholder, type, ...prop
 };
 
 const validationSchema = Yup.object({
-    Email: Yup.string().email('Email is required').required('Email is required'),
+    email: Yup.string().email('Email is required').required('Email is required'),
     password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
 });
 
@@ -38,7 +38,7 @@ const Register: React.FC = () => {
             history.push(RouteUtils.getUrl(route, null));
         }
     };
-    const responseFacebook= (res) => {
+    const responseFacebook = (res) => {
         console.log(res);
         authController.oauthFacebook(res.accessToken);
     };
@@ -76,12 +76,11 @@ const Register: React.FC = () => {
                             initialValues={{email: '', password: ''}}
                             onSubmit={(data, {setSubmitting}) => {
                                 setSubmitting(true);
-                                // console.log(data);
                                 authController.login(data);
                                 setSubmitting(false);
                             }}>
                             <Form>
-                                <MyInputField name="Email" type="email" placeholder="E-mail"/>
+                                <MyInputField name="email" type="email" placeholder="E-mail"/>
                                 <MyInputField name="password" type="password" placeholder="Password"/>
                                 <div className="row forgot">
                                     <div className="col-md-6">
@@ -112,25 +111,16 @@ const Register: React.FC = () => {
                                 onFailure={responseGoogle}
                                 className="button google"
                             />
-                            {/*<Link to="/">*/}
-                            {/*    <button type="submit" className="button google"><img src={Google} alt="Google"/><span><div>Sign in with</div> </span>Google*/}
-                            {/*    </button>*/}
-                            {/*</Link>*/}
                         </div>
                         <div className="col-md-4">
-                            {/*<Link to="/">*/}
-                                <FacebookLogin
-                                    appId="608174746705144"
-                                    autoLoad={true}
-                                    textButton="Signin with Facebook"
-                                    fields="name,email,picture"
-                                    callback={responseFacebook}
-                                    cssClass="button facebook"
-                                />
-                                {/*<button type="submit" className="button facebook"><img src={Facebook}*/}
-                                {/*                                                       alt="Facebook"/><span><div>Sign in with</div> </span>Facebook*/}
-                                {/*</button>*/}
-                            {/*</Link>*/}
+                            <FacebookLogin
+                                appId="608174746705144"
+                                autoLoad={false}
+                                textButton="Signin with Facebook"
+                                fields="name,email,picture"
+                                callback={responseFacebook}
+                                cssClass="button facebook"
+                            />
                         </div>
                         <div className="col-md-4">
 

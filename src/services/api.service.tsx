@@ -30,7 +30,7 @@ export class ApiService {
             );
     }
 
-    post<T>(endPoint: string, body: any, useAuthHeaders = false): Observable<T> {
+    post<T>(endPoint: string, body: any, useAuthHeaders = false): Observable<any> {
         const config: AxiosRequestConfig = {
             headers: this._buildHeaders(useAuthHeaders)
         };

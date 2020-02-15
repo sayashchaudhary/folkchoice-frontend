@@ -1,5 +1,6 @@
 import {ApiService} from '../services/api.service';
 import {UserStore} from '../stores/user.store';
+import {EConstants} from '../utils/constants';
 
 class AuthController {
 
@@ -10,10 +11,10 @@ class AuthController {
         email: string,
         password: string
     }) {
-        this.apiService.post('/login', user).subscribe(s=>{
-            console.log(s);
-        });
-
+        this.apiService.post('/login', user)
+            .subscribe((res: { token: string }) => {
+                localStorage.setItem(EConstants.AUTH_TOKEN, res.token);
+            })
     }
 
     register(user: {
@@ -33,19 +34,19 @@ class AuthController {
     }
 
     oauthGoogle = data => {
-        const token=data;
+        const token = data;
         console.log(token);
-        const res = this.apiService.post('/oauth/google',token).subscribe(s=>{
+        const res = this.apiService.post('/oauth/google', token).subscribe(s => {
             console.log(s);
             console.log(res);
             // localStorage.setItem('JWT_Token',res.data.token);
         });
-    }
+    };
 
     oauthFacebook = data => {
         const token = data;
         console.log(token);
-        this.apiService.post('/oauth/facebook', token).subscribe(s=>{
+        this.apiService.post('/oauth/facebook', token).subscribe(s => {
             console.log(s);
         });
     }
