@@ -4,13 +4,15 @@ import { Helmet } from 'react-helmet';
 import { Link, useHistory } from 'react-router-dom';
 import Input from '@material-ui/core/Input'
 import Logo from '../../../assets/images/logo.png';
-import Google from '../../../assets/images/google.png';
-import Facebook from '../../../assets/images/facebook.png';
+// import Google from '../../../assets/images/google.png';
+// import Facebook from '../../../assets/images/facebook.png';
 import Phone from '../../../assets/images/phone.png';
 import { Formik, Form, useField, FieldAttributes } from 'formik';
 import { RoutePath } from '../../../routing/routes';
 import { RouteUtils } from '../../../routing/route-utils';
 import {authController} from "../../../controllers/auth.controller";
+import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
 
 
 const TITLE = 'Sign In - Folk Choice';
@@ -36,6 +38,17 @@ const Register: React.FC = () => {
             history.push(RouteUtils.getUrl(route, null));
         }
     };
+    const responseFacebook= (res) => {
+        console.log(res);
+        authController.oauthFacebook(res.accessToken);
+    };
+
+    const responseGoogle = (res) => {
+        console.log(res);
+        authController.oauthGoogle(res.accessToken);
+    };
+
+
     return (
         <div className="container-fluid">
             <Helmet>
@@ -91,19 +104,36 @@ const Register: React.FC = () => {
                     <div className="text-center"><strong>or...</strong></div>
                     <div className="row buttons">
                         <div className="col-md-4">
-                            <Link to="/">
-                                <button type="submit" className="button google"><img src={Google} alt="Google"/><span><div>Sign in with</div> </span>Google
-                                </button>
-                            </Link>
+                            <GoogleLogin
+                                clientId="34909442935-nvnpplq4ig46ig8siddoqbn2mcsnic3t.apps.googleusercontent.com"
+                                buttonText="LOGIN WITH GOOGLE"
+                                autoLoad={false}
+                                onSuccess={responseGoogle}
+                                onFailure={responseGoogle}
+                                className="button google"
+                            />
+                            {/*<Link to="/">*/}
+                            {/*    <button type="submit" className="button google"><img src={Google} alt="Google"/><span><div>Sign in with</div> </span>Google*/}
+                            {/*    </button>*/}
+                            {/*</Link>*/}
                         </div>
                         <div className="col-md-4">
-                            <Link to="/">
-                                <button type="submit" className="button facebook"><img src={Facebook}
-                                                                                       alt="Facebook"/><span><div>Sign in with</div> </span>Facebook
-                                </button>
-                            </Link>
+                            {/*<Link to="/">*/}
+                                <FacebookLogin
+                                    appId="608174746705144"
+                                    autoLoad={true}
+                                    textButton="Signin with Facebook"
+                                    fields="name,email,picture"
+                                    callback={responseFacebook}
+                                    cssClass="button facebook"
+                                />
+                                {/*<button type="submit" className="button facebook"><img src={Facebook}*/}
+                                {/*                                                       alt="Facebook"/><span><div>Sign in with</div> </span>Facebook*/}
+                                {/*</button>*/}
+                            {/*</Link>*/}
                         </div>
                         <div className="col-md-4">
+
                             <Link to="/">
                                 <button type="submit" className="button facebook"><img src={Phone} alt="Phone"/><span><div>Sign in with</div> </span>Phone
                                 </button>

@@ -32,6 +32,24 @@ class AuthController {
         }
     }
 
+    oauthGoogle = data => {
+        const token=data;
+        console.log(token);
+        const res = this.apiService.post('/oauth/google',token).subscribe(s=>{
+            console.log(s);
+            console.log(res);
+            // localStorage.setItem('JWT_Token',res.data.token);
+        });
+    }
+
+    oauthFacebook = data => {
+        const token = data;
+        console.log(token);
+        this.apiService.post('/oauth/facebook', token).subscribe(s=>{
+            console.log(s);
+        });
+    }
+
 }
 
 export const authController = new AuthController();

@@ -1,7 +1,7 @@
 import React from 'react';
-import {useHistory} from "react-router";
-import ProductCard, {ProductCardProps} from '../Shared/ProductCard/ProductCard';
-import {RoutePath} from "../../routing/routes";
+import { useHistory } from "react-router";
+import ProductCard, { ProductCardProps } from '../Shared/ProductCard/ProductCard';
+import { RoutePath } from "../../routing/routes";
 import { RouteUtils } from "../../routing/route-utils";
 // import WrapperComponent from '../HOC/Route/Route'
 
@@ -27,8 +27,8 @@ const Dashboard: React.FC = () => {
         // <WrapperComponent>
         <div className="container-fluid">
             <div className="dashboard">
-                <button onClick={() => navigateToRoute(RoutePath.clothing)} >Clothing</button>
-                <button onClick={() => navigateToRoute(RoutePath.kids)} >Kids</button>
+                <button onClick={() => navigateToRoute(RoutePath.clothing)}>Clothing</button>
+                <button onClick={() => navigateToRoute(RoutePath.kids)}>Kids</button>
                 {/*<button onClick={}>Clothing</button>*/}
                 {/*<button onClick={() => navigateToRoute(RoutePath.kids)}>Kids</button>*/}
                 <div className="dashboard__items">
