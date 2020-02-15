@@ -10,7 +10,9 @@ class AuthController {
         email: string,
         password: string
     }) {
-        this.apiService.post('/login', user).subscribe();
+        this.apiService.post('/login', user).subscribe(s=>{
+            console.log(s);
+        });
 
     }
 
@@ -21,7 +23,6 @@ class AuthController {
         cnfPassword: string,
         phoneNo: string,
         gender: string,
-        role: string
     }) {
         if (!this.userStore.isLoading && !this.userStore.isLoggedIn) {
             this.apiService.post('/signup', user).subscribe(s => {

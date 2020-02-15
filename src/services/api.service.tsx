@@ -1,15 +1,14 @@
-import axios, { AxiosRequestConfig } from 'axios';
-import { EConstants } from '../utils/constants';
-import { from, Observable, throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import axios, {AxiosRequestConfig} from 'axios';
+import {EConstants} from '../utils/constants';
+import {from, Observable, throwError} from 'rxjs';
+import {catchError, map} from 'rxjs/operators';
 
 export class ApiService {
 
     static _instance: ApiService;
 
     private constructor() {
-        //TODO: Replace this with correct base url
-        axios.defaults.baseURL = 'http://3.12.234.166:3000'
+        axios.defaults.baseURL = 'https://api.test.thefolkchoice.com:3000'
     }
 
     static getInstance() {
@@ -54,7 +53,7 @@ export class ApiService {
     }
 
     private _buildHeaders(useAuthHeaders: boolean): { [key: string]: string } {
-        let headers: any = { contentType: 'application/json' };
+        let headers: any = {contentType: 'application/json'};
         if (useAuthHeaders) {
             headers = {
                 ...headers,

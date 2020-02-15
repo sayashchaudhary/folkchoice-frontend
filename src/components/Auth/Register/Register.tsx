@@ -59,8 +59,7 @@ const Register: React.FC = () => {
                                 password: "",
                                 cnfPassword: "",
                                 phoneNo: "",
-                                gender: "",
-                                role:"user"
+                                gender: ""
                             }}
                             onSubmit={(data, {setSubmitting}) => {
                                 setSubmitting(true);

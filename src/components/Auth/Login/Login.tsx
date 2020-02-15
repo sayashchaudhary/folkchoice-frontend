@@ -63,7 +63,7 @@ const Register: React.FC = () => {
                             initialValues={{email: '', password: ''}}
                             onSubmit={(data, {setSubmitting}) => {
                                 setSubmitting(true);
-                                console.log(data);
+                                // console.log(data);
                                 authController.login(data);
                                 setSubmitting(false);
                             }}>
