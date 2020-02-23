@@ -1,8 +1,7 @@
-import React from 'react';
-import { useHistory } from "react-router";
+import React, { useEffect, useState } from 'react';
 import ProductCard, { ProductCardProps } from '../Shared/ProductCard/ProductCard';
-import { RoutePath } from "../../routing/routes";
-import { RouteUtils } from "../../routing/route-utils";
+import {productController} from '../../controllers/productcontroller';
+
 // import WrapperComponent from '../HOC/Route/Route'
 
 const dummyProducts: ProductCardProps[] = [
@@ -14,23 +13,26 @@ const dummyProducts: ProductCardProps[] = [
     {name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349'},
 ];
 
-const Dashboard: React.FC = () => {
 
-    const history = useHistory();
-    const navigateToRoute = (route: RoutePath) => {
-        if (route) {
-            history.push(RouteUtils.getUrl(route, null));
-        }
-    };
+const Dashboard: React.FC = () => {
+    function viewProduct(){
+        const [data]=productController.viewProduct();
+    }
+
+
+    const [products,setProducts] = useState([]);
+    setProducts({
+        ...products
+    });
+
+    useEffect(() => {
+        viewProduct();
+    }, []);
 
     return (
         // <WrapperComponent>
         <div className="container-fluid">
             <div className="dashboard">
-                <button onClick={() => navigateToRoute(RoutePath.clothing)}>Clothing</button>
-                <button onClick={() => navigateToRoute(RoutePath.kids)}>Kids</button>
-                {/*<button onClick={}>Clothing</button>*/}
-                {/*<button onClick={() => navigateToRoute(RoutePath.kids)}>Kids</button>*/}
                 <div className="dashboard__items">
                     <div className="dashboard__items-text">
                         <h4>Today, we present you:</h4><br/>
@@ -41,6 +43,7 @@ const Dashboard: React.FC = () => {
                             {
                                 dummyProducts.map(p => {
                                     return (
+
                                         <div
                                             className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
                                             <ProductCard

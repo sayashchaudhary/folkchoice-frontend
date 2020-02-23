@@ -18,7 +18,7 @@ export class ApiService {
         return this._instance;
     }
 
-    get<T>(endPoint: string, params: any, useAuthHeaders = false): Observable<T> {
+    get<T>(endPoint: string, params?: any, useAuthHeaders = false): Observable<T> {
         const config: AxiosRequestConfig = {
             headers: this._buildHeaders(useAuthHeaders),
             params
