@@ -16,14 +16,14 @@ const dummyProducts: ProductCardProps[] = [
 
 const Dashboard: React.FC = () => {
     function viewProduct(){
-        const [data]=productController.viewProduct();
+        // const [data]=productController.viewProduct();
     }
 
 
-    const [products,setProducts] = useState([]);
-    setProducts({
-        ...products
-    });
+    // const [products,setProducts] = useState([]);
+    // setProducts({
+    //     ...products
+    // });
 
     useEffect(() => {
         viewProduct();
