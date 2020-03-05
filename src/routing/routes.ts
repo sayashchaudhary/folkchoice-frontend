@@ -9,6 +9,7 @@ export enum RoutePath {
     men = 'men',
     women = 'women',
     secondInnings = 'secondInnings',
+    cart = 'cart'
 }
 
 export const AuthRouteMap = {
