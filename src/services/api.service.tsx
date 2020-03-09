@@ -1,7 +1,7 @@
 import axios, {AxiosRequestConfig} from 'axios';
 import {EConstants} from '../utils/constants';
 import {from, Observable, throwError} from 'rxjs';
-import {catchError, map} from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 
 export class ApiService {
 
@@ -25,7 +25,8 @@ export class ApiService {
         };
         return from(axios.get<T>(endPoint, config))
             .pipe(
-                map(d => d.data),
+                tap(d => console.log(d)),
+                map(d => d.data['data']),
                 catchError(this._handleError)
             );
     }
@@ -36,7 +37,7 @@ export class ApiService {
         };
         return from(axios.post<T>(endPoint, body, config))
             .pipe(
-                map(d => d.data),
+                map(d => d.data['data']),
                 catchError(this._handleError)
             );
     }
@@ -47,7 +48,7 @@ export class ApiService {
         };
         return from(axios.put<T>(endPoint, body, config))
             .pipe(
-                map(d => d.data),
+                map(d => d.data['data']),
                 catchError(this._handleError)
             );
     }

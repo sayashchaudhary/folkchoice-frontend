@@ -4,8 +4,8 @@ export interface ProductCardProps {
     imageUrl?: string;
     name: string;
     seller: string;
-    oldPrice: string;
-    newPrice: string
+    oldPrice: number;
+    newPrice: number
 }
 
 const ProductCard: React.FC<ProductCardProps> = (props: ProductCardProps) => {
