@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import ProductCard, {ProductCardProps} from '../Shared/ProductCard/ProductCard';
 import {productController} from '../../controllers/product.controller';
+import {cartStore} from "../../stores/cart.store";
 import {inject, observer} from 'mobx-react';
 import {GlobalProps} from '../../App';
 
@@ -21,9 +22,14 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
         console.log("Products", props.store!.productStore.getEntities);
     }
 
-    useEffect(() => {
-        viewProduct();
-    }, []);
+    // useEffect(() => {
+    //     viewProduct();
+    // }, []);
+
+
+    function handleClick(productStore) {
+        cartStore.addProductsToCart(productStore);
+    }
 
     return (
         <div className="container-fluid">
@@ -46,6 +52,7 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                                                 oldPrice={p.old_price}
                                                 newPrice={p.new_price}
                                             />
+                                            <button onClick={handleClick}>Add To Cart</button>
                                         </div>
                                     );
                                 })
