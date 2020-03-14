@@ -22,9 +22,9 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
         console.log("Products", props.store!.productStore.getEntities);
     }
 
-    // useEffect(() => {
-    //     viewProduct();
-    // }, []);
+    useEffect(() => {
+        viewProduct();
+    }, []);
 
 
     function handleClick(productStore) {
