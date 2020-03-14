@@ -17,8 +17,8 @@ const ProductCard: React.FC<ProductCardProps> = (props: ProductCardProps) => {
             <h4 className="product-card-name">{props.name}</h4>
             <p className="product-card-seller">{props.seller}</p>
             <p className="product-card-prices text-right">
-                <del> {props.oldPrice}</del>
-                <span className="product-card-seller__price"> {props.newPrice}</span></p>
+                <del> ₹{props.oldPrice}</del>
+                <span className="product-card-seller__price"> ₹{props.newPrice}</span></p>
         </div>
     );
 };
