@@ -1,7 +1,7 @@
-import { observable } from 'mobx';
-import { UserStore } from './user.store';
-import { AppStore } from './app.store';
-import { ProductStore } from './product.store';
+import {observable} from 'mobx';
+import {UserStore} from './user.store';
+import {AppStore} from './app.store';
+import {ProductStore} from './product.store';
 import {CartStore} from "./cart.store";
 
 export class RootStore {

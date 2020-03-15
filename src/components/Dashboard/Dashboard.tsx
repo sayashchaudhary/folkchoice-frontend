@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import ProductCard, {ProductCardProps} from '../Shared/ProductCard/ProductCard';
+import ProductCard from '../Shared/ProductCard/ProductCard';
 import {productController} from '../../controllers/product.controller';
 import {cartStore} from "../../stores/cart.store";
 import {inject, observer} from 'mobx-react';
