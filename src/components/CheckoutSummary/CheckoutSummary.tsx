@@ -2,11 +2,11 @@ import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
 
-const Cosmetics: React.FC = () => {
+const CheckoutSummary: React.FC = () => {
     return (
         <div className="container-fluid">
             <Navbar/>
-            <div className="container cart">
+            <div className="container checkout">
                 <div className="row">
                     <div className="col-md-4">
                         <h4>DELIVERY ADDRESS :</h4>
@@ -72,7 +72,7 @@ const Cosmetics: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="container cart1">
+            <div className="container checkout1">
                 <div className="row">
                     <div className="col-md-8">
                         <h4>TOTAL AMOUNT TO BE PAID:<b>1271$</b></h4>
@@ -87,4 +87,4 @@ const Cosmetics: React.FC = () => {
     )
 };
 
-export default Cosmetics;
+export default CheckoutSummary;
