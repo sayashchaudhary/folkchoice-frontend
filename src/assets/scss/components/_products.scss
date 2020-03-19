@@ -1,0 +1,65 @@
+.products-container {
+  padding-top: 8%;
+}
+
+.panel {
+  width: 22%;
+  position: fixed;
+  height: 100%;
+  margin-left: -27px;
+  //left: -500px;
+  top: 2%;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 3%;
+  margin-top: 5%;
+}
+
+.dropdown button:hover,
+.dropdown button:focus,
+.show > .btn-primary.dropdown-toggle,
+.dropdown button {
+  background-color: transparent;
+  border-color: transparent;
+  color: black;
+  outline: none;
+}
+
+.text{
+  float: left;
+}
+.drop{
+  float: right;
+  text-align: right;
+}
+.dropdown-menu{
+  text-align: left !important;
+  //left:-200px !important;
+  width: 390px;
+  height: 29vh;
+  left: -330px !important;
+  //top: 0.5% !important;
+  //padding: 50%;
+  background: #FFFFFF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 35px;
+}
+.dropdown-item{
+  padding-left: 13%;
+  padding-top: 2%;
+}
+.dropdown-item:hover{
+  background-color: transparent;
+}
+.view{
+  background-color: black !important;
+  color: white !important;
+  position: absolute;
+  width: 28%;
+  height: 15%;
+  left: 65%;
+  border-radius: 47px;
+}
