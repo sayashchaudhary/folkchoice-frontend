@@ -26,6 +26,12 @@ const Landing: React.FC = () => {
                                             <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                                             <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
                                             <Dropdown.Item>
+                                                <CenteredModal
+                                                    show={modalShow}
+                                                    onHide={() => setModalShow(false)}
+                                                    heading='Color'
+                                                    text='color options will be coming'
+                                                />
                                                 <button type="submit" className="view"
                                                         onClick={() => setModalShow(true)}>View More
                                                 </button>
@@ -49,6 +55,12 @@ const Landing: React.FC = () => {
                                             <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                                             <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
                                             <Dropdown.Item>
+                                                <CenteredModal
+                                                    show={modalShow}
+                                                    onHide={() => setModalShow(false)}
+                                                    heading='fabric'
+                                                    text='fabric options will be coming'
+                                                />
                                                 <button type="submit" className="view"
                                                         onClick={() => setModalShow(true)}>View More
                                                 </button>
@@ -72,6 +84,12 @@ const Landing: React.FC = () => {
                                             <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                                             <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
                                             <Dropdown.Item>
+                                                <CenteredModal
+                                                    show={modalShow}
+                                                    onHide={() => setModalShow(false)}
+                                                    heading='Size'
+                                                    text='Size options will be coming'
+                                                />
                                                 <button type="submit" className="view"
                                                         onClick={() => setModalShow(true)}>View More
                                                 </button>
@@ -95,6 +113,12 @@ const Landing: React.FC = () => {
                                             <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                                             <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
                                             <Dropdown.Item>
+                                                <CenteredModal
+                                                    show={modalShow}
+                                                    onHide={() => setModalShow(false)}
+                                                    heading='Other Filter'
+                                                    text='More filter options will be coming'
+                                                />
                                                 <button type="submit" className="view"
                                                         onClick={() => setModalShow(true)}>View More
                                                 </button>
@@ -108,10 +132,7 @@ const Landing: React.FC = () => {
                     </div>
                     <div className="col-md-9">
                         <h1><b>Products Title here.....</b></h1>
-                        <CenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                        />
+
                     </div>
                 </div>
             </div>
