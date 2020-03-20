@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
-import { DropdownButton, Dropdown } from 'react-bootstrap';
-import CenteredModal from "../Shared/Modal/Modal";
+import { DropdownButton, Dropdown} from 'react-bootstrap';
+import CenteredModal from '../Shared/Modal/Modal';
+import Checkbox from '../Shared/Checkbox/Checkbox';
 
 const Landing: React.FC = () => {
     const [modalShow, setModalShow] = React.useState(false);
@@ -19,12 +20,12 @@ const Landing: React.FC = () => {
                                     </div>
                                     <div className="drop col-md-2">
                                         <DropdownButton id="dropdown-basic-button" title="">
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
                                             <Dropdown.Item>
                                                 <CenteredModal
                                                     show={modalShow}
@@ -48,12 +49,12 @@ const Landing: React.FC = () => {
                                     </div>
                                     <div className="drop col-md-2">
                                         <DropdownButton id="dropdown-basic-button" title="">
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
                                             <Dropdown.Item>
                                                 <CenteredModal
                                                     show={modalShow}
@@ -77,12 +78,12 @@ const Landing: React.FC = () => {
                                     </div>
                                     <div className="drop col-md-2">
                                         <DropdownButton id="dropdown-basic-button" title="">
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
                                             <Dropdown.Item>
                                                 <CenteredModal
                                                     show={modalShow}
@@ -106,12 +107,12 @@ const Landing: React.FC = () => {
                                     </div>
                                     <div className="drop col-md-2">
                                         <DropdownButton id="dropdown-basic-button" title="">
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Action</Dropdown.Item>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox />
                                             <Dropdown.Item>
                                                 <CenteredModal
                                                     show={modalShow}
@@ -132,6 +133,7 @@ const Landing: React.FC = () => {
                     </div>
                     <div className="col-md-9">
                         <h1><b>Products Title here.....</b></h1>
+
 
                     </div>
                 </div>

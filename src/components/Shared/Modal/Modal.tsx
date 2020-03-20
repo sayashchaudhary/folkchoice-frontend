@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal } from 'react-bootstrap';
+import { Modal,Button } from 'react-bootstrap';
 //
 // export interface MarketProps {
 //     imageUrl?: string;
@@ -28,7 +28,7 @@ function CenteredModal(props) {
                 </p>
             </Modal.Body>
             <Modal.Footer>
-                <button onClick={props.onHide}>Close</button>
+                <Button onClick={props.onHide}>Close</Button>
             </Modal.Footer>
         </Modal>
     );
