@@ -1,10 +1,10 @@
 import React from 'react';
-import {TilesProps} from '../Shared/Tiles/Tiles';
-import {MarketProps} from '../Shared/Market/Market';
+import { TilesProps } from '../Shared/Tiles/Tiles';
+import { MarketProps } from '../Shared/Market/Market';
 import Navbar from '../Shared/Navbar/Navbar';
 import Tiles from '../Shared/Tiles/Tiles';
 import Market from '../Shared/Market/Market';
-import Slider, {SliderData} from '../Shared/Carousel/Carousel';
+import Slider, { SliderData } from '../Shared/Carousel/Carousel';
 import Footer from '../Shared/Footer/Footer';
 
 const dummyTiles: TilesProps[] = [
@@ -99,16 +99,16 @@ const Men: React.FC = () => {
                 {
                     dummyMarkets.map(m => {
                         return (
-                                <div className="col-md-6 pt-3 clothing__spacing">
-                                    <Market shop={m.shop} category={m.category} id={m.id}/>
-                                </div>
+                            <div className="col-md-6 pt-3 clothing__spacing">
+                                <Market shop={m.shop} category={m.category} id={m.id}/>
+                            </div>
                         )
 
                     })
                 }
             </div>
             <div className="row">
-                <Footer />
+                <Footer/>
             </div>
         </div>
     );

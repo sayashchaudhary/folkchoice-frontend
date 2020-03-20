@@ -1,4 +1,3 @@
-
 .box {
   display: block;
   position: relative;
@@ -9,10 +8,12 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  z-index: 1200;
 }
 
 label {
   display: block;
+  z-index: 1200;
 }
 
 .box input {
@@ -21,6 +22,7 @@ label {
   cursor: pointer;
   height: 0;
   width: 0;
+  z-index: 1200;
 }
 
 .checkmark {
@@ -33,6 +35,7 @@ label {
   border: 1px solid #8B8B8B;
   box-sizing: border-box;
   border-radius: 3px;
+  z-index: 1200;
 }
 
 .box:hover input ~ .checkmark {
@@ -63,4 +66,25 @@ label {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked,
+.MuiCheckbox-root,
+.MuiIconButton-colorSecondary,
+.MuiIconButton-root {
+  color: black !important;
+}
+
+.modal_content p {
+  padding-top: 5%;
+}
+
+.model {
+  .btn-primary,
+  .btn-primary:hover {
+    background-color: black;
+    border-color: black;
+    border-radius: 56px;
+    width: 30%;
+  }
 }

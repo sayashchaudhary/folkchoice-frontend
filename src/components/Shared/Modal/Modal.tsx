@@ -1,12 +1,22 @@
 import React from 'react';
-import { Modal,Button } from 'react-bootstrap';
-//
-// export interface MarketProps {
-//     imageUrl?: string;
-//     shop: string;
-//     category: string;
-//     id: number
-// }
+import { Modal, Button } from 'react-bootstrap';
+import Grid from '../Grid/Grid';
+import { ModalProps } from "../Grid/Grid";
+
+const ColorProps: ModalProps[] = [
+    {
+        text: 'Colors'
+    },
+    {
+        text: 'Colors'
+    },
+    {
+        text: 'Colors'
+    },
+    {
+        text: 'Colors'
+    }
+];
 
 function CenteredModal(props) {
     return (
@@ -16,19 +26,30 @@ function CenteredModal(props) {
             aria-labelledby="contained-modal-title-vcenter"
             centered
         >
-            <Modal.Header closeButton>
-                <Modal.Title id="contained-modal-title-vcenter">
-                    {props.heading}
-                </Modal.Title>
-            </Modal.Header>
             <Modal.Body>
-                {/*<h4>Centered Modal</h4>*/}
-                <p>
-                    {props.text}
-                </p>
+                <div className="container">
+                    <div className="row modal_content text-center">
+                        <div className="col-md-6">
+                            {
+                                ColorProps.map(t => {
+                                    return (
+                                        <div>
+                                            <Grid text={t.text}/>
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
+                        <div className="col-md-6">
+                            <Grid />
+                        </div>
+                    </div>
+                </div>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
+                <div className="col-md-12 text-center model">
+                    <Button onClick={props.onHide}>Close</Button>
+                </div>
             </Modal.Footer>
         </Modal>
     );
