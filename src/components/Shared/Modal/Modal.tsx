@@ -11,7 +11,7 @@ const ColorProps: ModalProps[] = [
         text: 'Colors'
     },
     {
-        text: 'Colors'
+        text: 'Colors123'
     },
     {
         text: 'Colors'
