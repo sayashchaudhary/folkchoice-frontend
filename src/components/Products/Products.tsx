@@ -1,45 +1,20 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
-import Drop, { DropdownProps } from '../Shared/Dropdown/Dropdown';
-import Modal from "../Shared/Modal/Modal";
+import { DropdownButton, Dropdown } from 'react-bootstrap';
+import CenteredModal, {Modalprop} from '../Shared/Modal/Modal';
+import Checkbox from '../Shared/Checkbox/Checkbox';
 
-const ColorProps: DropdownProps[] = [
+const ModalProps: Modalprop[] = [
     {
-        item1: 'black',
-        item2: 'blue',
-        item3: 'brown',
-        item4: 'red',
-        item5: 'orange',
-        item6: 'violet',
-        modalText: 'Colors'
-    }
-];
-
-const SizeProps: DropdownProps[] = [
+        text:'color'
+    },
     {
-        item1: '4XL',
-        item2: '3XL',
-        item3: '2XL',
-        item4: 'XL',
-        item5: 'L',
-        item6: 'M',
-        modalText: 'Size will be displayed here'
-    }
-];
-
-const FabricsProps: DropdownProps[] = [
-    {
-        item1: 'cotton',
-        item2: 'silk',
-        item3: 'pant',
-        item4: 'coat',
-        item5: 'orange',
-        item6: 'violet',
-        modalText: 'Fabrics will be displayed here'
+        text:'red'
     }
 ];
 
 const Products: React.FC = () => {
+    const [modalShow, setModalShow] = React.useState(false);
     return (
         <div className="container-fluid">
             <Navbar/>
@@ -53,17 +28,31 @@ const Products: React.FC = () => {
                                         <h4>Color:</h4>
                                     </div>
                                     <div className="drop col-md-2">
-                                        {
-                                            ColorProps.map(t => {
-                                                return (
-                                                    <div>
-                                                        <Drop item1={t.item1} item2={t.item2} item3={t.item3}
-                                                              item4={t.item4} item5={t.item5} item6={t.item6}
-                                                              modalText={t.modalText}/>
-                                                    </div>
-                                                );
-                                            })
-                                        }
+                                        <DropdownButton id="dropdown-basic-button" title="">
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>
+                                                {
+                                                    ModalProps.map(t => {
+                                                        return (
+                                                            <CenteredModal
+                                                                show={modalShow}
+                                                                onHide={() => setModalShow(false)}
+                                                                text={t.text}
+                                                            />
+                                                        );
+                                                    })
+                                                }
+
+                                                <button type="submit" className="view"
+                                                        onClick={() => setModalShow(true)}>View More
+                                                </button>
+                                            </Dropdown.Item>
+                                        </DropdownButton>
                                     </div>
                                 </div>
                             </div>
@@ -74,17 +63,24 @@ const Products: React.FC = () => {
                                         <h4>Fabric:</h4>
                                     </div>
                                     <div className="drop col-md-2">
-                                        {
-                                            SizeProps.map(t => {
-                                                return (
-                                                    <div>
-                                                        <Drop item1={t.item1} item2={t.item2} item3={t.item3}
-                                                              item4={t.item4} item5={t.item5} item6={t.item6}
-                                                              modalText={t.modalText}/>
-                                                    </div>
-                                                );
-                                            })
-                                        }
+                                        <DropdownButton id="dropdown-basic-button" title="">
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>
+                                                <CenteredModal
+                                                    show={modalShow}
+                                                    onHide={() => setModalShow(false)}
+                                                    text='fabric options will be coming'
+                                                />
+                                                <button type="submit" className="view"
+                                                        onClick={() => setModalShow(true)}>View More
+                                                </button>
+                                            </Dropdown.Item>
+                                        </DropdownButton>
                                     </div>
                                 </div>
                             </div>
@@ -95,17 +91,24 @@ const Products: React.FC = () => {
                                         <h4>Size:</h4>
                                     </div>
                                     <div className="drop col-md-2">
-                                        {
-                                            FabricsProps.map(t => {
-                                                return (
-                                                    <div>
-                                                        <Drop item1={t.item1} item2={t.item2} item3={t.item3}
-                                                              item4={t.item4} item5={t.item5} item6={t.item6}
-                                                              modalText={t.modalText}/>
-                                                    </div>
-                                                );
-                                            })
-                                        }
+                                        <DropdownButton id="dropdown-basic-button" title="">
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>
+                                                <CenteredModal
+                                                    show={modalShow}
+                                                    onHide={() => setModalShow(false)}
+                                                    text='Size options will be coming'
+                                                />
+                                                <button type="submit" className="view"
+                                                        onClick={() => setModalShow(true)}>View More
+                                                </button>
+                                            </Dropdown.Item>
+                                        </DropdownButton>
                                     </div>
                                 </div>
                             </div>
@@ -116,26 +119,31 @@ const Products: React.FC = () => {
                                         <h4>Other Filter:</h4>
                                     </div>
                                     <div className="drop col-md-2">
-                                        {
-                                            ColorProps.map(t => {
-                                                return (
-                                                    <div>
-                                                        <Drop item1={t.item1} item2={t.item2} item3={t.item3}
-                                                              item4={t.item4} item5={t.item5} item6={t.item6}
-                                                              modalText={t.modalText}/>
-                                                    </div>
-                                                );
-                                            })
-                                        }
+                                        <DropdownButton id="dropdown-basic-button" title="">
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>
+                                                <CenteredModal
+                                                    show={modalShow}
+                                                    onHide={() => setModalShow(false)}
+                                                    text='More filter options will be coming'
+                                                />
+                                                <button type="submit" className="view"
+                                                        onClick={() => setModalShow(true)}>View More
+                                                </button>
+                                            </Dropdown.Item>
+                                        </DropdownButton>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div className="col-md-9">
                         <h1><b>Products Title here.....</b></h1>
-                        <Modal/>
                     </div>
                 </div>
             </div>

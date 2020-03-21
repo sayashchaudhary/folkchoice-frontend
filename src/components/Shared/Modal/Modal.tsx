@@ -1,22 +1,10 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import Grid from '../Grid/Grid';
-import { ModalProps } from "../Grid/Grid";
+import Grid from '../Grid/Grid'
 
-const ColorProps: ModalProps[] = [
-    {
-        text: 'Colors'
-    },
-    {
-        text: 'Colors'
-    },
-    {
-        text: 'Colors123'
-    },
-    {
-        text: 'Colors'
-    }
-];
+export interface Modalprop {
+    text: string;
+}
 
 function CenteredModal(props) {
     return (
@@ -28,20 +16,9 @@ function CenteredModal(props) {
         >
             <Modal.Body>
                 <div className="container">
-                    <div className="row modal_content text-center">
+                    <div className="row">
                         <div className="col-md-6">
-                            {
-                                ColorProps.map(t => {
-                                    return (
-                                        <div>
-                                            <Grid text={t.text}/>
-                                        </div>
-                                    );
-                                })
-                            }
-                        </div>
-                        <div className="col-md-6">
-                            <Grid />
+                            <Grid text={props.text}/>
                         </div>
                     </div>
                 </div>
