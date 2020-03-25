@@ -38,6 +38,7 @@ function CenteredModal(props) {
             </Modal.Body>
             <Modal.Footer>
                 <div className="col-md-12 text-center model">
+                    <Button>Submit</Button><br/><br/>
                     <Button onClick={props.onHide}>Close</Button>
                 </div>
             </Modal.Footer>

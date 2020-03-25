@@ -4,7 +4,9 @@ import {productController} from '../../controllers/product.controller';
 import {cartStore} from "../../stores/cart.store";
 import {inject, observer} from 'mobx-react';
 import {GlobalProps} from '../../App';
-
+import { RoutePath } from '../../routing/routes';
+import { RouteUtils } from '../../routing/route-utils';
+import { useHistory } from 'react-router-dom';
 
 // const dummyProducts: ProductCardProps[] = [
 //     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
@@ -31,14 +33,25 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
         cartStore.addProductsToCart(productStore);
     }
 
+    const history = useHistory();
+    const navigateToRoute = (route: RoutePath) => {
+        if (route) {
+            history.push(RouteUtils.getUrl(route, null));
+        }
+    };
+
     return (
         <div className="container-fluid">
             <div className="dashboard">
                 <div className="dashboard__items">
+
                     <div className="dashboard__items-text">
                         <h4>Today, we present you:</h4><br/>
                         <h2><strong>Steal on Cosmetics</strong></h2>
+                        <button onClick={() => navigateToRoute(RoutePath.products)} type="submit">Filter Page
+                        </button>
                     </div>
+
                     <div className="dashboard__items-item">
                         <div className="row">
                             {
