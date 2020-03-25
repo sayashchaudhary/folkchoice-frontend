@@ -74,7 +74,7 @@ const Products: React.FC = () => {
                                                 <CenteredModal
                                                     show={modalShow}
                                                     onHide={() => setModalShow(false)}
-                                                    text='fabric options will be coming'
+                                                    text=''
                                                 />
                                                 <button type="submit" className="view"
                                                         onClick={() => setModalShow(true)}>View More
@@ -102,7 +102,7 @@ const Products: React.FC = () => {
                                                 <CenteredModal
                                                     show={modalShow}
                                                     onHide={() => setModalShow(false)}
-                                                    text='Size options will be coming'
+                                                    text=''
                                                 />
                                                 <button type="submit" className="view"
                                                         onClick={() => setModalShow(true)}>View More
@@ -130,7 +130,7 @@ const Products: React.FC = () => {
                                                 <CenteredModal
                                                     show={modalShow}
                                                     onHide={() => setModalShow(false)}
-                                                    text='More filter options will be coming'
+                                                    text=''
                                                 />
                                                 <button type="submit" className="view"
                                                         onClick={() => setModalShow(true)}>View More
