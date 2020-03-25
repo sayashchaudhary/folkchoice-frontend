@@ -18,9 +18,9 @@ const Slider: React.FC<sliderProps> = (props: sliderProps) => {
     return (
         <Carousel autoPlay={true} infiniteLoop={true} className="carousel__background">
             {
-                props.data.map(d => {
+                props.data.map((d, index) => {
                     return (
-                        <div>
+                        <div key={index}>
                             <img src={Download} alt="Download" className="slider__image"/>
                             <img src={Gradient} alt="Gradient" className="slider__gradient"/>
                             <p className="legend">{d.caption}</p>

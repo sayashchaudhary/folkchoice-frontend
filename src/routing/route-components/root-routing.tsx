@@ -1,18 +1,19 @@
 import React from 'react';
 // import { GlobalProps } from '../../App';
-import {Redirect, Route, Switch} from 'react-router';
+import { Redirect, Route, Switch } from 'react-router';
 import Login from '../../components/Auth/Login/Login';
 import Register from '../../components/Auth/Register/Register';
 import Clothing from '../../components/Clothing/Clothing';
 import Kids from '../../components/Kids/Kids';
 import Men from '../../components/Men/Men';
 import Landing from '../../components/Landing/Landing';
-import {RouteUtils} from '../route-utils';
-import {RoutePath} from '../routes';
+import { RouteUtils } from '../route-utils';
+import { RoutePath } from '../routes';
 import Women from '../../components/Women/Women';
 import SecondInnings from '../../components/Second_Innings/Second_Innings';
 import Cosmetics from '../../components/Cosmetics/Cosmetics';
-import Cart from '../../components/Cart/Cart';
+import Cart from "../../components/Cart/Cart";
+import Products from '../../components/Products/Products';
 
 
 export const RootRouting: React.FC<any> = (props) => {
@@ -50,6 +51,9 @@ export const RootRouting: React.FC<any> = (props) => {
             </Route>
             <Route path={RouteUtils.getPath(RoutePath.cart)}>
                 <Cart/>
+            </Route>
+            <Route path={RouteUtils.getPath(RoutePath.products)}>
+                <Products />
             </Route>
         </Switch>
     );

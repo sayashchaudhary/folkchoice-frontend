@@ -1,8 +1,10 @@
-import React from 'react';
+import React from "react";
+import { observer } from "mobx-react";
+import { GlobalProps } from "../../App";
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
 
-const Cosmetics: React.FC = () => {
+const Cart: React.FC<GlobalProps> = (props: GlobalProps) => {
     return (
         <div className="container-fluid">
             <Navbar/>
@@ -83,8 +85,24 @@ const Cosmetics: React.FC = () => {
                 </div>
             </div>
             < Footer/>
+
+            <div className="cart-list">
+                {
+                    props.store!.cartStore.getEntities.map((item, index) => {
+                        return (
+                            <li key={index}>
+                                <div>
+                                    <img src={item.image_url}/>
+                                    <p>{item.title}</p>
+                                    <p>{item.new_price}</p>
+                                </div>
+                            </li>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 };
 
-export default Cosmetics;
+export default (observer(Cart));

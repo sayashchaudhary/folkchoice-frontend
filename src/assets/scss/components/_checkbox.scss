@@ -1,0 +1,90 @@
+.box {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  top: -6%;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1200;
+}
+
+label {
+  display: block;
+  z-index: 1200;
+}
+
+.box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  z-index: 1200;
+}
+
+.checkmark {
+  position: absolute;
+  top: -8px;
+  left: 75%;
+  height: 18px;
+  width: 18px;
+  background: #FFFFFF;
+  border: 1px solid #8B8B8B;
+  box-sizing: border-box;
+  border-radius: 3px;
+  z-index: 1200;
+}
+
+.box:hover input ~ .checkmark {
+  background-color: transparent;
+}
+
+.box input:checked ~ .checkmark {
+  background-color: black;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.box input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.box .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked,
+.MuiCheckbox-root,
+.MuiIconButton-colorSecondary,
+.MuiIconButton-root {
+  color: black !important;
+}
+
+.modal_content p {
+  padding-top: 5%;
+}
+
+.model {
+  .btn-primary,
+  .btn-primary:hover {
+    background-color: black;
+    border-color: black;
+    border-radius: 56px;
+    width: 30%;
+  }
+}

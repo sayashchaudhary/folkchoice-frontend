@@ -1,0 +1,127 @@
+.products-container {
+  padding-top: 8%;
+}
+
+.panel {
+  width: 22%;
+  position: fixed;
+  height: 100%;
+  margin-left: -27px;
+  top: 2%;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 3%;
+  margin-top: 5%;
+}
+
+.dropdown button:hover,
+.dropdown button:focus,
+.show > .btn-primary.dropdown-toggle,
+.dropdown button {
+  background-color: transparent;
+  border-color: transparent;
+  color: black;
+  outline: none;
+}
+
+.text {
+  float: left;
+}
+
+.drop {
+  float: right;
+  text-align: right;
+}
+
+.dropdown-menu {
+  text-align: left !important;
+  width: 390px;
+  height: 30vh !important;
+  left: -330px !important;
+  background: #FFFFFF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 35px;
+}
+
+.dropdown-item {
+  padding-left: 30%;
+  padding-top: 3%;
+  width: 10%;
+  cursor: auto;
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+}
+
+.view {
+  background-color: black !important;
+  color: white !important;
+  position: absolute;
+  width: 30%;
+  height: 12%;
+  left: 60%;
+  border-radius: 47px;
+  margin-top: 2%;
+}
+
+@media (max-width: 767px) {
+  .panel {
+    display: none;
+  }
+}
+
+@media (width: 768px) {
+  .products-container {
+    padding-top: 12%;
+  }
+  .panel {
+    margin-top: 10%;
+    width: 28%;
+  }
+  .text {
+    padding-left: 12%;
+    padding-right: 0;
+  }
+  .dropdown-menu {
+    width: 210px;
+    left: -185px !important;
+    height: 350px;
+  }
+  .view {
+    width: 50%;
+    left: 45%;
+    margin-top: 5%;
+  }
+  .box {
+    top: -7%;
+  }
+}
+
+@media only screen and (height: 1366px) {
+  .products-container {
+    padding-top: 10%;
+  }
+  .panel {
+    width: 27%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 7%;
+  }
+  .dropdown-menu {
+    width: 250px;
+    left: -210px !important;
+    height: 24vh;
+  }
+  .view {
+    width: 40%;
+    left: 50%;
+    margin-top: 3%;
+  }
+  .box {
+    top: -9%;
+  }
+}
