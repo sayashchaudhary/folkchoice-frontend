@@ -50,6 +50,10 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                         <h2><strong>Steal on Cosmetics</strong></h2>
                         <button onClick={() => navigateToRoute(RoutePath.products)} type="submit">Filter Page
                         </button>
+                        <button onClick={() => navigateToRoute(RoutePath.description)} type="submit">Product Description Page
+                        </button>
+                        <button onClick={() => navigateToRoute(RoutePath.checkout)} type="submit">Checkout Page
+                        </button>
                     </div>
 
                     <div className="dashboard__items-item">

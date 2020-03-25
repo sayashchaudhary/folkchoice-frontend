@@ -7,6 +7,7 @@ import { productController } from '../../controllers/product.controller';
 import { inject, observer } from 'mobx-react';
 import { GlobalProps } from '../../App';
 import ProductCard from "../Shared/ProductCard/ProductCard";
+import Footer from "../Shared/Footer/Footer";
 
 const modalProps: Modalprop[] = [
     {text: 'black'},
@@ -301,6 +302,7 @@ const Products: React.FC<GlobalProps> = (props: GlobalProps) => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 };

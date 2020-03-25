@@ -11,7 +11,8 @@ export enum RoutePath {
     secondInnings = 'secondInnings',
     cart = 'cart',
     products = 'products',
-    checkout = 'checkout'
+    checkout = 'checkout',
+    description = 'description'
 }
 
 export const AuthRouteMap = {

@@ -80,27 +80,27 @@ const Cart: React.FC<GlobalProps> = (props: GlobalProps) => {
                         <h4>TOTAL AMOUNT TO BE PAID:<b>1271$</b></h4>
                     </div>
                     <div className="col-md-4">
-                        <button type="submit" className="cart__button">PLACE ORDER</button>
+                        <button type="submit" className="order">PLACE ORDER</button>
                     </div>
                 </div>
             </div>
             < Footer/>
 
-            <div className="cart-list">
-                {
-                    props.store!.cartStore.getEntities.map((item, index) => {
-                        return (
-                            <li key={index}>
-                                <div>
-                                    <img src={item.image_url}/>
-                                    <p>{item.title}</p>
-                                    <p>{item.new_price}</p>
-                                </div>
-                            </li>
-                        )
-                    })
-                }
-            </div>
+            {/*<div className="cart-list">*/}
+            {/*    {*/}
+            {/*        props.store!.cartStore.getEntities.map((item, index) => {*/}
+            {/*            return (*/}
+            {/*                <li key={index}>*/}
+            {/*                    <div>*/}
+            {/*                        <img src={item.image_url}/>*/}
+            {/*                        <p>{item.title}</p>*/}
+            {/*                        <p>{item.new_price}</p>*/}
+            {/*                    </div>*/}
+            {/*                </li>*/}
+            {/*            )*/}
+            {/*        })*/}
+            {/*    }*/}
+            {/*</div>*/}
         </div>
     )
 };
