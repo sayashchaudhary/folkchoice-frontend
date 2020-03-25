@@ -8,7 +8,7 @@ const Cart: React.FC<GlobalProps> = (props: GlobalProps) => {
     return (
         <div className="container-fluid">
             <Navbar/>
-            <div className="container cart">
+            <div className="container checkout">
                 <div className="row">
                     <div className="col-md-4">
                         <h4>DELIVERY ADDRESS :</h4>
@@ -74,7 +74,7 @@ const Cart: React.FC<GlobalProps> = (props: GlobalProps) => {
                     </div>
                 </div>
             </div>
-            <div className="container cart1">
+            <div className="container checkout1">
                 <div className="row">
                     <div className="col-md-8">
                         <h4>TOTAL AMOUNT TO BE PAID:<b>1271$</b></h4>

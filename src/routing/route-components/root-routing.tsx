@@ -12,8 +12,9 @@ import { RoutePath } from '../routes';
 import Women from '../../components/Women/Women';
 import SecondInnings from '../../components/Second_Innings/Second_Innings';
 import Cosmetics from '../../components/Cosmetics/Cosmetics';
-import Cart from "../../components/Cart/Cart";
+// import Cart from "../../components/Cart/Cart";
 import Products from '../../components/Products/Products';
+import CheckoutSummary from "../../components/CheckoutSummary/CheckoutSummary";
 
 
 export const RootRouting: React.FC<any> = (props) => {
@@ -49,8 +50,8 @@ export const RootRouting: React.FC<any> = (props) => {
             <Route path={RouteUtils.getPath(RoutePath.cosmetics)}>
                 <Cosmetics/>
             </Route>
-            <Route path={RouteUtils.getPath(RoutePath.cart)}>
-                <Cart/>
+            <Route path={RouteUtils.getPath(RoutePath.checkout)}>
+                <CheckoutSummary/>
             </Route>
             <Route path={RouteUtils.getPath(RoutePath.products)}>
                 <Products />

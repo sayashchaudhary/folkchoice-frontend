@@ -1,4 +1,4 @@
-.cart, .cart1 {
+.checkout, .checkout1 {
   margin-top: 8%;
   box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.2), 0px 0px 9px rgba(0, 0, 0, 0.25);
   border-radius: 33px;
@@ -80,11 +80,12 @@
   text-align: right;
 }
 
-.cart1{
-  margin-top:2%
+.checkout1 {
+  margin-top: 2%
 }
+
 @media(max-width: 767px) {
-  .cart {
+  .checkout {
     margin-top: 25%;
 
     h4,
@@ -92,7 +93,7 @@
       padding: 2%;
     }
   }
-  .cart1 {
+  .checkout1 {
     margin-top: 10%;
     margin-bottom: 10%;
 
@@ -125,18 +126,20 @@
   }
 }
 
-@media(width:768px){
-  .cart{
-    margin-top:15%
+@media(width: 768px) {
+  .checkout {
+    margin-top: 15%
   }
-  .cart1{
-    margin-top:2%;
-    h4{
-      font-size:20px;
+  .checkout1 {
+    margin-top: 2%;
+
+    h4 {
+      font-size: 20px;
     }
-    button{
+
+    button {
       margin-left: 5%;
-      width:80%;
+      width: 80%;
       padding: 3%;
     }
   }
