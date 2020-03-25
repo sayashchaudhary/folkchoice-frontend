@@ -1,25 +1,40 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
-import { DropdownButton, Dropdown } from 'react-bootstrap';
+import {DropdownButton, Dropdown} from 'react-bootstrap';
 import CenteredModal, {Modalprop} from '../Shared/Modal/Modal';
 import Checkbox from '../Shared/Checkbox/Checkbox';
+import {productController} from '../../controllers/product.controller';
+import {inject, observer} from 'mobx-react';
+import {GlobalProps} from '../../App';
+import ProductCard from "../Shared/ProductCard/ProductCard";
+
 
 const modalProps: Modalprop[] = [
     {
-        text:'blue'
+        text: 'blue'
     },
     {
-        text:'red'
+        text: 'red'
     },
     {
-        text:'yellow'
+        text: 'yellow'
     },
     {
-        text:'green'
+        text: 'green'
     }
 ];
 
-const Products: React.FC = () => {
+const Products: React.FC<GlobalProps> = (props: GlobalProps) => {
+
+    function viewProduct() {
+        productController.getAllProduct();
+        console.log("Products", props.store!.productStore.getEntities);
+    }
+
+    useEffect(() => {
+        viewProduct();
+    }, []);
+
     const [modalShow, setModalShow] = React.useState(false);
     return (
         <div className="container-fluid">
@@ -145,7 +160,23 @@ const Products: React.FC = () => {
                         </div>
                     </div>
                     <div className="col-md-9">
-                        <h1><b>Products Title here.....</b></h1>
+                        <div className="row">
+                            {
+                                props.store!.productStore.getEntities.map((p, index) => {
+                                    return (
+                                        <div key={index}
+                                             className="col-3 col-sm-3 col-md-3 dashboard__items-item__spacing">
+                                            <ProductCard
+                                                name={p.description}
+                                                seller='Seller'
+                                                oldPrice={p.old_price}
+                                                newPrice={p.new_price}
+                                            />
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,4 +185,4 @@ const Products: React.FC = () => {
 };
 
 
-export default Products;
+export default inject('store')(observer(Products));
