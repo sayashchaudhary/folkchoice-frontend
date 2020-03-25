@@ -7,6 +7,8 @@ export interface Modalprop {
 }
 
 function CenteredModal(props) {
+
+
     return (
         <Modal
             {...props}
@@ -19,7 +21,14 @@ function CenteredModal(props) {
                     <div className="row">
                         <div className="col-md-6">
                             {
-                                props.data.map(d => (
+                                props.data.slice(0,(props.data.length)/2).map(d => (
+                                    <Grid text={d.text}/>
+                                ))
+                            }
+                        </div>
+                        <div className="col-md-6">
+                            {
+                                props.data.slice((props.data.length)/2).map(d => (
                                     <Grid text={d.text}/>
                                 ))
                             }
