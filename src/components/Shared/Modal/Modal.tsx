@@ -18,7 +18,11 @@ function CenteredModal(props) {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <Grid text={props.text}/>
+                            {
+                                props.data.map(d => (
+                                    <Grid text={d.text}/>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>

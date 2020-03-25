@@ -4,12 +4,18 @@ import { DropdownButton, Dropdown } from 'react-bootstrap';
 import CenteredModal, {Modalprop} from '../Shared/Modal/Modal';
 import Checkbox from '../Shared/Checkbox/Checkbox';
 
-const ModalProps: Modalprop[] = [
+const modalProps: Modalprop[] = [
     {
-        text:'color'
+        text:'blue'
     },
     {
         text:'red'
+    },
+    {
+        text:'yellow'
+    },
+    {
+        text:'green'
     }
 ];
 
@@ -37,15 +43,11 @@ const Products: React.FC = () => {
                                             <Dropdown.Item>Action</Dropdown.Item><Checkbox/>
                                             <Dropdown.Item>
                                                 {
-                                                    ModalProps.map(t => {
-                                                        return (
-                                                            <CenteredModal
-                                                                show={modalShow}
-                                                                onHide={() => setModalShow(false)}
-                                                                text={t.text}
-                                                            />
-                                                        );
-                                                    })
+                                                    <CenteredModal
+                                                        show={modalShow}
+                                                        onHide={() => setModalShow(false)}
+                                                        data={modalProps}
+                                                    />
                                                 }
 
                                                 <button type="submit" className="view"
