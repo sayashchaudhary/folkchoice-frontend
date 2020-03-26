@@ -69,7 +69,7 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                                                 oldPrice={p.old_price}
                                                 newPrice={p.new_price}
                                             />
-                                            <button onClick={handleClick}>Add To Cart</button>
+                                            {/*<button onClick={handleClick}>Add To Cart</button>*/}
                                         </div>
                                     );
                                 })
