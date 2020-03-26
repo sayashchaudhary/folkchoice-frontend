@@ -4,15 +4,18 @@ import Slider, {SliderData} from '../Shared/Carousel/Carousel';
 import Market, {MarketProps} from '../Shared/Market/Market';
 import Footer from '../Shared/Footer/Footer';
 import Navbar from "../Shared/Navbar/Navbar";
+import { RoutePath } from "../../routing/routes";
 
 const genderTiles: TilesProps[] = [
     {
         text: 'GENTLEMAN',
-        imageUrl: 'https://i1.wp.com/plazauomo.se/wp-content/uploads/2018/12/Squarzi2-e1545925942761.jpg?resize=800%2C633&ssl=1'
+        imageUrl: 'https://i1.wp.com/plazauomo.se/wp-content/uploads/2018/12/Squarzi2-e1545925942761.jpg?resize=800%2C633&ssl=1',
+        link: RoutePath.products
     },
     {
         text: 'LADY',
-        imageUrl: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/karlie-kloss-is-seen-wearing-a-baby-blue-ralph-lauren-news-photo-1575557364.jpg?resize=768:*'
+        imageUrl: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/karlie-kloss-is-seen-wearing-a-baby-blue-ralph-lauren-news-photo-1575557364.jpg?resize=768:*',
+        link: RoutePath.products
     }
 ];
 
@@ -37,22 +40,22 @@ const categoryTiles: TilesProps[] = [
     {
         text: 'CASUALS',
         imageUrl: 'https://i.pinimg.com/564x/52/da/f5/52daf5bde1f3cc93c50d92712b6681e9.jpg',
-        // link: ''
+        link: RoutePath.products
     },
     {
         text: 'FORMALS',
         imageUrl: 'https://images.unsplash.com/photo-1521341057461-6eb5f40b07ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-        // link: ''
+        link: RoutePath.products
     },
     {
         text: 'COTTAN SAREES',
         imageUrl: 'https://cdn.shopify.com/s/files/1/1420/5588/products/IMG_4502_600x.jpg?v=1559167077',
-        // link: ''
+        link: RoutePath.products
     },
     {
         text: 'DHOTI KURTA',
         imageUrl: 'https://images.manyavar.com/product_images/14754/qty_30/1.JPG?1551703540',
-        // link: ''
+        link: RoutePath.products
     }
 ];
 
