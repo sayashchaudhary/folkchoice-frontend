@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from "../Shared/Footer/Footer";
 
@@ -58,10 +58,13 @@ const Product: React.FC = () => {
     function display() {
         let u = document.getElementsByClassName("address_btn") as HTMLCollectionOf<HTMLElement>;
         let v = document.getElementsByClassName("address") as HTMLCollectionOf<HTMLElement>;
-        for(let i=0;i<u.length;i++){
+        for (let i = 0; i < u.length; i++) {
             v[i].style.display = 'block';
         }
     }
+
+    let [count, setCount] = useState(0);
+    if(count<0){setCount(count=0)}
 
     return (
         <div className="container-fluid">
@@ -126,12 +129,16 @@ const Product: React.FC = () => {
                                         SUPER10 Expires in: 4 hours 58 minutes Max Discount: 100% of MRP (Your total
                                         saving: Rs. 505) </p><br/>
 
-                                        <button className="address_btn" onClick={()=>{display()}}>Sold by:</button><br/>  <p className="address">Manufacturer/Packer/Importer Details Prateek Apparels
-                                        Pvt Ltd, #113 Krishna Reddy Indl Area,7th Mile,Kudlu Gate,Hosur
-                                        Road,Banglore 560068-INDIA<br/><br/><b> Country of origin</b><br/></p>
+                                    <button className="address_btn" onClick={() => {
+                                        display()
+                                    }}>Sold by:
+                                    </button>
+                                    <br/>  <p className="address">Manufacturer/Packer/Importer Details Prateek Apparels
+                                    Pvt Ltd, #113 Krishna Reddy Indl Area,7th Mile,Kudlu Gate,Hosur
+                                    Road,Banglore 560068-INDIA<br/><br/><b> Country of origin</b><br/></p>
                                     <h4> India </h4>
                                 </div>
-                                <div className="col-md-1"> </div>
+                                <div className="col-md-1"></div>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -150,9 +157,15 @@ const Product: React.FC = () => {
                                         <button type="submit" className="order__size">XL</button>
                                         <button type="submit" className="order__size">XXL</button>
                                         <p className="quantity"><b>QUANTITY</b></p>
-                                        <button type="submit" className="order__add">-</button>
-                                        <button type="submit" className="order__quantity">1</button>
-                                        <button type="submit" className="order__add">+</button>
+                                        <button type="submit" className="order__add" onClick={() => {
+                                            setCount(count - 1)
+                                        }}>-
+                                        </button>
+                                        <button type="submit" className="order__quantity">{count}</button>
+                                        <button type="submit" className="order__add" onClick={() => {
+                                            setCount(count + 1)
+                                        }}>+
+                                        </button>
                                     </div>
                                     <br/>
                                 </div>

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { observer } from "mobx-react";
 import { GlobalProps } from "../../App";
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
 
 const Cart: React.FC<GlobalProps> = (props: GlobalProps) => {
+    let [count, setCount] = useState(0);
+    if (count < 0) {
+        setCount(count = 0)
+    }
     return (
         <div className="container-fluid">
             <Navbar/>
@@ -37,9 +41,15 @@ const Cart: React.FC<GlobalProps> = (props: GlobalProps) => {
                         <button type="submit" className="order__size">XL</button>
                         <button type="submit" className="order__size">XXL</button>
                         <p className="quantity"><b>QUANTITY</b></p>
-                        <button type="submit" className="order__add">-</button>
-                        <button type="submit" className="order__quantity">1</button>
-                        <button type="submit" className="order__add">+</button>
+                        <button type="submit" className="order__add" onClick={() => {
+                            setCount(count - 1)
+                        }}>-
+                        </button>
+                        <button type="submit" className="order__quantity">{count}</button>
+                        <button type="submit" className="order__add" onClick={() => {
+                            setCount(count + 1)
+                        }}>+
+                        </button>
                     </div>
                 </div>
             </div>
