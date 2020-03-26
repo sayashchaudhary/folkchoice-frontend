@@ -79,6 +79,10 @@ const Products: React.FC<GlobalProps> = (props: GlobalProps) => {
         viewProduct();
     }, []);
     const [modalShow, setModalShow] = React.useState(false);
+    const [modal1Show, set1ModalShow] = React.useState(false);
+    const [modal2Show, set2ModalShow] = React.useState(false);
+    const [modal3Show, set3ModalShow] = React.useState(false);
+
     return (
         <div className="container-fluid">
             <Navbar/>
@@ -129,14 +133,14 @@ const Products: React.FC<GlobalProps> = (props: GlobalProps) => {
                                             <Dropdown.Item>
                                                 {
                                                     <CenteredModal
-                                                        show={modalShow}
-                                                        onHide={() => setModalShow(false)}
+                                                        show={modal1Show}
+                                                        onHide={() => set1ModalShow(false)}
                                                         data={fabricProps}
                                                     />
                                                 }
 
                                                 <button type="submit" className="view"
-                                                        onClick={() => setModalShow(true)}>View More
+                                                        onClick={() => set1ModalShow(true)}>View More
                                                 </button>
                                             </Dropdown.Item>
                                         </DropdownButton>
@@ -158,14 +162,14 @@ const Products: React.FC<GlobalProps> = (props: GlobalProps) => {
                                             <Dropdown.Item>
                                                 {
                                                     <CenteredModal
-                                                        show={modalShow}
-                                                        onHide={() => setModalShow(false)}
+                                                        show={modal2Show}
+                                                        onHide={() => set2ModalShow(false)}
                                                         data={sizeProps}
                                                     />
                                                 }
 
                                                 <button type="submit" className="view"
-                                                        onClick={() => setModalShow(true)}>View More
+                                                        onClick={() => set2ModalShow(true)}>View More
                                                 </button>
                                             </Dropdown.Item>
                                         </DropdownButton>
@@ -187,13 +191,13 @@ const Products: React.FC<GlobalProps> = (props: GlobalProps) => {
                                             <Dropdown.Item>
                                                 {
                                                     <CenteredModal
-                                                        show={modalShow}
-                                                        onHide={() => setModalShow(false)}
+                                                        show={modal3Show}
+                                                        onHide={() => set3ModalShow(false)}
                                                         data={neckProps}
                                                     />
                                                 }
                                                 <button type="submit" className="view"
-                                                        onClick={() => setModalShow(true)}>View More
+                                                        onClick={() => set3ModalShow(true)}>View More
                                                 </button>
                                             </Dropdown.Item>
                                         </DropdownButton>
