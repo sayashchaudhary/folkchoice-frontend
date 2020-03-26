@@ -1,7 +1,6 @@
 import React from 'react';
 import Checkbox from "@material-ui/core/Checkbox";
 
-
 function ModalGrid(props) {
     return (
         <div className="grid">

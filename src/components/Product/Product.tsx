@@ -55,13 +55,21 @@ const Product: React.FC = () => {
         }
     }
 
+    function display() {
+        let u = document.getElementsByClassName("address_btn") as HTMLCollectionOf<HTMLElement>;
+        let v = document.getElementsByClassName("address") as HTMLCollectionOf<HTMLElement>;
+        for(let i=0;i<u.length;i++){
+            v[i].style.display = 'block';
+        }
+    }
+
     return (
         <div className="container-fluid">
             <Navbar/>
             <div className="description">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-5">
+                        <div className="col-md-6">
                             <div className="row">
                                 <div className="col-md-4 col-6">
                                     <div className="row">
@@ -92,7 +100,6 @@ const Product: React.FC = () => {
                                                  className="description__img" onClick={() => slide3()}/>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div className="col-md-8 col-6">
                                     <div className="images">
@@ -111,13 +118,28 @@ const Product: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
+                            <div className="row">
+                                <div className="col-md-11 description__offers">
+                                    <p><b>BEST OFFERS</b><br/> Best Price: Rs. 494
+                                        Applicable on: Orders above Rs. 999 Coupon
+                                        code:
+                                        SUPER10 Expires in: 4 hours 58 minutes Max Discount: 100% of MRP (Your total
+                                        saving: Rs. 505) </p><br/>
+
+                                        <button className="address_btn" onClick={()=>{display()}}>Sold by:</button><br/>  <p className="address">Manufacturer/Packer/Importer Details Prateek Apparels
+                                        Pvt Ltd, #113 Krishna Reddy Indl Area,7th Mile,Kudlu Gate,Hosur
+                                        Road,Banglore 560068-INDIA<br/><br/><b> Country of origin</b><br/></p>
+                                    <h4> India </h4>
+                                </div>
+                                <div className="col-md-1"> </div>
+                            </div>
                         </div>
-                        <div className="col-md-7">
+                        <div className="col-md-6">
                             <div className="description__product">
                                 <h2>Women Chikan Embroidery Poly Georgette Straight Kurta (Green) </h2>
                                 <br/>
                                 <h2>1271$</h2><br/>
-                                <p><b>SOLD BY:</b> RAMA TRADERS</p>
+                                <p><b>SOLD BY:</b> RAMA TRADERS</p><br/>
                                 <p><b>SIZE:</b></p>
                                 <div className="row">
                                     <div className="col-md-6">
@@ -132,13 +154,7 @@ const Product: React.FC = () => {
                                         <button type="submit" className="order__quantity">1</button>
                                         <button type="submit" className="order__add">+</button>
                                     </div>
-                                    <div className="col-md-6">
-                                        <p className="description__offers"><b>BEST OFFERS</b><br/> Best Price: Rs. 494
-                                            Applicable on: Orders above Rs. 999 Coupon
-                                            code:
-                                            SUPER10 Expires in: 4 hours 58 minutes Max Discount: 100% of MRP (Your total
-                                            saving: Rs. 505) </p>
-                                    </div>
+                                    <br/>
                                 </div>
                                 <div className="row">
                                     <button type="submit" className="description__cart">Add to Cart</button>
@@ -146,7 +162,7 @@ const Product: React.FC = () => {
                                 </div>
                                 <div className="row">
                                     <div className="col-md-8">
-                                        <h4>PRODUCT DESCRIPTION</h4>
+                                        <h3>PRODUCT DESCRIPTION</h3>
                                         <p>orem Ipsum is simply dummy text of the printing and typesetting industry.
                                             Lorem
                                             Ipsum has been the industry's standard dummy text ever since the 1500s, when
@@ -169,13 +185,6 @@ const Product: React.FC = () => {
                                         <li> Easy 30 days returns and exchanges</li>
                                         <li> Try & Buy might be available</li>
                                         <li> Product Code: 2192703</li>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <p className="description__offers">
-                                            <b>Sold by:</b><br/> Manufacturer/Packer/Importer Details Prateek Apparels
-                                            Pvt Ltd, #113 Krishna Reddy Indl Area,7th Mile,Kudlu Gate,Hosur
-                                            Road,Banglore 560068-INDIA<br/><br/><b> Country of origin</b><br/></p><h4
-                                        className="description__offers"> India </h4>
                                     </div>
                                 </div>
                             </div>

@@ -2,7 +2,7 @@
   display: block;
   position: relative;
   cursor: pointer;
-  top: -6%;
+  //top: -6%;
   font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -27,7 +27,7 @@ label {
 
 .checkmark {
   position: absolute;
-  top: -8px;
+  //top: -8px;
   left: 75%;
   height: 18px;
   width: 18px;
@@ -80,6 +80,7 @@ label {
 }
 
 .model {
+  display: inline-block;
   .btn-primary,
   .btn-primary:hover {
     background-color: black;

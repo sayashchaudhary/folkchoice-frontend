@@ -37,9 +37,12 @@
     background: white;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-    margin-bottom: 2%;
+    margin-bottom: 10%;
     margin-left: 1%;
     margin-right: 1%;
+    &:focus{
+      background-color: #373A59;
+    }
   }
 
   &__quantity {
@@ -67,17 +70,19 @@
 .price {
   box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.2), 0px 0px 9px rgba(0, 0, 0, 0.25);
   border-radius: 33px;
-  width: 656px;
+  width: 80%;
   padding: 2%;
   margin-bottom: 4%;
 }
 
 .left {
   float: left;
+  //padding-left: 5%;
 }
 
 .right {
   text-align: right;
+  padding-right: 5%;
 }
 
 .checkout1 {
