@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductCard from '../Shared/ProductCard/ProductCard';
-import {productController} from '../../controllers/product.controller';
-import {cartStore} from "../../stores/cart.store";
-import {inject, observer} from 'mobx-react';
-import {GlobalProps} from '../../App';
+import { productController } from '../../controllers/product.controller';
+import { cartStore } from "../../stores/cart.store";
+import { inject, observer } from 'mobx-react';
+import { GlobalProps } from '../../App';
 import { RoutePath } from '../../routing/routes';
 import { RouteUtils } from '../../routing/route-utils';
 import { useHistory } from 'react-router-dom';
@@ -50,7 +50,8 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                         <h2><strong>Steal on Cosmetics</strong></h2>
                         <button onClick={() => navigateToRoute(RoutePath.products)} type="submit">Filter Page
                         </button>
-                        <button onClick={() => navigateToRoute(RoutePath.description)} type="submit">Product Description Page
+                        <button onClick={() => navigateToRoute(RoutePath.description)} type="submit">Product Description
+                            Page
                         </button>
                         <button onClick={() => navigateToRoute(RoutePath.checkout)} type="submit">Checkout Page
                         </button>
@@ -61,17 +62,19 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                             {
                                 props.store!.productStore.getEntities.map((p, index) => {
                                     return (
-                                        <div key={index}
-                                             className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
-                                            <ProductCard
-                                                name={p.description}
-                                                seller='Seller'
-                                                oldPrice={p.old_price}
-                                                newPrice={p.new_price}
-                                            />
-                                            {/*<button onClick={handleClick}>Add To Cart</button>*/}
-                                        </div>
-                                    );
+                                        p.productSubcategory.productCategory.id === 4 ?
+                                            <div key={index}
+                                                 className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
+                                                <ProductCard
+                                                    name={p.description}
+                                                    seller='Seller'
+                                                    oldPrice={p.old_price}
+                                                    newPrice={p.new_price}
+                                                />
+                                                {/*<button onClick={handleClick}>Add To Cart</button>*/}
+                                            </div>
+                                            : null
+                                    )
                                 })
                             }
                         </div>
@@ -82,18 +85,21 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                     <div className="dashboard__items-item">
                         <div className="row">
                             {
-                                props.store!.productStore.getEntities.map((p, index) => {
+                                props.store!.productStore.getEntities.map(function mapper(p, index) {
                                     return (
-                                        <div key={index}
-                                             className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
-                                            <ProductCard
-                                                name={p.description}
-                                                seller='Seller'
-                                                oldPrice={p.old_price}
-                                                newPrice={p.new_price}
-                                            />
-                                        </div>
-                                    );
+                                        p.productSubcategory.productCategory.id != 4 ?
+                                            <div key={index}
+                                                 className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
+                                                <ProductCard
+                                                    name={p.description}
+                                                    seller='Seller'
+                                                    oldPrice={p.old_price}
+                                                    newPrice={p.new_price}
+                                                />
+                                                {/*<button onClick={handleClick}>Add To Cart</button>*/}
+                                            </div>
+                                            : null
+                                    )
                                 })
                             }
                         </div>
