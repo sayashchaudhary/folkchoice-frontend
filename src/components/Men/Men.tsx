@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Tiles, { TilesProps } from '../Shared/Tiles/Tiles';
 import Market, { MarketProps } from '../Shared/Market/Market';
 import Navbar from '../Shared/Navbar/Navbar';
 import Slider, { SliderData } from '../Shared/Carousel/Carousel';
 import Footer from '../Shared/Footer/Footer';
 import { RoutePath } from "../../routing/routes";
+import { marketController } from "../../controllers/market.controller";
+import { GlobalProps } from "../../App";
+import { inject, observer } from "mobx-react";
 
 const dummyTiles: TilesProps[] = [
     {
@@ -34,23 +37,32 @@ const dummyTiles: TilesProps[] = [
     }
 ];
 
-const dummyMarkets: MarketProps[] = [
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 1},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 2},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 3},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 4},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 5},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 6},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 7},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 8}
-];
+// const dummyMarkets: MarketProps[] = [
+//     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 1},
+//     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 2},
+//     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 3},
+//     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 4},
+//     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 5},
+//     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 6},
+//     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 7},
+//     {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 8}
+// ];
 
 const dummySlider: SliderData[] = [
     {caption: ''},
     {caption: ''},
     {caption: ''}
 ];
-const Men: React.FC = () => {
+const Men: React.FC<GlobalProps> = (props: GlobalProps) => {
+    function viewMarket() {
+        marketController.getAllMarket();
+        console.log("Market", props.store!.marketStore.getEntities);
+    }
+
+    useEffect(() => {
+        viewMarket();
+    }, []);
+
     return (
         <div className="container-fluid">
             <Navbar/>
@@ -60,7 +72,7 @@ const Men: React.FC = () => {
                     dummyTiles.map(t => {
                         return (
                             <div className="col-sm-4 col-md-4 col-lg-2 men__spacing">
-                                <Tiles imageUrl={t.imageUrl} text={t.text} link={t.link} />
+                                <Tiles imageUrl={t.imageUrl} text={t.text} link={t.link}/>
                             </div>
                         );
                     })
@@ -75,11 +87,11 @@ const Men: React.FC = () => {
 
             <div className="row">
                 {
-                    dummyMarkets.map(m => {
+                    props.store!.marketStore.getEntities.map((p, index) => {
                         return (
-                            m.id <= 4 ?
+                            p.id <= 4 ?
                                 <div className="col-md-6 pt-3 clothing__spacing">
-                                    <Market shop={m.shop} category={m.category} id={m.id}/>
+                                    <Market shop={p.user.name} category={p.description} rating={p.rating}/>
                                 </div>
                                 :
                                 null
@@ -96,13 +108,12 @@ const Men: React.FC = () => {
 
             <div className="row">
                 {
-                    dummyMarkets.map(m => {
+                    props.store!.marketStore.getEntities.map((p, index) => {
                         return (
                             <div className="col-md-6 pt-3 clothing__spacing">
-                                <Market shop={m.shop} category={m.category} id={m.id}/>
+                                <Market shop={p.user.name} category={p.description} rating={p.rating}/>
                             </div>
                         )
-
                     })
                 }
             </div>
@@ -113,4 +124,5 @@ const Men: React.FC = () => {
     );
 };
 
-export default Men;
+export default inject('store')(observer(Men));
+

@@ -293,7 +293,7 @@ const Products: React.FC<GlobalProps> = (props: GlobalProps) => {
                                         <div key={index}
                                              className="col-3 col-sm-3 col-md-3 dashboard__items-item__spacing">
                                             <ProductCard
-                                                name={p.description}
+                                                name={p.title}
                                                 seller='Seller'
                                                 oldPrice={p.old_price}
                                                 newPrice={p.new_price}

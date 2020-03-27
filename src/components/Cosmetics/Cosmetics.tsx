@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
-import Tiles, {TilesProps} from "../Shared/Tiles/Tiles";
-import Slider, {SliderData} from "../Shared/Carousel/Carousel";
-import Market, {MarketProps} from "../Shared/Market/Market";
+import Tiles, { TilesProps } from "../Shared/Tiles/Tiles";
+import Slider, { SliderData } from "../Shared/Carousel/Carousel";
+import Market, { MarketProps } from "../Shared/Market/Market";
+import { inject, observer } from "mobx-react";
+import { GlobalProps } from "../../App";
+import { marketController } from "../../controllers/market.controller";
 
 const genderTiles: TilesProps[] = [
     {
@@ -38,18 +41,16 @@ const dummySlider: SliderData[] = [
     {caption: ''},
 ];
 
-const dummyMarket: MarketProps[] = [
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 1},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 2},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 3},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 4},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 5},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 6},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 7},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 8},
-];
+const Cosmetics: React.FC<GlobalProps> = (props: GlobalProps) => {
+    function viewMarket() {
+        marketController.getAllMarket();
+        console.log("Market", props.store!.marketStore.getEntities);
+    }
 
-const Cosmetics: React.FC = () => {
+    useEffect(() => {
+        viewMarket();
+    }, []);
+
     return (
         <div className="container-fluid">
             <Navbar/>
@@ -69,11 +70,11 @@ const Cosmetics: React.FC = () => {
             </div>
             <div className="row">
                 {
-                    dummyMarket.map(m => {
+                    props.store!.marketStore.getEntities.map((p, index) => {
                         return (
-                            m.id <= 2 ?
+                            p.id <= 4 ?
                                 <div className="col-md-6 pt-3 clothing__spacing">
-                                    <Market shop={m.shop} category={m.category} id={m.id}/>
+                                    <Market shop={p.user.name} category={p.description} rating={p.rating}/>
                                 </div>
                                 :
                                 null
@@ -87,12 +88,16 @@ const Cosmetics: React.FC = () => {
             </div>
             <div className="row">
                 {
-                    dummyMarket.map(m => {
+                    props.store!.marketStore.getEntities.map((p, index) => {
                         return (
-                            <div className="col-md-6">
-                                <Market shop={m.shop} category={m.category} id={m.id}/>
-                            </div>
+                            p.id <= 4 ?
+                                <div className="col-md-6 pt-3 clothing__spacing">
+                                    <Market shop={p.user.name} category={p.description} rating={p.rating}/>
+                                </div>
+                                :
+                                null
                         )
+
                     })
                 }
             </div>
@@ -101,4 +106,5 @@ const Cosmetics: React.FC = () => {
     )
 };
 
-export default Cosmetics;
+export default inject('store')(observer(Cosmetics));
+
