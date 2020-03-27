@@ -5,8 +5,11 @@ function ModalGrid(props) {
     return (
         <div className="grid">
             <div className="container">
-                <div className="row text-center">
-                    <div className="col-md-8">
+                <div className="row">
+                    <div className="col-md-2">
+                        <button className="grid__circle" style={{backgroundColor: `${props.color}`}} />
+                    </div>
+                    <div className="col-md-6">
                         <p>{props.text}</p><br/>
                     </div>
                     <div className="col-md-4">

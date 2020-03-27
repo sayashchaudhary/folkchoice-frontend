@@ -7,34 +7,33 @@ import { productController } from '../../controllers/product.controller';
 import { inject, observer } from 'mobx-react';
 import { GlobalProps } from '../../App';
 import ProductCard from "../Shared/ProductCard/ProductCard";
-import Footer from "../Shared/Footer/Footer";
 
 const modalProps: Modalprop[] = [
-    {text: 'black'},
-    {text: 'blue'},
-    {text: 'brown'},
-    {text: 'burgundy'},
-    {text: 'Charcoal'},
-    {text: 'Cream'},
-    {text: 'Green'},
-    {text: 'Gold'},
-    {text: 'Grey'},
-    {text: 'Magenta'},
-    {text: 'Maroon'},
-    {text: 'Mustard'},
-    {text: 'Navy Blue'},
-    {text: 'Off White'},
-    {text: 'Olive'},
-    {text: 'Orange'},
-    {text: 'Peach'},
-    {text: 'Pink'},
-    {text: 'Purple'},
-    {text: 'Red'},
-    {text: 'Rust'},
-    {text: 'Teal'},
-    {text: 'Torquoise blue'},
-    {text: 'White'},
-    {text: 'Yellow'}
+    {text: 'black', color: 'black'},
+    {text: 'blue', color: 'blue'},
+    {text: 'brown', color: 'brown'},
+    {text: 'burgundy', color: 'burgundy'},
+    {text: 'Charcoal', color: 'charcoal'},
+    {text: 'Cream', color: 'cream'},
+    {text: 'Green', color: 'green'},
+    {text: 'Gold', color: 'gold'},
+    {text: 'Grey', color: 'grey'},
+    {text: 'Magenta', color: 'magenta'},
+    {text: 'Maroon', color: 'maroon'},
+    {text: 'Mustard', color: 'mustard'},
+    {text: 'Navy Blue', color: 'blue'},
+    {text: 'Off White', color: 'white'},
+    {text: 'Olive', color: 'olive'},
+    {text: 'Orange', color: 'orange'},
+    {text: 'Peach', color: 'peach'},
+    {text: 'Pink', color: 'pink'},
+    {text: 'Purple', color: 'purple'},
+    {text: 'Red', color: 'red'},
+    {text: 'Rust', color: 'rust'},
+    {text: 'Teal', color: 'teal'},
+    {text: 'Torquoise blue', color: 'torquoise'},
+    {text: 'White', color: 'white'},
+    {text: 'Yellow', color: 'yellow'}
 ];
 
 const sizeProps: Modalprop[] = [
@@ -204,7 +203,7 @@ const Products: React.FC<GlobalProps> = (props: GlobalProps) => {
                                     </div>
                                 </div>
                             </div>
-                            <br />
+                            <br/>
                             <div className="content">
                                 <div className="row">
                                     <div className="text col-md-10">
