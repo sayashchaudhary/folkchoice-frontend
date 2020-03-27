@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Tiles, { TilesProps } from "../Shared/Tiles/Tiles";
 import Slider, { SliderData } from "../Shared/Carousel/Carousel"
 import Market, { MarketProps } from "../Shared/Market/Market";
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from "../Shared/Footer/Footer";
 import { RoutePath } from "../../routing/routes";
+import { GlobalProps } from "../../App";
+import { marketController } from "../../controllers/market.controller";
+import { inject, observer } from "mobx-react";
 
 const genderTiles: TilesProps[] = [
     {
@@ -66,14 +69,16 @@ const categoryTiles: TilesProps[] = [
     }
 ];
 
-const dummyMarket: MarketProps[] = [
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 1},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 2},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 3},
-    {shop: 'Rama Traders', category: 'Ethnic, Casuals, Formals', id: 4},
-];
+const Kids: React.FC<GlobalProps> = (props: GlobalProps) => {
+    function viewMarket() {
+        marketController.getAllMarket();
+        console.log("Market", props.store!.marketStore.getEntities);
+    }
 
-const Kids: React.FC = () => {
+    useEffect(() => {
+        viewMarket();
+    }, []);
+
     return (
         <div className="container-fluid">
             <Navbar/>
@@ -118,10 +123,10 @@ const Kids: React.FC = () => {
             </div>
             <div className="row">
                 {
-                    dummyMarket.map(m => {
+                    props.store!.marketStore.getEntities.map((p, index) => {
                         return (
-                            <div className="col-md-6 kids__spacing">
-                                <Market shop={m.shop} category={m.category} id={m.id}/>
+                            <div className="col-md-6 pt-3 clothing__spacing">
+                                <Market shop={p.user.name} category={p.description} rating={p.rating}/>
                             </div>
                         )
                     })
@@ -132,4 +137,4 @@ const Kids: React.FC = () => {
     )
 };
 
-export default Kids;
+export default inject('store')(observer(Kids));

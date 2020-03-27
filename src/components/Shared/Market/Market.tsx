@@ -3,9 +3,10 @@ import Star from '../../../assets/images/star.png';
 
 export interface MarketProps {
     imageUrl?: string;
-    shop: string;
-    category: string;
-    id: number
+    shop?: string;
+    category?: string;
+    id?: number;
+    rating?: number;
 }
 
 const Market: React.FC<MarketProps> = (props: MarketProps) => {
@@ -17,7 +18,7 @@ const Market: React.FC<MarketProps> = (props: MarketProps) => {
                     alt="Profile Pic" className="market__card-image"/>
                 <p className="market__card-text"><strong>{props.shop}</strong><br/> {props.category}</p>
                 <img src={Star} alt="star" className="market__card-star"/><span
-                className="market__card-rating">3.1/5</span>
+                className="market__card-rating">{props.rating}/5</span>
             </div>
         </div>
     )
