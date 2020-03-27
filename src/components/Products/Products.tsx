@@ -9,62 +9,62 @@ import { GlobalProps } from '../../App';
 import ProductCard from "../Shared/ProductCard/ProductCard";
 
 const modalProps: Modalprop[] = [
-    {text: 'black', color: 'black'},
-    {text: 'blue', color: 'blue'},
-    {text: 'brown', color: 'brown'},
-    {text: 'burgundy', color: 'burgundy'},
-    {text: 'Charcoal', color: 'charcoal'},
-    {text: 'Cream', color: 'cream'},
+    {text: 'Black', color: 'black'},
+    {text: 'Blue', color: 'blue'},
+    {text: 'Brown', color: 'brown'},
+    {text: 'Burgundy', color: '#800020'},
+    {text: 'Charcoal', color: '#36454f'},
+    {text: 'Cream', color: '#fffdd0'},
     {text: 'Green', color: 'green'},
     {text: 'Gold', color: 'gold'},
     {text: 'Grey', color: 'grey'},
     {text: 'Magenta', color: 'magenta'},
     {text: 'Maroon', color: 'maroon'},
-    {text: 'Mustard', color: 'mustard'},
+    {text: 'Mustard', color: ' #ffdb58'},
     {text: 'Navy Blue', color: 'blue'},
-    {text: 'Off White', color: 'white'},
+    {text: 'Off White', color: '#f5f2d0'},
     {text: 'Olive', color: 'olive'},
     {text: 'Orange', color: 'orange'},
-    {text: 'Peach', color: 'peach'},
+    {text: 'Peach', color: '#ffe5b4'},
     {text: 'Pink', color: 'pink'},
     {text: 'Purple', color: 'purple'},
     {text: 'Red', color: 'red'},
-    {text: 'Rust', color: 'rust'},
-    {text: 'Teal', color: 'teal'},
-    {text: 'Torquoise blue', color: 'torquoise'},
+    {text: 'Rust', color: '#b7410e'},
+    {text: 'Teal', color: '#008080'},
+    {text: 'Torquoise blue', color: '#40E0D0'},
     {text: 'White', color: 'white'},
     {text: 'Yellow', color: 'yellow'}
 ];
 
 const sizeProps: Modalprop[] = [
-    {text: 'XS'},
-    {text: 'S'},
-    {text: 'M'},
-    {text: 'L'},
-    {text: 'XL'},
-    {text: '2XL'},
-    {text: '3XL'},
-    {text: '4XL'},
-    {text: '5XL'}
+    {text: 'XS', display: 'none'},
+    {text: 'S', display: 'none'},
+    {text: 'M', display: 'none'},
+    {text: 'L', display: 'none'},
+    {text: 'XL', display: 'none'},
+    {text: '2XL', display: 'none'},
+    {text: '3XL', display: 'none'},
+    {text: '4XL', display: 'none'},
+    {text: '5XL', display: 'none'}
 ];
 
 const fabricProps: Modalprop[] = [
-    {text: 'Blended'},
-    {text: 'Cotton'},
-    {text: 'Wool'},
-    {text: 'Lenin'},
-    {text: 'Nylon'},
-    {text: 'Polyester'},
-    {text: 'Silk'}
+    {text: 'Blended', display: 'none'},
+    {text: 'Cotton', display: 'none'},
+    {text: 'Wool', display: 'none'},
+    {text: 'Lenin', display: 'none'},
+    {text: 'Nylon', display: 'none'},
+    {text: 'Polyester', display: 'none'},
+    {text: 'Silk', display: 'none'}
 ];
 
 const neckProps: Modalprop[] = [
-    {text: 'High Neck'},
-    {text: 'Hood'},
-    {text: 'Round Neck'},
-    {text: 'Scoop Neck'},
-    {text: 'V-Neck'},
-    {text: 'Polo Collar'}
+    {text: 'High Neck', display: 'none'},
+    {text: 'Hood', display: 'none'},
+    {text: 'Round Neck', display: 'none'},
+    {text: 'Scoop Neck', display: 'none'},
+    {text: 'V-Neck', display: 'none'},
+    {text: 'Polo Collar', display: 'none'}
 ];
 
 const Products: React.FC<GlobalProps> = (props: GlobalProps) => {
@@ -96,10 +96,18 @@ const Products: React.FC<GlobalProps> = (props: GlobalProps) => {
                                     </div>
                                     <div className="drop col-md-2">
                                         <DropdownButton id="dropdown-basic-button" title="">
-                                            <Dropdown.Item>Black</Dropdown.Item><Checkbox/>
-                                            <Dropdown.Item>Blue</Dropdown.Item><Checkbox/>
-                                            <Dropdown.Item>Brown</Dropdown.Item><Checkbox/>
-                                            <Dropdown.Item>Burgundy</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>
+                                                <button className="circle" style={{backgroundColor: 'black'}}/>
+                                                Black</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>
+                                                <button className="circle" style={{backgroundColor: 'blue'}}/>
+                                                Blue</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>
+                                                <button className="circle" style={{backgroundColor: 'brown'}}/>
+                                                Brown</Dropdown.Item><Checkbox/>
+                                            <Dropdown.Item>
+                                                <button className="circle" style={{backgroundColor: '#800020'}}/>
+                                                Burgundy</Dropdown.Item><Checkbox/>
                                             <Dropdown.Item>
                                                 {
                                                     <CenteredModal

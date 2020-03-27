@@ -5,6 +5,7 @@ import Grid from '../Grid/Grid'
 export interface Modalprop {
     text: string;
     color?: string;
+    display?: string;
 }
 
 function CenteredModal(props) {
@@ -23,14 +24,14 @@ function CenteredModal(props) {
                         <div className="col-md-6">
                             {
                                 props.data.slice(0,(props.data.length)/2).map(d => (
-                                    <Grid text={d.text} color={d.color}/>
+                                    <Grid text={d.text} color={d.color} display={d.display}/>
                                 ))
                             }
                         </div>
                         <div className="col-md-6">
                             {
                                 props.data.slice((props.data.length)/2).map(d => (
-                                    <Grid text={d.text} color={d.color}/>
+                                    <Grid text={d.text} color={d.color} display={d.display}/>
                                 ))
                             }
                         </div>
