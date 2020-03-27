@@ -8,16 +8,6 @@ import { RoutePath } from '../../routing/routes';
 import { RouteUtils } from '../../routing/route-utils';
 import { useHistory } from 'react-router-dom';
 
-// const dummyProducts: ProductCardProps[] = [
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-// ];
-
-
 const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
     function viewProduct() {
         productController.getAllProduct();
@@ -66,7 +56,7 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                                             <div key={index}
                                                  className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
                                                 <ProductCard
-                                                    name={p.description}
+                                                    name={p.title}
                                                     seller='Seller'
                                                     oldPrice={p.old_price}
                                                     newPrice={p.new_price}
@@ -91,7 +81,7 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                                             <div key={index}
                                                  className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
                                                 <ProductCard
-                                                    name={p.description}
+                                                    name={p.title}
                                                     seller='Seller'
                                                     oldPrice={p.old_price}
                                                     newPrice={p.new_price}
