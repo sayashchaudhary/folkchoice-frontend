@@ -138,7 +138,7 @@ const Product: React.FC = () => {
                                     Road,Banglore 560068-INDIA<br/><br/><b> Country of origin</b><br/></p>
                                     <h4> India </h4>
                                 </div>
-                                <div className="col-md-1"></div>
+                                <div className="col-md-1"> </div>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -174,7 +174,7 @@ const Product: React.FC = () => {
                                     <button type="submit" className="description__cart">Buy now</button>
                                 </div>
                                 <div className="row">
-                                    <div className="col-md-8">
+                                    <div className="col-md-10">
                                         <h3>PRODUCT DESCRIPTION</h3>
                                         <p>orem Ipsum is simply dummy text of the printing and typesetting industry.
                                             Lorem

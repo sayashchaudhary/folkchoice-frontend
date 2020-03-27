@@ -3,7 +3,7 @@ import Logo from '../../../assets/images/logo.jpg';
 import Instagram from '../../../assets/images/instagram.png';
 import Facebook from '../../../assets/images/facebook1.png';
 import Twitter from '../../../assets/images/twitter.png';
-import Heart from '../../../assets/images/heart.png';
+import Heart from '../../../assets/images/heartfill.png';
 
 
 const Footer: React.FC = () => {
