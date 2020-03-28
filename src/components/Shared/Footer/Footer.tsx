@@ -17,9 +17,9 @@ const Footer: React.FC = () => {
                             <span className="footer__alignleft-text">FOLK CHOICE</span><br/>
                             <div className="footer__alignleft-detail">
                                 <h4><strong>E-mail us at</strong></h4>
-                                <p>abc@gmail.com</p>
+                                <a href="mailto:folkchoice3@gmail.com" target="_blank">abc@gmail.com</a>
                                 <h4><strong>Contact us: </strong>
-                                    <span>1234567890, 9876543210</span></h4>
+                                    <span>8595493807</span></h4>
                                 <h4>
                                     We Care
                                     <img src={Heart} alt="heart" className="footer__alignleft-detail__heart"/>
@@ -42,17 +42,17 @@ const Footer: React.FC = () => {
                 <div className="row">
                     <div className="col-md-12 text-center pb-3">
                         <div className="footer__social">
-                            <span className="fab fa-instagram"/>
+                            <a href="https://instagram.com/folkchoice_?igshid=1cvattgjx2sit" className="fab fa-instagram" target="_blank"/>
                         </div>
-                        <span className="footer__text">folk__choice</span>
+                        <span className="footer__text">folkchoice_</span>
                         <div className="footer__social">
-                            <span className="fab fa-facebook"/>
+                            <a href="https://www.facebook.com/Folk-Choice-107626467450698/" className="fab fa-facebook" target="_blank"/>
                         </div>
-                        <span className="footer__text">folk__choice</span>
+                        <span className="footer__text">Folk Choice</span>
                         <div className="footer__social">
-                            <span className="fab fa-twitter"/>
+                            <a href="https://twitter.com/folkchoice_" className="fab fa-twitter" target="_blank"/>
                         </div>
-                        <span className="footer__text">folk__choice</span>
+                        <span className="footer__text">@folkchoice_</span>
                     </div>
                 </div>
             </div>
