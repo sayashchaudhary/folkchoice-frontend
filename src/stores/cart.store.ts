@@ -1,32 +1,16 @@
-import BaseStore from "./base.store";
-import {action, computed, observable} from "mobx";
-import {CartProducts} from "../models/cart.model";
-import {count} from "rxjs/operators";
+import BaseStore from './base.store';
+import { action, computed, observable } from 'mobx';
+import { CartProducts } from '../models/cart.model';
+import { count } from 'rxjs/operators';
+import { IProduct } from '../models/product/product.model';
 
-export class CartStore extends BaseStore<CartProducts> {
+export class CartStore extends BaseStore<IProduct> {
     private static _instance: CartStore;
 
     // @observable isCartLoaded = false;
     // @observable isCartLoading = false;
 
-    @observable itemsInBag = [];
-
-    @computed get bagCount() {
-        return this.itemsInBag.reduce((prevItemCount, currentItem) => {
-            return prevItemCount + currentItem;
-        }, 0);
-    }
-
-    addItem(itemContainer, cartProducts: CartProducts[]) {
-        const isItemPresent = itemContainer.findIndex(item => {
-            return item.cartProducts === cartProducts;
-        });
-        if (isItemPresent) {
-            itemContainer[isItemPresent]['count']++
-        } else {
-            itemContainer.push({cartProducts})
-        }
-    }
+    @observable itemCount: { [id: number]: number } = {};
 
     constructor() {
         super();
@@ -40,9 +24,16 @@ export class CartStore extends BaseStore<CartProducts> {
     }
 
     @action
-    addProductsToCart(cartProducts: CartProducts[]) {
-        this.addAllEntities(cartProducts);
-        this.addItem(this.itemsInBag, cartProducts);
+    addProductsToCart(product: IProduct) {
+        if (this.itemCount[product.id]) {
+            this.itemCount[product.id]++;
+        } else {
+            this.pushEntity(product);
+            this.itemCount[product.id] = 1;
+        }
+
+        console.log('Cart count',this.itemCount);
+        console.log('Cart product',this.entities);
     }
 }
 

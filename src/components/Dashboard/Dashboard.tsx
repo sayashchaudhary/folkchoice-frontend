@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductCard from '../Shared/ProductCard/ProductCard';
-import {productController} from '../../controllers/product.controller';
-import {cartStore} from "../../stores/cart.store";
-import {inject, observer} from 'mobx-react';
-import {GlobalProps} from '../../App';
+import { productController } from '../../controllers/product.controller';
+import { cartStore } from '../../stores/cart.store';
+import { inject, observer } from 'mobx-react';
+import { GlobalProps } from '../../App';
+import { IProduct } from '../../models/product/product.model';
 
 
 // const dummyProducts: ProductCardProps[] = [
@@ -19,7 +20,7 @@ import {GlobalProps} from '../../App';
 const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
     function viewProduct() {
         productController.getAllProduct();
-        console.log("Products", props.store!.productStore.getEntities);
+        console.log('Products', props.store!.productStore.getEntities);
     }
 
     useEffect(() => {
@@ -27,9 +28,9 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
     }, []);
 
 
-    function handleClick(productStore) {
-        cartStore.addProductsToCart(productStore);
-    }
+    const addProductToCart = (product: IProduct) => {
+        cartStore.addProductsToCart(product);
+    };
 
     return (
         <div className="container-fluid">
@@ -52,7 +53,7 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                                                 oldPrice={p.old_price}
                                                 newPrice={p.new_price}
                                             />
-                                            <button onClick={handleClick}>Add To Cart</button>
+                                            <button onClick={() => addProductToCart(p)}>Add To Cart</button>
                                         </div>
                                     );
                                 })
