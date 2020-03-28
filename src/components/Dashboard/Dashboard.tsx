@@ -7,16 +7,6 @@ import { GlobalProps } from '../../App';
 import { IProduct } from '../../models/product/product.model';
 
 
-// const dummyProducts: ProductCardProps[] = [
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-//     { name: 'Lakme 9 to 5 CC - Honey', seller: 'Seller - Lalita Sales', oldPrice: '₹521', newPrice: '₹349' },
-// ];
-
-
 const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
     function viewProduct() {
         productController.getAllProduct();

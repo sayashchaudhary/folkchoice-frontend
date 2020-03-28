@@ -1,14 +1,9 @@
 import BaseStore from './base.store';
-import { action, computed, observable } from 'mobx';
-import { CartProducts } from '../models/cart.model';
-import { count } from 'rxjs/operators';
+import { action, observable } from 'mobx';
 import { IProduct } from '../models/product/product.model';
 
 export class CartStore extends BaseStore<IProduct> {
     private static _instance: CartStore;
-
-    // @observable isCartLoaded = false;
-    // @observable isCartLoading = false;
 
     @observable itemCount: { [id: number]: number } = {};
 

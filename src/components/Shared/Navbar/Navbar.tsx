@@ -123,7 +123,7 @@ const PrimarySearchAppBar = () => {
                         </div>
                         <img src={User} alt="User" className="nav__user"/>
                         <img src={Heart} alt="Wishlist" className="nav__heart"/>
-                        <img src={Cart} alt="cart" className="nav__cart"/>
+                        <img src={Cart} alt="cart" onClick={() => navigateToRoute(RoutePath.cart)} className="nav__cart"/>
                         <div className="nav__right">
                             <button onClick={() => navigateToRoute(RoutePath.login)} type="submit"
                                     className="nav__right-login">Sign in
