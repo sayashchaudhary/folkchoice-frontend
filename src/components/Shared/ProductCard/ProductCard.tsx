@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = (props: ProductCardProps) => {
     return (
         <div className="product-card">
             <img
-                src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/3/83a5d0d8901030655012_g.jpg"
+                src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/2/6/1f5471ec-c783-4fa7-99f4-2b6f6fb251761580946317672-1.jpg"
                 alt="img" className="product-card-image" onClick={() => navigateToRoute(RoutePath.description)}/>
             <h4 className="product-card-name">{props.name}</h4>
             <p className="product-card-seller">{props.seller}</p>
