@@ -13,23 +13,23 @@ const Footer: React.FC = () => {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="footer__alignleft">
-                            <img src={Logo} alt="Logo" className="footer__alignleft-image" />
+                            <img src={Logo} alt="Logo" className="footer__alignleft-image"/>
                             <span className="footer__alignleft-text">FOLK CHOICE</span><br/>
                             <div className="footer__alignleft-detail">
                                 <h4><strong>E-mail us at</strong></h4>
                                 <p>abc@gmail.com</p>
                                 <h4><strong>Contact us: </strong>
-                                <span>1234567890, 9876543210</span></h4>
+                                    <span>1234567890, 9876543210</span></h4>
                                 <h4>
                                     We Care
-                                    <img src={Heart} alt= "heart" className="footer__alignleft-detail__heart" />
+                                    <img src={Heart} alt="heart" className="footer__alignleft-detail__heart"/>
                                 </h4>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-6 text-right">
                         <div className="footer__alignright">
-                        <div className="footer__alignright-detail">
+                            <div className="footer__alignright-detail">
                                 <h4><strong>About us</strong></h4>
                                 <h4><strong>FAQ'S </strong></h4>
                                 <h4><strong>Help Desk </strong></h4>
@@ -41,14 +41,23 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="row">
                     <div className="col-md-12 text-center pb-3">
-                        <img src={Instagram} alt="instagram" className="footer__social" /><span>folk__choice</span>
-                        <img src={Facebook} alt="facebook" className="footer__social fb" /><span>folk__choice</span>
-                        <img src={Twitter} alt="twitter" className="footer__social" /><span>folk__choice</span>
+                        <div className="footer__social">
+                            <span className="fab fa-instagram"/>
+                        </div>
+                        <span className="footer__text">folk__choice</span>
+                        <div className="footer__social">
+                            <span className="fab fa-facebook"/>
+                        </div>
+                        <span className="footer__text">folk__choice</span>
+                        <div className="footer__social">
+                            <span className="fab fa-twitter"/>
+                        </div>
+                        <span className="footer__text">folk__choice</span>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     );
 };
 

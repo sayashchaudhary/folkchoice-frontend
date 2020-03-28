@@ -35,12 +35,16 @@
   }
 
   &__social {
-    width: 75px;
-    padding-right: 5px;
-    padding-left: 25px;
-  }
+    background-color: $color-secondary;
+    display: inline-block;
+    color: white;
+    font-size: 35px;
+    //padding: 3px;
+    width: 3%;
 
-  .fb{
-    width:90px;
+    //height: 45px;
+  }
+  .footer__text{
+    padding: 0.5%;
   }
 }
