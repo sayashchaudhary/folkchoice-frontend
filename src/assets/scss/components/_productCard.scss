@@ -1,8 +1,8 @@
 @import '../utilities/variables';
 
 .product-card {
-  width: 82%;
-  max-width: 240px;
+  width: 85%;
+  max-width: 270px;
   height: 90%;
   display: inline-block;
   background: $color-primary;
@@ -13,7 +13,7 @@
 
   &-image {
     padding-bottom: 1%;
-    max-height: 300px;
+    max-height: 320px;
     width: 100%;
     cursor: pointer;
     margin-bottom: 3%;
