@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                 <div className="row">
                     <div className="col-md-12 text-center pb-3">
                         <img src={Instagram} alt="instagram" className="footer__social" /><span>folk__choice</span>
-                        <img src={Facebook} alt="facebook" className="footer__social" /><span>folk__choice</span>
+                        <img src={Facebook} alt="facebook" className="footer__social fb" /><span>folk__choice</span>
                         <img src={Twitter} alt="twitter" className="footer__social" /><span>folk__choice</span>
                     </div>
                 </div>
