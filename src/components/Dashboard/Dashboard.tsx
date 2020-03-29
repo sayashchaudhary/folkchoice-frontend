@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../Shared/ProductCard/ProductCard';
 import { productController } from '../../controllers/product.controller';
-import { cartStore } from "../../stores/cart.store";
+import { cartStore } from '../../stores/cart.store';
 import { inject, observer } from 'mobx-react';
 import { GlobalProps } from '../../App';
-import { RoutePath } from '../../routing/routes';
-import { RouteUtils } from '../../routing/route-utils';
-import { useHistory } from 'react-router-dom';
+import { IProduct } from '../../models/product/product.model';
+
 
 const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
     function viewProduct() {
         productController.getAllProduct();
-        console.log("Products", props.store!.productStore.getEntities);
+        console.log('Products', props.store!.productStore.getEntities);
     }
 
     useEffect(() => {
@@ -19,16 +18,10 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
     }, []);
 
 
-    function handleClick(productStore) {
-        cartStore.addProductsToCart(productStore);
-    }
-
-    const history = useHistory();
-    const navigateToRoute = (route: RoutePath) => {
-        if (route) {
-            history.push(RouteUtils.getUrl(route, null));
-        }
+    const addProductToCart = (product: IProduct) => {
+        cartStore.addProductsToCart(product);
     };
+
 
     return (
         <div className="container-fluid">
@@ -43,6 +36,7 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                             {
                                 props.store!.productStore.getEntities.map(function mapper(p, index) {
                                     return (
+
                                         p.productSubcategory.productCategory.id != 4 ?
                                             <div key={index}
                                                  className="col-6 col-sm-6 col-md-4 col-lg-2 dashboard__items-item__spacing">
@@ -52,25 +46,18 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                                                     oldPrice={p.old_price}
                                                     newPrice={p.new_price}
                                                 />
-                                                {/*<button onClick={handleClick}>Add To Cart</button>*/}
+                                                <button onClick={() => addProductToCart(p)}>Add To Cart</button>
+
                                             </div>
                                             : null
-                                    )
+                                    );
                                 })
                             }
                         </div>
                     </div>
                     <div className="dashboard__items-text"><br/>
                         <h2><strong>Steal on Cosmetics</strong></h2><br/>
-                        <button onClick={() => navigateToRoute(RoutePath.products)} type="submit">Filter Page
-                        </button>
-                        <button onClick={() => navigateToRoute(RoutePath.description)} type="submit">Product Description
-                            Page
-                        </button>
-                        <button onClick={() => navigateToRoute(RoutePath.checkout)} type="submit">Checkout Page
-                        </button>
                     </div>
-
                     <div className="dashboard__items-item">
                         <div className="row">
                             {
@@ -85,7 +72,7 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                                                     oldPrice={p.old_price}
                                                     newPrice={p.new_price}
                                                 />
-                                                {/*<button onClick={handleClick}>Add To Cart</button>*/}
+                                                <button onClick={() => addProductToCart(p)}>Add To Cart</button>
                                             </div>
                                             : null
                                     )
@@ -93,7 +80,6 @@ const Dashboard: React.FC<GlobalProps> = (props: GlobalProps) => {
                             }
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
